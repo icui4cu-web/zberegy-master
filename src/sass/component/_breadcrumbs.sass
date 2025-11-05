@@ -1,0 +1,29 @@
+.menu-breadcrumbs
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+  padding: 60px 0
+  @include media-breakpoint-down(md)
+    padding: 30px 0
+    font-size: 14px
+  .menu-item
+    padding: 0
+    color: $link
+    &.curent-item
+      color: rgba(50, 50, 50, 0.6)
+      pointer-events: none
+    &-link
+      color: inherit
+  .delimer
+    display: flex
+    align-items: center
+    padding: 0 10px
+    &::before
+      content: ''
+      display: inline-block
+      border-right: 1px solid $link
+      border-top: 1px solid $link
+      width: 7px
+      height: 7px
+      transform: rotate(45deg)
+

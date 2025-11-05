@@ -1,0 +1,125 @@
+.memorial-header
+  margin-bottom: 45px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 15px
+  &-bg
+    height: 500px
+    @include media-breakpoint-down(md)
+      height: 300px
+    @include media-breakpoint-down(sm)
+      height: 100px
+    .img-header-bg-wrap
+      display: block
+      height: 100%
+      .img-header-bg
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+  .memorial-header-data
+    .img-gift-wrap
+      position: relative
+      @include media-breakpoint-down(sm)
+        width: 166px
+        margin: 0 auto
+    .img-wrap
+      position: relative
+      border-radius: 50%
+      overflow: hidden
+      border: 3px solid $clear
+      width: 306px
+      max-width: 100%
+      margin-top: -50%
+      box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1)
+
+      aspect-ratio: 1/1
+      background-color: #F2F2F2
+
+      @include media-breakpoint-down(sm)
+        margin-top: -30px
+      .memorial-img
+        position: relative
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+    .gift-wrap
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 100px
+      height: 100px
+      max-width: 35%
+      max-height: 35%
+      .gift-img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        object-position: center
+    .text-wrap
+      padding-top: 30px
+      @include media-breakpoint-down(md)
+        padding-top: 15px
+      @include media-breakpoint-down(sm)
+        text-align: center
+      .name-wrap
+        display: flex
+        @include media-breakpoint-down(sm)
+          justify-content: center
+          flex-wrap: wrap
+        .icon-relig
+          margin: 0 35px 10px
+          @include media-breakpoint-down(sm)
+            margin: 0 15px 10px
+            max-width: 15px
+      .loc
+        display: block
+        margin-bottom: 10px
+      .date
+        font-weight: 600
+        @include media-breakpoint-down(sm)
+          display: inline-block
+          margin-bottom: 20px
+  .btns-wrap
+    display: flex
+    justify-content: flex-end
+    padding-top: 20px
+    align-items: flex-start
+    @include media-breakpoint-down(md)
+      padding-top: 5px
+    @include media-breakpoint-down(sm)
+      padding-top: 0
+      justify-content: center
+    a, button
+      margin: 10px 10px 0 0
+      align-items: center
+      &:last-of-type
+        margin-right: 0
+      .icon-star
+        max-width: 20px
+
+.example-memorial
+  .memorial-header
+    .memorial-header-data
+      .img-wrap
+        &::before
+          content: attr(title)
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          text-align: center
+          color: rgba(50, 50, 50, 0.4)
+          font-family: $title
+          font-size: 22px
+          line-height: 26px
+          z-index: 0
+          @include media-breakpoint-down(md)
+            font-size: 16px
+            line-height: 20px
+  // .comments-wrap
+  textarea,
+  label,
+  [contenteditable],
+  [data-fancybox]
+    pointer-events: none !important

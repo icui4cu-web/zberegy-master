@@ -1,0 +1,62 @@
+.comments-to-photo
+  padding: 40px 20px
+  color: $text-c
+  .word-memory
+    border-bottom: 1px solid #DEDEDE
+    margin-bottom: 20px
+    &-header
+      display: flex
+      margin-bottom: 16px
+  .img-wrap
+    width: 40px
+    height: 40px
+    margin-right: 10px
+    border-radius: 50%
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .name
+    margin-bottom: 0
+  .date-time
+    font-size: 14px
+    line-height: 20px
+    color: rgba(50, 50, 50, 0.6)
+  .word-memory-comment
+    display: flex
+    // .word-memory-img
+    .comment-wrap
+      margin-bottom: 30px
+      .comment
+        background-color: #F2F2F2
+        border-right: $border-radius
+        padding: 10px
+        margin-bottom: 10px
+        .name
+          font-family: $title
+          font-weight: 600
+          margin-bottom: 4px
+        p
+          margin-bottom: 0
+  // Form-To-Foto
+  .form-comments-to-foto
+    label
+      color: $title-c
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 20px
+    .form-group
+      display: flex
+      align-items: center
+      background-color: #F2F2F2
+      border-radius: $border-radius
+      padding-right: 15px
+      input,
+      textarea,
+      [contenteditable]
+        background-color: transparent
+        border: none
+        margin: 0 10px 0 0
+        &:focus
+          box-shadow: none

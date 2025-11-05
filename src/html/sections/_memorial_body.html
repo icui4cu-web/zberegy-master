@@ -1,0 +1,42 @@
+<section class="memorial-body">
+  <div class="container-xl">
+    <div class="row">
+
+      <div class="col-12">
+        <ul class="nav nav-tab-wrap" id="pills-tab" role="tablist">
+          <li class="nav-tab-item" role="presentation">
+            <!-- active -->
+            <a class="nav-tab-link active" id="pills-tab-1" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">
+              Життєпис
+            </a>
+          </li>
+          <li class="nav-tab-item" role="presentation">
+            <a class="nav-tab-link" id="pills-tab-2" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">
+              Галерея
+            </a>
+          </li>
+          <li class="nav-tab-item" role="presentation">
+            <a class="nav-tab-link" id="pills-tab-3" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
+              Пам'ятні дати
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-8 col-md-7">
+        <div class="tab-content" id="pills-tabContent">
+          @@include('../blocks/_memorial_tab_1.html')
+          @@include('../blocks/_memorial_tab_2.html')
+          @@include('../blocks/_memorial_tab_3.html')
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-5">
+        <!-- @@include('../component/_example_memorial_comments_to_photo.html') -->
+        @@include('../component/_sidebar.html')
+      </div>
+      
+      
+    </div>
+  </div>
+</section>

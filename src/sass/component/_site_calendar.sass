@@ -1,0 +1,52 @@
+.pickmeup
+  background-color: $clear
+  border: 1px solid #dedede
+  border-radius: $border-radius
+  padding-bottom: 10px
+  nav
+    div
+      display: inline-flex
+      align-items: center
+      justify-content: center
+    .pmu-prev,
+    .pmu-next
+      line-height: 32px
+      padding: 0 20px 0 15px
+    .pmu-month
+      flex: auto
+  .pmu-day-of-week
+    align-items: center
+    div
+      flex: auto
+  .pmu-day-of-week div
+    color: #3a3a3a
+    font-weight: 500
+  .pmu-instance
+    width: 100%
+    .pmu-days
+      .pmu-button
+        padding: 5px 0
+    .pmu-button
+      width: calc( 100% / 7 )
+      color: #5B5B5B
+      &:hover
+        background-color: lighten($yellow, 42%)
+        color: $text-c
+      &.pmu-not-in-month
+        color: #c0c0c0
+      &.pmu-selected
+        background-color: lighten($yellow, 30%)
+        &.pmu-today
+          background-color: lighten($yellow, 30%)
+      &.pmu-today:not(.pmu-selected)
+        background-color: transparent
+        &:hover
+          background-color: lighten($yellow, 42%)
+      &.pmu-saturday,
+      &.pmu-sunday
+        color: #B0742E
+  .pmu-years,
+  .pmu-months
+    .pmu-button
+      width: 25%
+      

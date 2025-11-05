@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('_head.html')
+<body>
+  <!-- <main id="page" class="IS_LOG_IN"> -->
+  <main id="page">
+    @@include('_header.html')
+    <div id="content">
+      <div class="container-xl user-cabinet">
+        <div class="row">
+          <div class="col-xl-3">
+            @@include('sections/_user_cabinet_menu.html')
+          </div>
+          <div class="col-xl-9">
+            <div class="user-cabinet-content">
+              @@include('sections/_user_cabinet_data.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('_footer.html')
+  </main>
+  <!-- scripst & styles -->
+  @@include('_footer_connections.html')
+</body>
+</html>

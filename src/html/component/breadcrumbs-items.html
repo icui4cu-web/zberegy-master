@@ -1,0 +1,14 @@
+@@if (context.item === "item") {
+  <li class="delimer"></li>
+  <li class="menu-item">
+}
+  @@if (context.text) { @@text }
+@@if (context.item === "item") {</li>}
+@@if (context.item === "curent") {
+  <li class="delimer"></li>
+  <li class="menu-item curent-item">
+}
+  @@if (context.curent-text) { @@curent-text }
+@@if (context.item === "curent") {
+  </li>
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('_head.html')
+<body>
+  <!-- <main id="page" class="IS_LOG_IN"> -->
+  <main id="page">
+    @@include('_header.html')
+    <div id="content">
+      @@include('component/breadcrumbs.html',{
+        "item": "curent",
+        "text": "Результати пошуку",
+      })
+      @@include('sections/_search_results.html')
+    </div>
+    @@include('_footer.html')
+  </main>
+  <!-- scripst & styles -->
+  @@include('_footer_connections.html')
+</body>
+</html>

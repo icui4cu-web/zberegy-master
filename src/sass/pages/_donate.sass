@@ -1,0 +1,252 @@
+.donate
+  &-form-wrap
+    margin-bottom: 100px
+  &-block
+    position: relative
+    margin-bottom: 30px
+  .nav-tab
+    &-wrap
+      display: flex
+      border: 1px solid #DEDEDE
+      border-radius: $border-radius
+      padding: 0
+      @include media-breakpoint-down(lg)
+        border: none
+    &-item
+      flex: auto
+      padding: 0
+      @include media-breakpoint-down(lg)
+        flex: 50%
+        margin-bottom: 4px
+      @include media-breakpoint-down(sm)
+        flex: 100%
+
+
+      &:last-child .nav-tab-link::before
+        background-color: transparent
+    &-link
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 18px
+      line-height: 18px
+      font-weight: 600
+      color: rgba(50, 50, 50, 0.6)
+      padding: 20px
+      border: 1px solid transparent
+      border-radius: $border-radius
+      margin: -1px 0
+      transition: .3s
+      @include media-breakpoint-down(lg)
+        font-size: 16px
+        border-color: #DEDEDE
+        &::before
+          display: none
+      &::before
+        content: ''
+        width: 1px
+        height: calc(100% - 30px)
+        position: absolute
+        top: 50%
+        right: -1px
+        transform: translateY(-50%)
+        background-color: #DEDEDE
+      &.active
+        color: $link
+        border-color: $link
+        &::before
+          background-color: transparent
+  .form-period,
+  .form-currency,
+  .form-sum
+    display: flex
+    border: 1px solid #DEDEDE
+    border-radius: $border-radius
+    @include media-breakpoint-down(lg)
+      border: none
+    [type="radio"]:checked + label
+      color: $link
+      border-color: $link
+      &::before
+        background-color: transparent
+    label
+      position: relative
+      text-align: center
+      flex: auto
+      font-size: 18px
+      line-height: 18px
+      font-weight: 600
+      color: rgba(50, 50, 50, 0.6)
+      padding: 20px
+      border: 1px solid transparent
+      border-radius: $border-radius
+      margin: -1px 0
+      transition: .3s
+      @include media-breakpoint-down(lg)
+        font-size: 16px
+        border-color: #DEDEDE
+        margin-right: 4px
+        margin-bottom: 4px
+        &:last-child
+          margin-right: 0
+      &::before
+        content: ''
+        width: 1px
+        height: calc(100% - 30px)
+        position: absolute
+        top: 50%
+        right: -1px
+        transform: translateY(-50%)
+        background-color: #DEDEDE
+      &:last-child
+        &::before
+          background-color: transparent
+      span
+        font-size: inherit
+        line-height: inherit
+        font-weight: inherit
+      .type-period
+        font-size: 14px
+        line-height: 20px
+        font-weight: 400
+  .form-sum
+    flex-wrap: wrap
+    #pay_enother:checked ~ .pay-enother-wrap
+      display: block
+    .pay-enother-wrap
+      flex: 100%
+      margin-top: 10px
+      margin-bottom: 0
+      display: none
+      .input-curency
+        font-size: 18px
+        font-weight: 600
+        color: rgba(50, 50, 50, 0.6)
+      .pay-enother
+        padding-left: 35px
+        font-size: 18px
+        font-weight: 600
+        &:focus-visible
+          outline: none
+        &.error
+          margin-bottom: 0
+  .form-card
+    .form-block
+      display: flex
+    .form-group
+      flex: auto
+      &:first-child
+        margin-right: 20px
+  button
+    width: 100%
+  [type=submit][disabled]
+    opacity: .5
+  .error + .error-mess
+    padding: 5px 10px
+  .load-block
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 50px
+    background-color: #F2F2F2
+    border-radius: $border-radius
+    margin-bottom: 60px
+    @include media-breakpoint-down(sm)
+      padding: 40px
+      margin-bottom: 30px
+    .pay-in-process,
+    .pay-success
+      text-align: center
+    .icon-load,
+    .icon-check
+      margin-bottom: 40px
+      @include media-breakpoint-down(sm)
+        width: 50px
+        height: 50px
+        margin-bottom: 30px
+    .hou-arr,
+    .min-arr
+      transform-origin: center 52%
+      animation: clock 10s linear infinite
+    .min-arr
+      animation-duration: 3s
+    .pay-mess
+      display: block
+      font-family: $title
+      font-size: 18px
+      line-height: 24px
+      font-weight: 700
+      margin-bottom: 16px
+      @include media-breakpoint-down(sm)
+        font-size: 14px
+        line-height: 20px
+    .pay-data
+      display: flex
+      flex-direction: column
+      align-items: center
+      color: rgba(50, 50, 50, 0.8)
+      @include media-breakpoint-down(sm)
+        span
+          font-size: 12px
+          line-height: 16px
+
+  // other payment methods
+  &-other
+    &-title
+      display: flex
+      align-items: center
+      color: rgba(50, 50, 50, 0.8)
+      margin-bottom: 16px
+      .icon-private
+        margin-right: 10px
+      .currency
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 20px
+        height: 20px
+        background-color: #3E9AF6
+        border-radius: 50%
+        margin-right: 10px
+        color: $clear
+        font-size: 13px
+        font-weight: 600
+    &-data
+      display: flex
+      margin-bottom: 30px
+      .copy-data
+        flex: auto
+        // text-align: left
+        margin-right: 10px
+        font-weight: 700
+        color: #323232
+        &[data-country]
+          &::after
+            content: attr(data-country)
+            background-color: #ff0000
+            border-radius: 5px
+            color: $clear
+            padding: 2px 6px
+            font-weight: 700
+      .btn-copy
+        display: inline-flex
+        width: auto
+        align-items: center
+        color: rgba(50, 50, 50, 0.8)
+        &:hover
+          color: #323232
+      .btn-text
+        margin-right: 10px
+      .icon-copy
+        min-width: 12px
+        @include media-breakpoint-down(sm)
+          width: 12px
+
+
+@keyframes clock
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+    

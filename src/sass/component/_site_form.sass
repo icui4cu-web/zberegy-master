@@ -1,0 +1,174 @@
+// SITE-FORM
+.site-form
+  label:not(.btn-edit)
+    font-size: 14px
+    line-height: 20px
+    color: rgba(50, 50, 50, 0.6)
+    margin-bottom: 6px
+    cursor: pointer
+    @include media-breakpoint-down(sm)
+      font-size: 12px
+      line-height: 16px
+  .form-group
+    position: relative
+    margin-bottom: 20px
+  input,
+  textarea,
+  [contenteditable]
+    display: block
+    width: 100%
+    padding: 17px 20px
+    // margin-bottom: 20px
+    font-size: 16px
+    line-height: 26px
+    border-radius: 10px
+    border: 1px solid #dedede
+    color: rgba(50, 50, 50, 0.6)
+    transition: .3s
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 22px
+      padding: 14px 15px
+    &::placeholder
+      font-size: inherit
+      line-height: inherit
+      color: inherit
+      transition: inherit
+    &:focus,
+    &:focus-visible
+      color: $text-c
+      outline: none
+      &::placeholder
+        font-size: 0
+        color: transparent
+    &.error
+      border-color: $error
+      &:not(.user-cabinet-data .input-group-email input, textarea)
+        margin-bottom: 30px
+
+    &.error ~ .error-mess
+      padding-top: 4px
+      max-height: 100px
+      @include media-breakpoint-down(sm)
+        padding-top: 4px
+  .error-mess
+    position: absolute
+    bottom: 0
+    transform: translateY(100%)
+    display: block
+    overflow: hidden
+    max-height: 0
+    font-size: 12px
+    line-height: 12px
+    color: $error
+    transition: .3s
+    @include media-breakpoint-down(sm)
+      font-size: 12px
+  textarea
+    position: relative
+    min-height: 260px
+    max-height: 500px
+    padding-bottom: 25px
+    @include media-breakpoint-down(sm)
+      min-height: 100px
+      max-height: 300px
+    // &:focus
+      // &+.textarea-maxlength
+        // opacity: 1
+    &+.textarea-maxlength
+      display: block
+      text-align: right
+      font-size: 12px
+      line-height: 12px
+      color: rgba(50, 50, 50, 0.6)
+      margin-top: -12px
+      margin-right: 15px
+      transform: translateY(-10px)
+      z-index: 1
+      // opacity: 0
+      // transition: .3s
+  [contenteditable]
+    &::before
+      content: attr(data-placeholder)
+      width: 100%
+      white-space: nowrap
+      overflow: hidden
+      display: inline-flex
+      transition: .2s
+    &.active,
+    &:focus
+      &::before
+        width: 0
+  .agreement-terms
+    margin-bottom: 20px
+    font-size: 12px
+    line-height: 16px
+    a
+      color: $blue
+      font-size: inherit
+      line-height: inherit
+  .captcha
+    margin-bottom: 20px
+  .wenn-registriert
+    font-size: 18px
+    line-height: 18px
+    font-weight: 600
+    text-align: center
+    display: block
+    margin-bottom: 16px
+    a
+      color: #3E9AF6
+  .form-group,
+  .input-group
+    position: relative
+    .icon-for-input
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      &.pass-show
+        right: 15px
+        cursor: pointer
+      &.input-curency
+        left: 20px
+    .icon-lock
+      left: 20px
+
+form[disabled=true]:not(#user_data_form)
+  [type=submit]
+    background-color: #F2F2F2
+    color: rgba(50, 50, 50, 0.4)
+    pointer-events: none
+
+.custom-checkbox-wrap
+  display: flex
+  align-items: center
+.custom-checkbox
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 20px
+  height: 20px
+  color: #3E9AF6
+  background-color: $clear
+  border: 1px solid #DEDEDE
+  border-radius: 4px
+  margin-right: 10px
+  font-size: 0
+  font-weight: 900
+  transition: .2s
+  &::before
+    content: "\2713"
+  &-box
+    width: 19px
+    height: 19px
+    box-shadow: 0 0 0 1px #DEDEDE
+    border: 4px solid #ffffff
+    border-radius: 4px
+    background-color: #ffffff
+    margin-right: 10px
+
+input:checked + .custom-checkbox
+  font-size: 14px
+input:checked + .custom-checkbox-box
+  box-shadow: 0 0 0 1px #3E9AF6
+  background-color: #3E9AF6

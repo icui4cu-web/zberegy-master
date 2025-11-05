@@ -1,0 +1,119 @@
+<section class="home-capabilities accordion-images-wrap">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-lg-6 accordion-wrap">
+        <h2>Можливості Меморіалу</h2>
+        
+        <div class="site-accordion accordion-capabilities" id="accordionCapabilities">
+
+          <div class="card">
+            <div class="card-header" id="heading_1">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "accordion",
+                "text": "Життєпис/Фото та Відео",
+                "attr": " class=\"btn-accordion\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_1\" aria-expanded=\"true\" aria-controls=\"collapse_1\" "
+              })
+            </div>
+            <div id="collapse_1" class="collapse show" aria-labelledby="heading_1" data-parent="#accordionCapabilities">
+              <div class="card-body">
+                <p>На сторінці Онлайн Меморіалу Ви маєте можливість розповісти світові історію життя близької Вам людини. Поділиться спогадами, подіями, які Вам запам’яталися, додайте фото та відео.</p>
+              </div>
+            </div>
+          </div><!-- card -->
+
+          <div class="card">
+            <div class="card-header" id="heading_2">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "accordion",
+                "text": "Персоналізація",
+                "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_2\" aria-expanded=\"true\" aria-controls=\"collapse_2\" "
+              })
+            </div>
+            <div id="collapse_2" class="collapse" aria-labelledby="heading_2" data-parent="#accordionCapabilities">
+              <div class="card-body">
+                <p>При створенні Онлайн Меморіалу Ви можете обрати один з візуальних шаблонів, який, на Ваш погляд, найбільш пасує для його оформлення. На даний момент є 5 шаблонів, але ми плануємо в найближчому майбутньому збільшити їх кількість.</p>
+              </div>
+            </div>
+          </div><!-- card -->
+
+          <div class="card">
+            <div class="card-header" id="heading_3">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "accordion",
+                "text": "Пам'ятні дати",
+                "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_3\" aria-expanded=\"true\" aria-controls=\"collapse_3\" "
+              })
+            </div>
+            <div id="collapse_3" class="collapse" aria-labelledby="heading_3" data-parent="#accordionCapabilities">
+              <div class="card-body">
+                <p>Виділіть найважливіші моменти життя людини, такі як день народження, річниця весілля, народження дитини, досягнення тощо. Тобто все, що вважаєте за потрібне. Усі вони відобразяться на хронологічній шкалі. До кожної такої події можна додати опис та фото.</p>
+              </div>
+            </div>
+          </div><!-- card -->
+
+          <div class="card">
+            <div class="card-header" id="heading_4">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "accordion",
+                "text": "Книга спогадів",
+                "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_4\" aria-expanded=\"true\" aria-controls=\"collapse_4\" "
+              })
+            </div>
+            <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordionCapabilities">
+              <div class="card-body">
+                <p>Родичі, друзі, знайомі, колеги можуть поділитися своїми спогадами про людину, висловити слова підтримки близьким, додати фотографії та прокоментувати або відреагувати на записи інших людей.</p>
+              </div>
+            </div>
+          </div><!-- card -->
+
+          <div class="card">
+            <div class="card-header" id="heading_5">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "accordion",
+                "text": "Вшанування пам’яті",
+                "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_5\" aria-expanded=\"true\" aria-controls=\"collapse_5\" "
+              })
+            </div>
+            <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordionCapabilities">
+              <div class="card-body">
+                <p>Ви можете обрати один з “меморіальних поминків” для вшанування пам'яті людини і він буде відображений на сторінці Онлайн Меморіалу. І навіть якщо Ви знаходитесь за тисячі кілометрів, Ви маєте можливість вшанувати пам'ять людини відправивши такий пам'ятний подарунок.</p>
+              </div>
+            </div>
+          </div><!-- card -->
+
+        </div><!-- accordion-capabilities -->
+
+        @@include('../component/btns_links.html', {
+          "type": "link",
+          "style": "circle",
+          "text": "Детальніше",
+          "attr": " href=\"capabilities.html\""
+        })
+      </div>
+      <div class="col-lg-6 d-md-none d-lg-flex align-items-center">
+        <div class="images-wrap">
+          <figure class="accordion-img active" data-img="#collapse_1" data-toggle="collapse" data-target="#collapse_2">
+            <img data-src="static/img/home/capabilities/home-capabilities-1.png" alt="">
+          </figure>
+          <figure class="accordion-img collapsed" data-img="#collapse_2" data-toggle="collapse" data-target="#collapse_3">
+            <img data-src="static/img/home/capabilities/home-capabilities-8.png" alt="">
+          </figure>
+          <figure class="accordion-img collapsed" data-img="#collapse_3" data-toggle="collapse" data-target="#collapse_4">
+            <img data-src="static/img/home/capabilities/home-capabilities-2.png" alt="">
+          </figure>
+          <figure class="accordion-img collapsed" data-img="#collapse_4" data-toggle="collapse" data-target="#collapse_5">
+            <img data-src="static/img/home/capabilities/home-capabilities-11.png" alt="">
+          </figure>
+          <figure class="accordion-img collapsed" data-img="#collapse_5" data-toggle="collapse" data-target="#collapse_1">
+            <img data-src="static/img/home/capabilities/home-capabilities-9.png" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

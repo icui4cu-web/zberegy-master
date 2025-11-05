@@ -1,0 +1,67 @@
+<aside class="memorial-sidebar">
+  <div class="sidebar-block">
+    <h5>Пам’ять вшанували: 
+      <button id="gifts-count" class="gifts-count" data-toggle="modal" data-target="#giverModal" data-gifts-count="3"></button>
+    </h5>
+    <div class="gifts-wrap">
+      <div class="gift-img" data-giver-id="6">
+        <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3">
+      </div>
+      <div class="gift-img" data-giver-id="4">
+        <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3">
+      </div>
+      <div class="gift-img" data-giver-id="3">
+        <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+      </div>
+    </div>
+    @@include('../component/btns_links.html', {
+      "type": "btn",
+      "style": "add-gift",
+      "class": "btn-light",
+      "text": "Залишити поминок",
+      "attr": ""
+    })
+  </div>
+  <div class="sidebar-block">
+    <h5>Меморіал зберігає:</h5>
+    <div class="owner">
+      <div class="owner-img">
+        <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+      </div>
+      <span class="owner-name">Прізвище Ім'я По-батькові</span>
+    </div>
+    @@include('../component/btns_links.html', {
+      "type": "btn",
+      "style": "send-message",
+      "class": "btn-light",
+      "text": "Надіслати повідомлення",
+      "attr": ""
+    })
+  </div>
+  <div class="sidebar-block">
+    <h5>Останні події:</h5>
+    <ul class="last-events list-yellow-mark">
+      <li>
+        <div class="item-data">
+          <span class="name">Прізвище Ім'я По-батькові</span>
+          <span class="event">додав(ла) спогад</span>
+          <span class="date">дд.мм.рррр</span>
+        </div>
+      </li>
+      <li>
+        <div class="item-data">
+          <span class="name">Прізвище Ім'я По-батькові</span>
+          <span class="event">поділ(илася)ився сторінкою у Facebook</span>
+          <span class="date">дд.мм.рррр</span>
+        </div>
+      </li>
+      <li>
+        <div class="item-data">
+          <span class="name">Прізвище Ім'я По-батькові</span>
+          <span class="event">залишив(ла) поминок</span>
+          <span class="date">дд.мм.рррр</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside>

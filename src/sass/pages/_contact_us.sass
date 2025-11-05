@@ -1,0 +1,44 @@
+.contact-us
+  position: relative
+  max-width: 1920px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 60px
+  @include media-breakpoint-down(sm)
+    background-image: url(../img/contact-us/contact-us-bg.png)
+    background-position: left top
+    margin-bottom: 0
+  &-wrap
+    position: relative
+    z-index: 1
+    max-width: 530px
+    @include media-breakpoint-down(sm)
+      margin: 0 auto
+      margin-bottom: 15px
+    .site-form
+      textarea
+        min-height: 150px
+    [type="submit"]
+      margin-top: 10px
+  .bg img
+    position: absolute
+    top: 0
+    right: 0
+    transform: translate(10%, -30%)
+    max-height: none
+    width: 140%
+    max-width: 2642px
+    z-index: 0
+    @include media-breakpoint-down(lg)
+      top: 50%
+      transform: translate(10%, -50%)
+    @include media-breakpoint-down(sm)
+      position: relative
+      // width: 320%
+      width: 100%
+      transform: translate(0) scale(2)
+      margin-bottom: 30%
+      // transform: translate(-52%, -10%)
+      // margin-top: -20%
+
+    

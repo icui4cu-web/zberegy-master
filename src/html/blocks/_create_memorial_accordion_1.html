@@ -1,0 +1,406 @@
+<form class="site-form form-create-memorial" id="form_create_memorial">
+  <h6 >Головне фото</h6>
+  <div class="select-img-wrap">
+    <div class="select-img">
+      <img id="main_img" src="static/img/no-foto.svg" alt="Зображення акаунта">
+    </div>
+
+    <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img">
+    <label class="btn-load-select-img btn-edit" for="load_memorial_img">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="15" fill="currentColor" />
+        <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
+      </svg>
+    </label>
+
+    <button type="button" class="btn-del-select-img btn-delete" id="del_memorial_img" data-reset-img="static/img/no-foto.svg">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z"
+          fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z"
+          fill="currentColor" />
+      </svg>
+    </button>
+
+  </div>
+
+  <div class="row fields-wrap">
+    <div class="col-12">
+      <h6>Особисті дані</h6>
+    </div>
+    <div class="col-xl-4">
+      <div class="form-group">
+        <label for="memorial_last_name">Прізвище*</label>
+        <input type="text" id="memorial_last_name" placeholder="Введіть Прізвище" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label for="memorial_name">Ім'я*</label>
+        <input type="text" id="memorial_name"  placeholder="Введіть Ім'я" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label for="memorialsurname">По батькові*</label>
+        <input type="text" id="memorial_surname"  placeholder="Введіть По батькові" maxlength="100">
+        <span class="error-mess">Додайте інформацію</span>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <label for="birth_day">Дата народження*</label>
+      <div class="form-group">
+        <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.22907 1.57434H4.81106V0.466472C4.81106 0.233236 5.0009 0 5.3173 0C5.6337 0 5.88682 0.233236 5.88682 0.466472V1.57434H14.1132V0.466472C14.1132 0.233236 14.3663 0 14.6827 0C14.9358 0 15.1889 0.233236 15.1889 0.466472V1.57434H16.7709C18.5428 1.57434 19.9982 2.91545 19.9982 4.4898V17.0262C19.9982 18.6589 18.5428 20 16.7709 20H3.22907C1.45724 20 0.0018034 18.6589 0.0018034 17.0262V4.4898C0.0018034 2.91545 1.45724 1.57434 3.22907 1.57434ZM15.1889 2.5656V3.73178C15.1889 4.02332 14.9358 4.25656 14.6827 4.25656C14.3663 4.25656 14.1132 4.02332 14.1132 3.73178V2.5656H5.88682V3.73178C5.88682 4.02332 5.6337 4.25656 5.3173 4.25656C5.0009 4.25656 4.81106 4.02332 4.81106 3.73178V2.5656H3.22907C2.02675 2.5656 1.07756 3.44023 1.07756 4.4898V6.23907H18.9224V4.4898C18.9224 3.44023 17.9732 2.5656 16.7709 2.5656H15.1889ZM18.9224 7.23032H1.07756V17.0262C1.07756 18.0758 2.02675 19.0087 3.22907 19.0087H16.7709C17.9732 19.0087 18.9224 18.0758 18.9224 17.0262V7.23032Z"
+            fill="#323232" fill-opacity="0.8" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8.73441 8.74636H11.2656C11.582 8.74636 11.8351 8.97959 11.8351 9.27114V11.5452C11.8351 11.8367 11.582 12.07 11.2656 12.07H8.73441C8.41801 12.07 8.16489 11.8367 8.16489 11.5452V9.27114C8.16489 8.97959 8.41801 8.74636 8.73441 8.74636ZM14.1132 8.74636H16.5811C16.8975 8.74636 17.1506 8.97959 17.1506 9.27114V11.5452C17.1506 11.8367 16.8975 12.07 16.5811 12.07H14.1132C13.7968 12.07 13.5437 11.8367 13.5437 11.5452V9.27114C13.5437 8.97959 13.7968 8.74636 14.1132 8.74636ZM3.35563 13.5277H5.88682C6.20322 13.5277 6.45634 13.7609 6.45634 14.0525V16.3265C6.45634 16.6181 6.20322 16.8513 5.88682 16.8513H3.35563C3.03923 16.8513 2.78611 16.6181 2.78611 16.3265V14.0525C2.78611 13.7609 3.03923 13.5277 3.35563 13.5277ZM8.73441 13.5277H11.2656C11.582 13.5277 11.8351 13.7609 11.8351 14.0525V16.3265C11.8351 16.6181 11.582 16.8513 11.2656 16.8513H8.73441C8.41801 16.8513 8.16489 16.6181 8.16489 16.3265V14.0525C8.16489 13.7609 8.41801 13.5277 8.73441 13.5277ZM14.1132 13.5277H16.5811C16.8975 13.5277 17.1506 13.7609 17.1506 14.0525V16.3265C17.1506 16.6181 16.8975 16.8513 16.5811 16.8513H14.1132C13.7968 16.8513 13.5437 16.6181 13.5437 16.3265V14.0525C13.5437 13.7609 13.7968 13.5277 14.1132 13.5277Z"
+            fill="#323232" fill-opacity="0.8" />
+        </svg>
+        <input readonly type="text" id="birth_day" value="" placeholder="дд.мм.рррр">
+        <span class="error-mess">Вкажіть Дату</span>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label for="death_day">Дата смерті*</label>
+        <div class="form-group">
+          <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.22907 1.57434H4.81106V0.466472C4.81106 0.233236 5.0009 0 5.3173 0C5.6337 0 5.88682 0.233236 5.88682 0.466472V1.57434H14.1132V0.466472C14.1132 0.233236 14.3663 0 14.6827 0C14.9358 0 15.1889 0.233236 15.1889 0.466472V1.57434H16.7709C18.5428 1.57434 19.9982 2.91545 19.9982 4.4898V17.0262C19.9982 18.6589 18.5428 20 16.7709 20H3.22907C1.45724 20 0.0018034 18.6589 0.0018034 17.0262V4.4898C0.0018034 2.91545 1.45724 1.57434 3.22907 1.57434ZM15.1889 2.5656V3.73178C15.1889 4.02332 14.9358 4.25656 14.6827 4.25656C14.3663 4.25656 14.1132 4.02332 14.1132 3.73178V2.5656H5.88682V3.73178C5.88682 4.02332 5.6337 4.25656 5.3173 4.25656C5.0009 4.25656 4.81106 4.02332 4.81106 3.73178V2.5656H3.22907C2.02675 2.5656 1.07756 3.44023 1.07756 4.4898V6.23907H18.9224V4.4898C18.9224 3.44023 17.9732 2.5656 16.7709 2.5656H15.1889ZM18.9224 7.23032H1.07756V17.0262C1.07756 18.0758 2.02675 19.0087 3.22907 19.0087H16.7709C17.9732 19.0087 18.9224 18.0758 18.9224 17.0262V7.23032Z"
+              fill="#323232" fill-opacity="0.8" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.73441 8.74636H11.2656C11.582 8.74636 11.8351 8.97959 11.8351 9.27114V11.5452C11.8351 11.8367 11.582 12.07 11.2656 12.07H8.73441C8.41801 12.07 8.16489 11.8367 8.16489 11.5452V9.27114C8.16489 8.97959 8.41801 8.74636 8.73441 8.74636ZM14.1132 8.74636H16.5811C16.8975 8.74636 17.1506 8.97959 17.1506 9.27114V11.5452C17.1506 11.8367 16.8975 12.07 16.5811 12.07H14.1132C13.7968 12.07 13.5437 11.8367 13.5437 11.5452V9.27114C13.5437 8.97959 13.7968 8.74636 14.1132 8.74636ZM3.35563 13.5277H5.88682C6.20322 13.5277 6.45634 13.7609 6.45634 14.0525V16.3265C6.45634 16.6181 6.20322 16.8513 5.88682 16.8513H3.35563C3.03923 16.8513 2.78611 16.6181 2.78611 16.3265V14.0525C2.78611 13.7609 3.03923 13.5277 3.35563 13.5277ZM8.73441 13.5277H11.2656C11.582 13.5277 11.8351 13.7609 11.8351 14.0525V16.3265C11.8351 16.6181 11.582 16.8513 11.2656 16.8513H8.73441C8.41801 16.8513 8.16489 16.6181 8.16489 16.3265V14.0525C8.16489 13.7609 8.41801 13.5277 8.73441 13.5277ZM14.1132 13.5277H16.5811C16.8975 13.5277 17.1506 13.7609 17.1506 14.0525V16.3265C17.1506 16.6181 16.8975 16.8513 16.5811 16.8513H14.1132C13.7968 16.8513 13.5437 16.6181 13.5437 16.3265V14.0525C13.5437 13.7609 13.7968 13.5277 14.1132 13.5277Z"
+              fill="#323232" fill-opacity="0.8" />
+          </svg>
+          <input readonly type="text" id="death_day" value="" placeholder="дд.мм.рррр">
+          <span class="error-mess">Вкажіть Дату</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label>Країна народження*</label>
+        <div class="site-dropdown"> <!-- hiden elem (select)(!) -->
+          <input class="select-dropdown" hidden id="memorial_country">
+          <div class="site-dropdown-header">
+            <span class="select-sort">Виберіть зі списку</span>
+            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                fill="#323232"></path>
+            </svg>
+          </div>
+          <ul class="site-dropdown-select" id="country">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="form-group">
+        <label>Місто народження*</label>
+        <div class="site-dropdown">
+          <!-- hiden elem (select)(!) -->
+          <input class="select-dropdown" hidden id="memorial_city">
+          <div class="site-dropdown-header">
+            <span class="select-sort">Виберіть зі списку</span>
+            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                fill="#323232"></path>
+            </svg>
+          </div>
+          <ul class="site-dropdown-select" id="city">
+            <li class="site-dropdown-options dis">Виберіть спочатку країну</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label>Релігія</label>
+        <div class="site-dropdown">
+          <!-- hiden elem (select)(!) -->
+          <input class="select-dropdown" hidden name="selected_religion" id="selected_religion">
+          <div class="site-dropdown-header">
+            <span class="select-sort">Виберіть зі списку</span>
+            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                fill="#323232"></path>
+            </svg>
+          </div>
+          <ul class="site-dropdown-select">
+            <li class="site-dropdown-options" data-val="orthodox">Православ'я</li>
+            <li class="site-dropdown-options" data-val="catholic">Католицизм</li>
+            <li class="site-dropdown-options" data-val="islam">Іслам</li>
+            <li class="site-dropdown-options" data-val="judaism">Юдаїзм</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <h6>Шаблони</h6>
+    </div>
+    <div class="col-12">
+      <div class="templates-top-bg">
+        <label for="standart" class="custom-checkbox-wrap">
+          <input checked hidden type="radio" id="standart" name="templates">
+          <span class="custom-checkbox-box"></span>
+          <span>Стандартний</span>
+        </label>
+        <label for="standart">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/standart.jpg" alt="">
+          </div>
+        </label>
+      </div>
+      <div class="templates-top-bg">
+        <label for="war_woman" class="custom-checkbox-wrap">
+          <input hidden type="radio" id="war_woman" name="templates">
+          <span class="custom-checkbox-box"></span>
+          <span>Військовослужбовець (чоловік)</span>
+        </label>
+        <label for="war_woman">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/war-man.jpg" alt="">
+          </div>
+        </label>
+      </div>
+      <div class="templates-top-bg">
+        <label for="war_man" class="custom-checkbox-wrap">
+          <input hidden type="radio" id="war_man" name="templates">
+          <span class="custom-checkbox-box"></span>
+          <span>Військовослужбовець (жінка)</span>
+        </label>
+        <label for="war_man">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/war-woman.jpg" alt="">
+          </div>
+        </label>
+      </div>
+      <div class="templates-top-bg">
+        <label for="war_boy" class="custom-checkbox-wrap">
+          <input hidden type="radio" id="war_boy" name="templates">
+          <span class="custom-checkbox-box"></span>
+          <span>Дитина (хлопчик)</span>
+        </label>
+        <label for="war_boy">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/boy.jpg" alt="">
+          </div>
+        </label>
+      </div>
+      <div class="templates-top-bg">
+        <label for="war_girl" class="custom-checkbox-wrap">
+          <input hidden type="radio" id="war_girl" name="templates">
+          <span class="custom-checkbox-box"></span>
+          <span>Дитина (дівчинка)</span>
+        </label>
+        <label for="war_girl">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/girl.jpg" alt="">
+          </div>
+        </label>
+      </div>
+      <div class="templates-top-bg">
+        <!-- <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="load_memorial_img" id="load_memorial_img"> -->
+        <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="donl_templ" name="templates">
+        <label class="btn-downl-templ" for="donl_templ">
+          <span>Завантажити шаблон</span>
+          <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path class="down-arr" d="M10 1.0625V12.4346" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M18.9375 12.4375V18.125C18.9375 18.3405 18.8519 18.5472 18.6995 18.6995C18.5472 18.8519 18.3405 18.9375 18.125 18.9375H1.875C1.65951 18.9375 1.45285 18.8519 1.30048 18.6995C1.1481 18.5472 1.0625 18.3405 1.0625 18.125V12.4375"
+              stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </label>
+        <div class="img-wrap">
+          <img id="donl_templ_img" src="static/img/fake-img.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <h6>Епітафія</h6>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <label for="epitaph">
+          Тут Ви можете додати епітафію.
+        </label>
+        <textarea name="epitaph" id="epitaph" placeholder="Введіть текст" maxlength="1000"></textarea>
+        <span class="textarea-maxlength">0/1000</span>
+      </div>
+    </div>
+    <div class="col-12">
+      <p>Оберіть один з фонів для епітафії.</p>
+    </div>
+    <div class="col-12">
+      <div class="templates-top-bg epitaph-bg">
+        <label for="epitaph_blue_bg" class="custom-checkbox-wrap">
+          <input checked hidden type="radio" id="epitaph_blue_bg" name="epitaph_bg">
+          <span class="custom-checkbox-box"></span>
+          <span>Блакитний</span>
+        </label>
+        <label for="epitaph_blue_bg">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/epitaph/epitaph-blue.jpg" alt="">
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="templates-top-bg epitaph-bg">
+        <label for="epitaph_yellow_bg" class="custom-checkbox-wrap">
+          <input hidden type="radio" id="epitaph_yellow_bg" name="epitaph_bg">
+          <span class="custom-checkbox-box"></span>
+          <span>Жовтий</span>
+        </label>
+        <label for="epitaph_yellow_bg">
+          <div class="img-wrap">
+            <img src="static/img/cabinet/memorial/epitaph/epitaph-yellow.jpg" alt="">
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <h5>Біографія</h5>
+        <p>
+          Тут Ви можете написати інформацію про людину для якої створюєте Онлайн Меморіал. Якщо Вам складно написати
+          щось зараз (це можна буде зробити у будь-який зручний для Вас момент пізніше), то не заповнюйте це поле
+          (залишіть його порожнім).
+        </p>
+        <textarea name="biography" id="biography" maxlength="5000"></textarea>
+        <span class="textarea-maxlength">0/5000</span>
+      </div>
+    </div>
+    <div class="col-12">
+      <h5>Місце поховання</h5>
+      <p>Тут Ви можете додати повну інформацію (включно з геолокацією місця) де похована людина.</p>
+    </div>
+    <div class="col-xl-4">
+      <div class="form-group">
+        <label>Країна поховання</label>
+        <div class="site-dropdown">
+          <!-- hiden elem (select)(!) -->
+          <input class="select-dropdown" hidden id="burial_country">
+          <div class="site-dropdown-header">
+            <span class="select-sort">Виберіть зі списку</span>
+            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                fill="#323232"></path>
+            </svg>
+          </div>
+          <ul class="site-dropdown-select" id="burial_countries_list"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label>Місто поховання</label>
+        <div class="site-dropdown">
+          <!-- hiden elem (select)(!) -->
+          <input class="select-dropdown" hidden id="burial_city">
+          <div class="site-dropdown-header">
+            <span class="select-sort">Виберіть зі списку</span>
+            <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                fill="#323232"></path>
+            </svg>
+          </div>
+          <ul class="site-dropdown-select" id="burial_cities_list">
+            <li class="site-dropdown-options dis">Виберіть спочатку країну</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label for="cemetery_name">Цвинтар</label>
+        <input type="text" id="cemetery_name" placeholder="Введіть назву цвинтаря" maxlength="100">
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="form-group">
+        <label for="cemetery_area">Ділянка</label>
+        <input type="text" id="cemetery_area" placeholder="Введіть номер ділянки" maxlength="100">
+      </div>
+    </div>
+    <div class="col-xl-4 pl-xl-0">
+      <div class="form-group">
+        <label for="cemetery_geolocation">Геолокація</label>
+        <input type="text" id="cemetery_geolocation" placeholder="Введіть координати">
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <label for="monument_foto">Фото пам'ятника/ділянки</label>
+      </div>
+
+      <div class="select-img-wrap square-type">
+        <div class="select-img">
+          <img id="monument_foto_img" src="static/img/no-foto.svg" alt="Фото пам'ятника/ділянки">
+        </div>
+      
+        <input hidden type="file" accept="image/jpeg, image/jpg, image/png, image/webp" value="" data-old-value="static/img/no-foto.svg" name="monument_foto" id="monument_foto">
+        <label class="btn-load-select-img btn-edit" for="monument_foto">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="15" fill="currentColor" />
+            <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
+          </svg>
+        </label>
+      
+        <button type="button" class="btn-del-select-img btn-delete" id="del_monument_foto" data-reset-img="static/img/no-foto.svg">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z"
+              fill="currentColor" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      
+      </div>
+    </div>
+    <div class="col-12">
+      <h6>Приватність</h6>
+      <p>Якщо Ви оберете цю опцію, будь-які коментарі на цій сторінці будуть відключені.</p>
+      <label for="this_private_memorial" class="custom-checkbox-wrap">
+        <input hidden type="checkbox" id="this_private_memorial" name="this_private_memorial">
+        <span class="custom-checkbox"></span>
+        <span>Приватний Меморіал</span>
+      </label>
+    </div>
+    <div class="col-12 btn-wrap">
+      <button class="btn-yellow btn-edit-memorial" id="btn_edit_memorial" type="submit">
+        Зберегти
+      </button>
+      <button class="btn-reset" id="btn_reset_memorial" type="reset">
+        Скасувати
+      </button>
+    </div>
+    <div class="col-12">
+      <small>* відзначені поля, які є <span class="red-t">обов'язковими</span> для заповнення.</small>
+    </div>
+
+
+  </div><!-- /.row -->
+</form>

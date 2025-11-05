@@ -1,0 +1,50 @@
+.home-page-first
+  padding-left: 100px
+  display: flex
+  max-width: 1920px
+  margin: 0 auto
+  @media (max-width: 1600px)
+    padding-left: 0
+  @include media-breakpoint-down(sm)
+    flex-wrap: wrap
+  .container
+    max-width: 1720px
+  .text-wrap
+    padding: 250px 0
+    max-width: 700px
+    @media (max-width: 1600px)
+      padding: 150px 15px
+    @include media-breakpoint-down(lg)
+      max-width: 600px
+      padding: 100px 15px
+      flex: 50%
+    @include media-breakpoint-down(md)
+      padding: 60px 15px
+    @include media-breakpoint-down(sm)
+      max-width: 500px
+      padding: 30px 15px 0
+      margin: 0 auto
+      .p-mb-40
+        margin-bottom: 30px
+    @media (max-width: 650px)
+      flex: 100%
+      z-index: 0
+
+  .img-wrap
+    display: flex
+    flex: 50%
+    justify-content: flex-end
+    align-items: center
+    max-height: 900px
+    @include media-breakpoint-down(md)
+      max-height: 500px
+    @media (max-width: 650px)
+      flex: 100%
+      margin-top: -110px
+    @media (max-width: 360px)
+      margin-top: -80px
+    img
+      width: 100%
+      object-fit: contain
+      object-position: right center
+

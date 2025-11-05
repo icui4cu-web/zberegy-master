@@ -1,0 +1,42 @@
+.news-paginations
+  margin-bottom: 40px
+  .news-nav
+    display: flex
+    align-items: center
+    justify-content: center
+    .arr-wrap a
+      padding: 20px
+      color: #323232
+      @include media-breakpoint-down(sm)
+        padding: 10px
+      &:hover
+        color: #000000
+    &-list
+      display: flex
+      li
+        padding: 0
+      a
+        display: flex
+        width: 50px
+        height: 50px
+        justify-content: center
+        align-items: center
+        background-color: $clear
+        border: 1px solid #DEDEDE
+        border-radius: 50%
+        margin: 5px
+        color: rgba(50, 50, 50, 0.6)
+        @include media-breakpoint-down(sm)
+          width: 26px
+          height: 26px
+          font-size: 10px
+        &:hover
+          border-color: rgba(250, 208, 1, 0.5)
+          background-color: rgba(250, 208, 1, 0.5)
+        &:active,
+        &.current
+          color: #323232
+          border-color: $yellow
+          background-color: $yellow
+
+

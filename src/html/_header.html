@@ -1,0 +1,155 @@
+<header id="header" class="header">
+  <!-- <div class="header-wrap row justify-content-between"> -->
+  <div class="header-wrap row">
+    @@include('component/btns_links.html', {
+      "type": "btn",
+      "style": "menu-toggler",
+      "class": "d-xl-none collapsed",
+      "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#headerMenu\" aria-controls=\"headerMenu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" "
+    })
+    @@include('component/logo.html')
+    <div class="search-block">
+      <!-- <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage d-xl-none"> -->
+      <a href="user-cabinet-private.html" data-count="3" class="btn-user-mesage">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="25" fill="#F2F2F2"></circle>
+          <path d="M35.0547 15H14.9453C13.3213 15 12 16.3503 12 18.01V31.99C12 33.6497 13.3213 35 14.9453 35H35.0547C36.6787 35 38 33.6497 38 31.99V18.01C38 16.3503 36.6787 15 35.0547 15ZM37.1875 18.01V31.99C37.1875 32.459 37.0414 32.8934 36.7938 33.2493L27.7904 22.5794L36.6446 16.5591C36.9819 16.9448 37.1875 17.4532 37.1875 18.01ZM35.0547 15.8303C35.3645 15.8301 35.6706 15.8993 35.9515 16.0331L25 23.4794L14.0485 16.0331C14.3293 15.8993 14.6355 15.8301 14.9453 15.8303H35.0547ZM12.8125 31.99V18.01C12.8125 17.4532 13.0181 16.9448 13.3554 16.5592L22.2096 22.5794L13.2062 33.2493C12.9586 32.8934 12.8125 32.459 12.8125 31.99ZM14.9453 34.1697C14.5372 34.17 14.1376 34.0499 13.7946 33.8238L22.9045 23.0519L24.775 24.3237C24.8417 24.369 24.9199 24.3932 25 24.3932C25.0801 24.3932 25.1583 24.369 25.225 24.3237L27.0955 23.0519L36.2054 33.8238C35.8624 34.0499 35.4628 34.17 35.0547 34.1697H14.9453Z" fill="#323232"></path>
+        </svg>
+      </a>
+      <div class="search-wrap">
+        <input id="search_input" type="search" name="search" autocomplete="off" value="" placeholder="Пошук меморіалів" class="search-input" list="character">
+        <datalist id="character">
+          <option value="Соловейко Іван Юрійович"></option>
+          <option value="Іваннов Іван Юрійович"></option>
+          <option value="Серов Петро Iванович"></option>
+          <option value="Смирнов Петро Петрович"></option>
+          <option value="Смирнов Петро Iванович"></option>
+          <option value="Про проект"></option>
+          <option value="Умови використання сайта"></option>
+        </datalist>
+        @@include('component/btns_links.html', {"type": "btn","style": "search-reset", "class": "hide" })
+        @@include('component/btns_links.html', {
+          "type": "btn",
+          "style": "search",
+          "attr": " id=\"search_btn\" type=\"button\" aria-label=\"Кнопка активувати поле пошуку\" data-btn-name=\"Знайти\" "
+        })
+        @@include('component/btns_links.html', {"type": "btn","style": "search-toggler close", "class": "d-xl-none"})
+      </div>
+      @@include('component/btns_links.html', {"type": "btn", "style": "search-toggler", "class": "d-xl-none"})
+    </div>
+
+    
+    <nav class="header-nav navbar-expand-xl">
+      <div class="navbar-collapse collapse btn-wrap" id="headerMenu">
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "green",
+          "text": "Створити меморіал",
+          "attr": "href=\"login.html\" ",
+          "class": "d-none d-xl-block"
+        })
+        <!-- @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "blue",
+          "text": "Підтримати проект",
+          "attr": "href=\"donate.html\" ",
+          "class": "d-none d-xl-block"
+        }) -->
+        <div class="btn-user-login active">
+          <a href="login.html">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="25" fill="currentColor"></circle>
+              <path d="M25 25.0258C19.7295 25.0258 15.4414 29.3139 15.4414 34.5844C15.4414 34.8138 15.6276 35 15.857 35C16.0864 35 16.2726 34.8138 16.2726 34.5844C16.2726 29.7718 20.1875 25.8569 25.0001 25.8569C29.8126 25.8569 33.7275 29.7718 33.7275 34.5844C33.7275 34.8138 33.9137 35 34.1431 35C34.3725 35 34.5587 34.8138 34.5587 34.5844C34.5587 29.313 30.2706 25.0258 25 25.0258Z" fill="#323232"></path>
+              <path d="M25 15C22.4798 15 20.4285 17.0505 20.4285 19.5715C20.4285 22.0925 22.4798 24.143 25 24.143C27.5201 24.143 29.5715 22.0925 29.5715 19.5715C29.5715 17.0505 27.5201 15 25 15ZM25 23.3118C22.9378 23.3118 21.2596 21.6337 21.2596 19.5715C21.2596 17.5093 22.9378 15.8312 25 15.8312C27.0621 15.8312 28.7403 17.5093 28.7403 19.5715C28.7403 21.6337 27.0621 23.3118 25 23.3118Z" fill="#323232"></path>
+            </svg>
+          </a>
+          <a class="link" href="login.html">
+            Вхід
+          </a>
+          <span class="delimer">/</span>
+          <a class="link" href="signup.html">
+            Реєстрація
+          </a>
+        </div>
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "user-cabinet",
+          "attr": " href=\"user-cabinet-data.html\" ",
+        })
+        @@include('component/btns_links.html', {
+          "type": "link",
+          "style": "user-mesage",
+          "attr": "href=\"user-cabinet-private.html\" data-count=\"3\" ",
+
+        })
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Про Нас",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#aboutUs\" aria-expanded=\"true\" aria-controls=\"aboutUs\""
+          })
+          <div class="collapse show" id="aboutUs">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="about-us.html">Про проект</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="news.html">Новини</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="contact-us.html">Контакти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Послуги",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#services\" aria-expanded=\"false\" aria-controls=\"services\""
+          })
+          <div class="collapse show" id="services">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="capabilities.html">Можливості сервісу</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="example-memorial.html">Приклад Онлайн Меморіалу</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-collapse d-xl-none d-lg-block">
+          <!-- "class": "collapsed", -->
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Важлива інформація",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#importantInfo\" aria-expanded=\"false\" aria-controls=\"importantInfo\""
+          })
+          <div class="collapse show" id="importantInfo">
+            <ul class="header-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="capabilities.html">Контакти</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="privacy-policy.html">Політика безпеки</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>

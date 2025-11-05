@@ -1,0 +1,36 @@
+.home-donate
+  position: relative
+  background-repeat: no-repeat
+  background-size: auto 100%
+  background-position: left center
+  max-width: 1920px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 100px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 60px
+  .bg
+    position: absolute
+    left: -300px
+    top: 50%
+    transform: translateY(-50%)
+    height: 150%
+    // width: 200%
+  .content-wrap
+    position: relative
+  .text-wrap,
+  .img-wrap
+    @include media-breakpoint-down(sm)
+      max-width: 500px
+      margin: 0 auto
+      justify-content: center
+      text-align: center
+  .text-wrap
+    display: flex
+    align-content: center
+    flex-wrap: wrap
+    @include media-breakpoint-down(sm)
+      margin-bottom: 30px
+    .btn-donate
+      @media (max-width: 400px)
+        width: 100%

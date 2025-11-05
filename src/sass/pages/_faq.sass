@@ -1,0 +1,56 @@
+.faq
+  .accordion-title
+    background-color: #F2F2F2
+    border-radius: $border-radius
+    padding: 23px 30px
+    margin: 0
+    margin-top: 60px
+    &:first-child
+      margin-top: 0
+    @include media-breakpoint-down(md)
+      padding: 20px
+      margin-top: 40px
+    @include media-breakpoint-down(sm)
+      padding: 10px 0
+      margin-top: 20px
+      background-color: transparent
+      &:first-child
+        margin-top: 0
+  .site-accordion
+    margin-bottom: 60px
+    @include media-breakpoint-down(md)
+      margin-bottom: 40px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 30px
+    // .card-header
+    .card
+      border-bottom: 1px solid #DEDEDE
+    .btn-accordion
+      font-size: 30px
+      line-height: 40px
+      font-weight: 700
+      padding: 30px 30px 16px 30px
+      transition: .3s
+      &.collapsed
+        padding: 30px
+        @include media-breakpoint-down(md)
+          padding: 20px
+        @include media-breakpoint-down(sm)
+          padding: 10px 0
+          border-color: transparent
+      @include media-breakpoint-down(md)
+        padding: 20px 20px 16px 20px
+        font-size: 24px
+        line-height: 30px
+      @include media-breakpoint-down(sm)
+        font-size: 16px
+        line-height: 22px
+        font-weight: 600
+        padding: 10px 0
+        border-bottom: 1px solid #DEDEDE
+    .card-body
+      padding: 0 30px
+      @include media-breakpoint-down(md)
+        padding: 0 20px
+      @include media-breakpoint-down(sm)
+        padding: 20px 0 0

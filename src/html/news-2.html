@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('_head.html')
+
+<body>
+  <!-- <main id="page" class="IS_LOG_IN"> -->
+  <main id="page">
+    @@include('_header.html')
+    <div id="content">
+      @@include('component/breadcrumbs.html',{
+      "item_1": "item",
+      "text_1": "Новини",
+      "href_1": "news.html",
+
+      "item": "curent",
+      "text": "Як вшанувати пам'ять рідної людини",
+      })
+      
+      @@include('sections/_news-2.html')
+      <!-- @@include('component/_news_paginations.html') -->
+    </div>
+    @@include('_footer.html')
+  </main>
+  <!-- scripst & styles -->
+  @@include('_footer_connections.html')
+</body>
+
+</html>

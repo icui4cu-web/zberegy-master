@@ -1,0 +1,121 @@
+<section class="search-results memorials-preview-wrap">
+  <div class="container-xl">
+    <div class="row search-head">
+      <div class="col-lg-8 col-md-8">
+        <h1>
+          <span id="search_query" class="d-inline-block pb-3 h3"></span><br>
+          Меморіалів:&nbsp;<span class="search-count">457</span>
+        </h1>
+      </div>
+      <div class="col-lg-4 col-md-4 d-flex">
+        <div class="search-drop-wrap">
+          <span class="label-search-sort">Сортувати за:</span>
+          <div class="site-dropdown">
+            <!-- hiden elem (select)(!) -->
+            <select class="select-dropdown d-none">
+              <option value="Прізвище">Прізвищем</option>
+            </select>
+            
+            <div class="site-dropdown-header">
+              <span class="select-sort">Прізвищем</span>
+              <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"/>
+              </svg>
+            </div>
+            <ul class="site-dropdown-select">
+              <li class="site-dropdown-options curent" data-sort="surname">Прізвищем</li>
+              <li class="site-dropdown-options" data-sort="name">Ім'ям</li>
+              <li class="site-dropdown-options" data-sort="patronymic">По-батькові</li>
+              <li class="site-dropdown-options" data-sort="date">Датою</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row search-sort-container" data-sort-type="surname">
+      <div class="col-12">
+        <a class="link-to-memorial" href="real-memorial.html">
+          <div class="preview-item">
+            <div class="img-wrap">
+              <img width="312" height="312" src="static/img/memorials/person-2/foto-2.jpg" alt="foto">
+            </div>
+            <div class="text-wrap">
+              <h2 class="title">Соловейко Іван Юрійович</h2>
+              <p class="loc">Львів, Україна</p>
+              <p class="date">08.04.1935 — 15.06.2010</p>
+              <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+            </div>
+            <div class="btn-wrap">
+              <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+              <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+              @@include('../component/btns_links.html', {
+                "type": "btn", 
+                "style": "add-to-favorite",
+                "attr": " data-favorite=\"add-to-favorite\" data-title=\"Додати в Обрані Меморіали\" "
+              })
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12">
+        <a class="link-to-memorial" href="real-memorial.html">
+          <div class="preview-item">
+            <div class="img-wrap">
+              <img width="312" height="312" src="static/img/memorials/person-1/foto-1.jpg" alt="foto">
+            </div>
+            <div class="text-wrap">
+              <h2 class="title">Соловейко Іван Георгійович</h2>
+              <p class="loc">Львів, Україна</p>
+              <p class="date">08.04.1935 — 15.06.2010</p>
+              <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+            </div>
+            <div class="btn-wrap">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "lock",
+                "attr": " data-title=\"Обмежений доступ\" "
+              })
+              <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+              <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "add-to-favorite",
+                "attr": " data-favorite=\"remove-from-favorite\" data-title=\"Видалити з Обраного\" "
+              })
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12">
+        <a class="link-to-memorial" href="real-memorial.html">
+          <div class="preview-item">
+            <div class="img-wrap">
+              <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            </div>
+            <div class="text-wrap">
+              <h2 class="title">Соловейко Іван Георгійович</h2>
+              <p class="loc">Львів, Україна</p>
+              <p class="date">08.04.1935 — 15.06.2010</p>
+              <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+            </div>
+            <div class="btn-wrap">
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "lock",
+                "attr": " data-title=\"Обмежений доступ\" "
+              })
+              <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+              <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+              @@include('../component/btns_links.html', {
+                "type": "btn",
+                "style": "add-to-favorite",
+                "attr": " data-favorite=\"remove-from-favorite\" data-title=\"Видалити з Обраного\" "
+              })
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>

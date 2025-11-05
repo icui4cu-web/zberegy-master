@@ -1,0 +1,172 @@
+.home-how-create
+  text-align: center
+  margin-bottom: 160px
+  @include media-breakpoint-down(md)
+    margin-bottom: 60px
+  .title
+    margin-bottom: 70px
+    @include media-breakpoint-down(md)
+      margin-bottom: 50px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 10px
+  .steps-wrap
+    // display: flex
+    margin-bottom: 60px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 30px
+
+    // .draggable
+    // .slick-track
+      min-width: 100%
+  .step
+    // flex-basis: 25%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:nth-child(2n+2)
+      @include media-breakpoint-down(sm)
+        flex-direction: column-reverse
+        .step-header
+          &::after
+            top: -20.5px
+      
+    .step-header
+      width: 100%
+    .step-text
+      max-width: 325px
+    &-header,
+    &-footer
+      display: flex
+      align-content: center
+      flex-wrap: wrap
+      justify-content: center
+      min-height: 170px
+      @include media-breakpoint-down(sm)
+        min-height: auto
+    &-header
+      position: relative
+      border-bottom: 1px solid #000
+      min-height: 205px
+      margin-bottom: 30px
+      @include media-breakpoint-down(md)
+        border: none
+      @include media-breakpoint-down(sm)
+        min-height: auto
+    &:first-child
+      .step-header
+        &::before
+          content: ''
+          position: absolute
+          bottom: -4.5px
+          left: 0
+          width: 9px
+          height: 9px
+          border-radius: 50%
+          background-color: $clear
+          border: 1px solid #323232
+          @include media-breakpoint-down(md)
+            display: none
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4)
+      .step-header
+        &::after
+          content: '1'
+          display: flex
+          justify-content: center
+          align-items: center
+          position: absolute
+          border-radius: 50%
+          background-color: #323232
+          border: 10px solid $clear
+          width: 41px
+          height: 41px
+          color: $clear
+          bottom: -20.5px
+          left: calc( 50% - 20.5px )
+    &:nth-child(2)
+      .step-header
+        @include media-breakpoint-down(sm)
+          padding-top: 30px
+          margin-bottom: 0
+        &::after
+          content: '2'
+    &:nth-child(3)
+      .step-header
+        &::after
+          content: '3'
+    &:nth-child(4)
+      .step-header
+        @include media-breakpoint-down(sm)
+          padding-top: 30px
+          margin-bottom: 0
+        &::after
+          content: '4'
+    &:last-child
+      .step-header
+        &::before
+          content: ''
+          position: absolute
+          bottom: -4px
+          right: 2px
+          width: 7px
+          height: 7px
+          transform: rotate(45deg)
+          border-right: 1px solid #323232
+          border-top: 1px solid #323232
+          @include media-breakpoint-down(md)
+            display: none
+    &-img,
+    &-text
+      text-align: center
+    &-img
+      img
+        // width: 120px
+        // width: 100%
+        // max-width: 200px
+        max-height: 200px
+  .btns-wrap
+    display: flex
+    justify-content: center
+    @include media-breakpoint-down(sm)
+      flex-wrap: wrap
+      [class^=btn]
+        width: 100%
+        max-width: 350px
+    a, button
+      margin: 0 30px 20px 0
+      &:last-of-type
+        margin-right: 0
+      @include media-breakpoint-down(sm)
+        margin-right: 0
+.slick-dots
+  display: none
+  @include media-breakpoint-down(md)
+    display: flex
+    justify-content: center
+    max-width: 100%
+  li
+    padding: 0
+    border: 1px solid transparent
+    padding: 5px
+    margin: 15px
+    border-radius: 50%
+    line-height: 0
+    font-size: 0
+    transition: .4s
+    min-width: 18px
+    max-width: 18px
+    &.slick-active,
+    &.slick-current,
+    &.slick-center
+      border-color: #cfcfcf
+      button
+        background-color: #FAD101
+  button
+    padding: 0
+    font-size: 0
+    line-height: 0
+    padding: 3px
+    border-radius: 50%
+    background-color: #E9E9E9

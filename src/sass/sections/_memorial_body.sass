@@ -1,0 +1,63 @@
+.memorial-body
+  margin-bottom: 100px
+  @include media-breakpoint-down(sm)
+    max-width: 500px
+    margin: 0 auto
+  .nav-tab
+    &-wrap
+      display: flex
+      border-bottom: 1px solid #DEDEDE
+      margin-bottom: 30px
+    &-item
+      padding: 0
+      margin-right: 70px
+      @include media-breakpoint-down(sm)
+        margin-right: 0
+        flex: auto
+    &-link
+      position: relative
+      display: block
+      padding: 15px
+      font-size: 18px
+      line-height: 18px
+      font-weight: 600
+      color: rgba(50, 50, 50, 0.6)
+      text-align: center
+      @include media-breakpoint-down(sm)
+        font-size: 12px
+        line-height: 12px
+        padding: 6px 15px
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        height: 2px
+        bottom: -1px
+        right: 0
+        width: 0
+        border-radius: 50px
+        background-color: #3E9AF6
+        transition: .5s
+      &.active
+        color: #323232
+        &::before
+          width: 100%
+  .tab-content
+    display: flex
+    overflow: hidden
+    flex-wrap: nowrap
+    border-radius: 10px
+    box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1)
+    padding: 30px
+    @include media-breakpoint-down(sm)
+      padding: 15px
+      margin-bottom: 30px
+    .tab-pane
+      display: none
+      transition: opacity .5s
+      // transform: translateX(100%)
+      // &.show+.tab-pane
+      //   display: none !important
+      &.active
+        display: block
+        animation: scale .3s forwards

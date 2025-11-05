@@ -1,0 +1,28 @@
+<!-- <section class="home-about-project" style="background-image: url(static/img/home/home-about-project-bg.jpg);"> -->
+<section class="home-about-project">
+  <img class="bg" src="static/img/home/home-about-project-bg.jpg" alt="">
+  <div class="container-xl content-wrap">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="video-wrap">
+          <button class="play-video">
+            <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="pulse-1" cx="90" cy="90" r="90" fill="#FAD101" fill-opacity="0.2"/>
+              <circle class="pulse-2" cx="90" cy="90" r="75" fill="#FAD101" fill-opacity="0.4"/>
+              <circle cx="90" cy="90" r="50" fill="#FAD101"/>
+              <path d="M114.54 90.5788C114.54 90.8591 114.467 91.1346 114.329 91.3781C114.191 91.6216 113.992 91.8247 113.752 91.9674L78.4232 112.933C78.1793 113.078 77.9016 113.155 77.6183 113.158C77.335 113.16 77.0561 113.087 76.81 112.946C76.5639 112.805 76.3594 112.601 76.2171 112.355C76.0748 112.109 75.9999 111.829 76 111.544V69.6131C75.9999 69.3286 76.0748 69.0491 76.2171 68.803C76.3594 68.5569 76.5639 68.353 76.81 68.212C77.0561 68.071 77.335 67.9978 77.6183 68C77.9016 68.0023 78.1793 68.0797 78.4232 68.2245L113.752 89.1902C113.992 89.3329 114.191 89.536 114.329 89.7795C114.467 90.023 114.54 90.2985 114.54 90.5788Z" fill="white"/>
+            </svg>
+          </button>
+          <div class="overlay"></div>
+          <!-- <iframe id="video" width="636" height="440" data-video-src="https://www.youtube.com/embed/D7SlK16o82o" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe id="video" width="636" height="440" data-video-src="https://www.youtube.com/embed/D7SlK16o82o"></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 text-wrap">
+        <h2>Що таке Онлайн Меморіал?</h2>
+        <p>Онлайн Меморіал це не просто сторінка сайту з інформацією про людину, якої вже нема в цьому світі. Це віртуальний пам'ятник або альбом спогадів, який завжди буде поруч. Родичі, друзі, колеги по роботі можуть залишати на сторінці Меморіалу слова підтримки, ділитися спогадами про людину, додавати фотографії,  до того ж робити це з будь якого куточку світу у будь який час. Це дозволить зберегти пам'ять та передати її нащадкам. А, як відомо, людина жива, доки жива пам’ять про неї… </p>
+        @@include('../component/btns_links.html', {"type": "link", "style": "circle", "text": "Детальніше","attr": " href=\"faq.html\""})
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,151 @@
+<form class="site-form memorable-events-form" id="memorable_events_form">
+  <h6>Додайте пам’ятні події</h6>
+  <p>Ви можете вказати найважливіші та пам'ятні дати з життя людини. Додати до них опис та фото. Інформація відображатиметься у вигляді хронологічної шкали.</p>
+  
+  <div class="form-group">
+    <label>Дата народження</label>
+    <input readonly type="text" name="event_birth_day" id="event_birth_day" value="00.00.0000" placeholder="дд.мм.рррр">
+  </div>
+
+  <div id="events_wrap"></div>
+  
+  <div hidden id="event_template" class="memorable-event-preview-block with-separator form-group">
+    <div class="event-title-group">
+      <label hidden data-lab-hide>Назва події*</label>
+      <textarea data-readonly readonly="true" class="event-title" value="" maxlength="1000"></textarea>
+      <span class="textarea-maxlength">1/1000</span>
+      <span class="error-mess">Додайте інформацію</span>
+    </div>
+    <!-- <label hidden data-lab-hide>Дата*</label> -->
+    <input data-readonly readonly class="event-date" type="text" value="">
+    <div style="position: relative;">
+      <label hidden data-lab-hide>Опис події</label>
+      <textarea data-readonly readonly="true" class="event-descr " value="" maxlength="1000"></textarea>
+      <span class="textarea-maxlength">1/1000</span>
+      <span class="error-mess">Додайте інформацію</span>
+    </div>
+    
+    <div class="memorable-event-img form-group">
+      
+      <label hidden data-event-block="event_template" class="select-new-img btn-downl-event-img">
+        <input hidden data-event-block="event_template" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" name="templates" autocomplete="off">
+        <span>Змiнити фото</span>
+        <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path class="down-arr" d="M10 1.0625V12.4346" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M18.9375 12.4375V18.125C18.9375 18.3405 18.8519 18.5472 18.6995 18.6995C18.5472 18.8519 18.3405 18.9375 18.125 18.9375H1.875C1.65951 18.9375 1.45285 18.8519 1.30048 18.6995C1.1481 18.5472 1.0625 18.3405 1.0625 18.125V12.4375" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </label>
+      <div class="memorable-event-img-wrap">
+        <button hidden data-event-block="event_template" type="button" class="btn-remove-event-img btn-delete">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z" fill="currentColor"></path>
+          </svg>
+        </button>
+        <div class="img-wrap">
+          <img class="memorable-event-img" data-event-block="event_template" src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <button hidden type="button" class="btn-add-foto btn-save-edits" data-event-block="event_template">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path  d="M13.5929 2.37009C13.9441 1.87616 13.8639 1.21629 13.4138 0.896244C12.9637 0.576194 12.3141 0.717156 11.9629 1.21109L4.33158 11.9433C3.98035 12.4372 4.06051 13.0971 4.5106 13.4171C4.9607 13.7372 5.6103 13.5962 5.96152 13.1023L13.5929 2.37009Z" fill="#3E9AF6" />
+          <path d="M4.55392 13.8993C4.75558 14.0981 5.23338 13.9404 5.62109 13.5471C6.00881 13.1538 6.15964 12.6738 5.95797 12.475L1.57617 8.15547C1.37451 7.95667 0.896718 8.11436 0.508999 8.50767C0.121281 8.90098 -0.029544 9.38098 0.172122 9.57978L4.55392 13.8993Z" fill="#3E9AF6" />
+        </g>
+      </svg>
+      Зберегти
+    </button>
+
+
+    <div class="btns-wrap">
+      <button type="button" data-event-block="event_template" class="btn-edit-event btn-edit">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="15" r="15" fill="currentColor" />
+          <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z" />
+        </svg>
+      </button>
+      <button data-event-block="event_template" type="button" class="btn-remove-event btn-delete">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z" fill="currentColor"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z" fill="currentColor"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- ./ template -->
+
+  <div class="memorable-event-block">
+
+    <label for="memorable_event_name">Назва події*</label>
+    <div class="form-group">
+      <textarea  name="memorable_event_name" id="memorable_event_name" placeholder="Напишіть, яка подія відбулась у цей день" maxlength="1000"></textarea>
+      <span class="textarea-maxlength">0/1000</span>
+      <span class="error-mess">Додайте інформацію</span>
+    </div>
+
+    <label for="memorable_event_decr">Опис події</label>
+    <div class="form-group">
+      <textarea  name="memorable_event_decr" id="memorable_event_decr" placeholder="Додайте опис" maxlength="1000"></textarea>
+      <span class="textarea-maxlength">0/1000</span>
+      <span class="error-mess">Додайте інформацію</span>
+    </div>
+
+    <label for="memorable_event_date_day">Дата*</label>
+    <div class="form-group">
+      <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.22907 1.57434H4.81106V0.466472C4.81106 0.233236 5.0009 0 5.3173 0C5.6337 0 5.88682 0.233236 5.88682 0.466472V1.57434H14.1132V0.466472C14.1132 0.233236 14.3663 0 14.6827 0C14.9358 0 15.1889 0.233236 15.1889 0.466472V1.57434H16.7709C18.5428 1.57434 19.9982 2.91545 19.9982 4.4898V17.0262C19.9982 18.6589 18.5428 20 16.7709 20H3.22907C1.45724 20 0.0018034 18.6589 0.0018034 17.0262V4.4898C0.0018034 2.91545 1.45724 1.57434 3.22907 1.57434ZM15.1889 2.5656V3.73178C15.1889 4.02332 14.9358 4.25656 14.6827 4.25656C14.3663 4.25656 14.1132 4.02332 14.1132 3.73178V2.5656H5.88682V3.73178C5.88682 4.02332 5.6337 4.25656 5.3173 4.25656C5.0009 4.25656 4.81106 4.02332 4.81106 3.73178V2.5656H3.22907C2.02675 2.5656 1.07756 3.44023 1.07756 4.4898V6.23907H18.9224V4.4898C18.9224 3.44023 17.9732 2.5656 16.7709 2.5656H15.1889ZM18.9224 7.23032H1.07756V17.0262C1.07756 18.0758 2.02675 19.0087 3.22907 19.0087H16.7709C17.9732 19.0087 18.9224 18.0758 18.9224 17.0262V7.23032Z" fill="#323232" fill-opacity="0.8" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.73441 8.74636H11.2656C11.582 8.74636 11.8351 8.97959 11.8351 9.27114V11.5452C11.8351 11.8367 11.582 12.07 11.2656 12.07H8.73441C8.41801 12.07 8.16489 11.8367 8.16489 11.5452V9.27114C8.16489 8.97959 8.41801 8.74636 8.73441 8.74636ZM14.1132 8.74636H16.5811C16.8975 8.74636 17.1506 8.97959 17.1506 9.27114V11.5452C17.1506 11.8367 16.8975 12.07 16.5811 12.07H14.1132C13.7968 12.07 13.5437 11.8367 13.5437 11.5452V9.27114C13.5437 8.97959 13.7968 8.74636 14.1132 8.74636ZM3.35563 13.5277H5.88682C6.20322 13.5277 6.45634 13.7609 6.45634 14.0525V16.3265C6.45634 16.6181 6.20322 16.8513 5.88682 16.8513H3.35563C3.03923 16.8513 2.78611 16.6181 2.78611 16.3265V14.0525C2.78611 13.7609 3.03923 13.5277 3.35563 13.5277ZM8.73441 13.5277H11.2656C11.582 13.5277 11.8351 13.7609 11.8351 14.0525V16.3265C11.8351 16.6181 11.582 16.8513 11.2656 16.8513H8.73441C8.41801 16.8513 8.16489 16.6181 8.16489 16.3265V14.0525C8.16489 13.7609 8.41801 13.5277 8.73441 13.5277ZM14.1132 13.5277H16.5811C16.8975 13.5277 17.1506 13.7609 17.1506 14.0525V16.3265C17.1506 16.6181 16.8975 16.8513 16.5811 16.8513H14.1132C13.7968 16.8513 13.5437 16.6181 13.5437 16.3265V14.0525C13.5437 13.7609 13.7968 13.5277 14.1132 13.5277Z" fill="#323232" fill-opacity="0.8" />
+      </svg>
+      <input readonly type="text" id="memorable_event_date_day" value="" placeholder="дд.мм.рррр">
+      <span class="error-mess">Оберіть дату</span>
+    </div>
+
+    <div class="memorable-event-img form-group">
+      <!-- <input hidden="" id="gallery_img" type="file" accept="image/jpeg, image/jpg, image/png, image/webp"  autocomplete="off"> -->
+      <!-- <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="templates" autocomplete="off"> -->
+      <input hidden="" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="memorable_crreate_event_img" name="uploadfile[]" multiple="" autocomplete="off">
+
+      <label class="btn-downl-event-img" for="memorable_crreate_event_img">
+        <span>Завантажте фото</span>
+        <svg class="icon-download" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="down-arr" d="M5.73438 8.17383L10 12.4383L14.2656 8.17383" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path class="down-arr" d="M10 1.0625V12.4346" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M18.9375 12.4375V18.125C18.9375 18.3405 18.8519 18.5472 18.6995 18.6995C18.5472 18.8519 18.3405 18.9375 18.125 18.9375H1.875C1.65951 18.9375 1.45285 18.8519 1.30048 18.6995C1.1481 18.5472 1.0625 18.3405 1.0625 18.125V12.4375" stroke="#5B5B5B" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </label>
+
+      <div class="img-wrap memorable-event-img-preview-wrap">
+        <button hidden type="button" class="btn-remove-event-img btn-delete" id="btn_del_memorable_crreate_event_img_preview">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 7.5C17.721 7.5 17.933 7.5878 18.0893 7.74408C18.2456 7.90036 18.3334 8.11232 18.3334 8.33333H20C20.221 8.33333 20.433 8.42113 20.5893 8.57741C20.7456 8.73369 20.8334 8.94565 20.8334 9.16667C20.8334 9.38768 20.7456 9.59964 20.5893 9.75592C20.433 9.9122 20.221 10 20 10H10C9.77901 10 9.56705 9.9122 9.41076 9.75592C9.25448 9.59964 9.16669 9.38768 9.16669 9.16667C9.16669 8.94565 9.25448 8.73369 9.41076 8.57741C9.56705 8.42113 9.77901 8.33333 10 8.33333H11.6667C11.6667 8.11232 11.7545 7.90036 11.9108 7.74408C12.067 7.5878 12.279 7.5 12.5 7.5H17.5Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.833H20V20.833C20 21.275 19.8244 21.699 19.5118 22.0115C19.1993 22.3241 18.7754 22.4997 18.3333 22.4997H11.6667C11.2246 22.4997 10.8007 22.3241 10.4882 22.0115C10.1756 21.699 10 21.275 10 20.833V10.833ZM12.9167 12.4997C12.8062 12.4997 12.7002 12.5436 12.622 12.6217C12.5439 12.6999 12.5 12.8058 12.5 12.9163V20.4163C12.5 20.5268 12.5439 20.6328 12.622 20.711C12.7002 20.7891 12.8062 20.833 12.9167 20.833C13.0272 20.833 13.1332 20.7891 13.2113 20.711C13.2894 20.6328 13.3333 20.5268 13.3333 20.4163V12.9163C13.3333 12.8058 13.2894 12.6999 13.2113 12.6217C13.1332 12.5436 13.0272 12.4997 12.9167 12.4997ZM17.0833 12.4997C16.9728 12.4997 16.8668 12.5436 16.7887 12.6217C16.7106 12.6999 16.6667 12.8058 16.6667 12.9163V20.4163C16.6667 20.5268 16.7106 20.6328 16.7887 20.711C16.8668 20.7891 16.9728 20.833 17.0833 20.833C17.1938 20.833 17.2998 20.7891 17.378 20.711C17.4561 20.6328 17.5 20.5268 17.5 20.4163V12.9163C17.5 12.8058 17.4561 12.6999 17.378 12.6217C17.2998 12.5436 17.1938 12.4997 17.0833 12.4997Z" fill="currentColor"></path>
+          </svg>
+        </button>
+        <img class="memorable-event-img-preview" id="memorable_crreate_event_img_preview" src="static/img/fake-img.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <button type="button" class="btn-add-foto" id="btn_memorable_events">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6"></rect>
+      <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6"></rect>
+    </svg>
+    Додати подію
+  </button>
+
+  <div class="form-group with-separator">
+    <label for="memorable_events_death_day">Дата смерті*</label>
+    <input readonly type="text" name="event_death_day" id="event_death_day" value="00.00.0000" placeholder="дд.мм.рррр">
+  </div>
+  
+  <div class="btn-wrap">
+    <button class="btn-yellow" id="btn_save_memorable_events">Зберегти</button>
+    <button class="btn-reset" id="btn_reset_memorable_events" type="button"> Скасувати </button>
+  </div>
+  <small>* відзначені поля, які є <span class="red-t">обов'язковими</span> для заповнення.</small>
+
+</form>

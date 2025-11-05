@@ -1,0 +1,132 @@
+<footer id="footer" class="footer" style="background-image: url(static/img/footer/footer-bg.png);">
+  <div class="container-xl container-fluid">
+    <div class="row">
+
+      <div class="col-xl-3">
+        @@include('./component/logo.html')
+        <p class="text-under-logo">Шляхом додавання основної або детальної інформації. Введіть кілька деталей, запросіть гостей і додайте пару спогадів. Це все, що вам потрібно зробити.</p>
+      </div>
+
+      <div class="col-xl-2 col-md-4 offset-xl-1">
+        <div class="nav-collapse">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Про Нас",
+            "class": "disabled",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#footerAboutUs\" aria-expanded=\"false\" aria-controls=\"footerAboutUs\""
+          })
+          <div class="collapse show" id="footerAboutUs">
+            <ul class="footer-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="about-us.html">Про проект</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="news.html">Новини</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="contact-us.html">Контакти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-4">
+        <div class="nav-collapse">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Послуги",
+            "class": "disabled",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#footerServices\" aria-expanded=\"false\" aria-controls=\"footerServices\""
+          })
+          <div class="collapse show" id="footerServices">
+            <ul class="footer-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="capabilities.html">Можливості сервісу</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="example-memorial.html">Приклад Онлайн Меморіалу</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="terms-of-use.html">Умови використання сайта</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-4">
+        <div class="nav-collapse">
+          @@include('component/btns_links.html', {
+            "type": "btn",
+            "style": "drop",
+            "text": "Важлива інформація",
+            "class": "disabled",
+            "attr": "type=\"button\" data-toggle=\"collapse\" data-target=\"#footerImportantInfo\" aria-expanded=\"false\" aria-controls=\"footerImportantInfo\""
+          })
+          <div class="collapse show" id="footerImportantInfo">
+            <ul class="footer-nav-menu list-yellow-mark has-links">
+              <li class="menu-item">
+                <a class="menu-item-link" href="donate.html">Підтримати проект</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="faq.html">Допомога</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-item-link" href="privacy-policy.html">Політика безпеки</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="footer-links">
+          <div class="socl-links-wrap">
+            <h6 class="title">Ми в соціальних мережах:</h6>
+            <ul class="socl-links">
+              <li class="socl-item">@@include('component/btns_links.html', {"type": "link", "style": "facebook", "attr": "href=\"#\" "})</li>
+              <li class="socl-item">@@include('component/btns_links.html', {"type": "link", "style": "youtube", "attr": "href=\"#\" "})</li>
+              <li class="socl-item">@@include('component/btns_links.html', {"type": "link", "style": "twitter", "attr": "href=\"#\" "})</li>
+            </ul>
+          </div>
+          <ul class="partners-links">
+            <li class="partners-item">
+              <a href="#" target="_blank" >
+                <img data-src="static/img/footer/company-1.png" alt="Логитип компанії">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#" target="_blank" >
+                <img data-src="static/img/footer/company-2.png" alt="Логитип компанії">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#" target="_blank" >
+                <img data-src="static/img/footer/company-3.png" alt="Логитип компанії">
+              </a>
+            </li>
+            <li class="partners-item">
+              <a href="#" target="_blank" >
+                <img data-src="static/img/footer/company-4.png" alt="Логитип компанії">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- /.col-xl-2 -->
+      <div class="col-12 pt-xl-5">
+        <div class="footer-copyright-text">
+          <span>
+            © 2022 <a href="#" target="_blank">Zberezhi.ua</a>. Всі права захищені
+          </span>
+        </div>
+        <!-- /.footer-text -->
+      </div>
+      <!-- /.col-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</footer>

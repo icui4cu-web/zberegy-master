@@ -1,0 +1,76 @@
+<section class="contact-us">
+  .<div class="container-xl">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-us-wrap">
+          <h1>Зв'язатися з нами</h1>
+          <p>
+            Якщо у Вас виникли питання щодо роботи нашого сервісу, маєте цікаві пропозиції щодо його розвитку, варіанти співпраці
+            або Ви помітили помилку, то зв'яжіться з нами, і ми спробуємо максимально швидко відповісти. Ми завжди раді будь-яким
+            новим ідеям та адекватно ставимося до конструктивної критики.
+          </p>
+          <form class="site-form" id="contact_us_form">
+            <div class="form-group">
+              <label for="name">ПІБ</label>
+              <input type="text" name="name" id="name" placeholder="Ваше Ім’я">
+              <span class="error-mess">Додайте інформацію</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="Введіть Ваш e-mail" required>
+              <span class="error-mess">Перевірте E-mail</span>
+            </div>
+
+            <label data-dropdown-for="message_subject">Тема повідомлення</label>            
+            <div class="site-dropdown" data-dropdown-id="message_subject">
+              <!-- hiden elem (select)(!) -->
+              <select class="select-dropdown" hidden>
+                <option id="message_subject" value="none">none</option>
+              </select>
+            
+              <div class="site-dropdown-header">
+                <span class="select-sort">Оберіть певну тему</span>
+                <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z"
+                    fill="#323232" />
+                </svg>
+              </div>
+              <ul class="site-dropdown-select">
+                <li class="site-dropdown-options">Тема 1</li>
+                <li class="site-dropdown-options">Тема 2</li>
+                <li class="site-dropdown-options">Тема 3</li>
+                <li class="site-dropdown-options">Iнша тема</li>
+              </ul>
+              <span class="error-mess">Оберiть тему</span>
+            </div>
+
+            <div class="form-group">
+              <label for="text">Текст повідомлення</label>
+              <textarea name="text" id="text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+              <span class="textarea-maxlength">0/1000</span>
+              <span class="error-mess">Додайте інформацію</span>
+            </div>
+
+            @@include('../component/btns_links.html', {
+              "type": "btn",
+              "style": "circle",
+              "text": "Надіслати",
+              "attr": " type=\"submit\" "
+            })
+
+          </form>
+        </div>
+      </div>
+      <!-- <div class="col-md-6">
+        <div class="img-wrap"> -->
+          <!-- </div>
+          </div> -->
+        </div>
+      </div>
+      <picture class="bg">
+        <source media="(min-width: 768px)" srcset="static/img/contact-us/contact-us.svg">
+        <img class="img-header-bg" src="static/img/contact-us/contact-us-sm.svg" alt="">
+      </picture>
+</section>

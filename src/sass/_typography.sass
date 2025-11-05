@@ -1,0 +1,407 @@
+@import "mixin"
+
+/* icons */
+@import "icons"
+@import "component/btns_links"
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+  -webkit-box-shadow: 0 0 0 50px $clear inset
+  // -webkit-text-fill-color: $dark
+input:-webkit-autofill::first-line
+  font-size: 16px
+  -webkit-font-size: 16px
+  line-height: 24px
+  font-family: $text
+  font-weight: 400
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+  -webkit-appearance: none
+input[type="search"]::-webkit-calendar-picker-indicator
+  display: none !important
+
+*
+  &::-webkit-scrollbar
+    width: 10px
+    height: 10px
+    cursor: pointer
+    @include media-breakpoint-down(md)
+      width: 5px
+      height: 5px
+
+  &::-webkit-scrollbar-track
+    // box-shadow: inset 0 0 5px lighten($yellow, 75%)
+    // background-color: lighten($blue, 40%)
+    border-left: 2px solid #F1F3F4
+    
+  &::-webkit-scrollbar-thumb
+    border-radius: $border-radius
+    // background-color: lighten(#dedede, 20%)
+    background-color: transparentize(#dedede, .3)
+    // border-radius: 50px
+  &::-webkit-scrollbar-thumb:hover
+    background-color: #dedede
+
+// .rate-pay-form
+//   -moz-user-select: none
+//   -o-user-select: none
+//   -khtml-user-select: none
+//   -webkit-user-select: none
+//   -ms-user-select: none
+//   user-select: none
+
+// .page-content
+  // max-width: 1330px
+  // width: calc( 100% - (56px + 56px))
+  // margin-left: auto
+  // margin-right: auto
+  // background-color: $clear
+section, div, label
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+  color: $title-c
+  font-family: $title
+  font-style: normal
+  font-weight: 700
+h1, .h1
+  font-size: 52px
+  line-height: 60px
+  @include media-breakpoint-down(lg)
+    font-size: 48px
+    line-height: 56px
+  @include media-breakpoint-down(md)
+    font-size: 38px
+    line-height: 46px
+  @include media-breakpoint-down(sm)
+    font-size: 30px
+    line-height: 40px
+h2, .h2
+  font-size: 46px
+  line-height: 54px
+  margin-bottom: 30px
+  @include media-breakpoint-down(lg)
+    font-size: 42px
+    line-height: 50px
+  @include media-breakpoint-down(md)
+    font-size: 38px
+    line-height: 46px
+  @include media-breakpoint-down(sm)
+    font-size: 26px
+    line-height: 32px
+    margin-bottom: 16px
+h3, .h3
+  font-size: 36px
+  line-height: 48px
+  @include media-breakpoint-down(lg)
+    font-size: 32px
+    line-height: 44px
+  @include media-breakpoint-down(md)
+    font-size: 28px
+    line-height: 40px
+  @include media-breakpoint-down(sm)
+    font-size: 24px
+    line-height: 28px
+h4, .h4
+  font-size: 30px
+  line-height: 40px
+  margin-bottom: 16px
+  @include media-breakpoint-down(lg)
+    font-size: 26px
+    line-height: 36px
+  @include media-breakpoint-down(md)
+    font-size: 22px
+    line-height: 32px
+    margin-bottom: 10px
+  @include media-breakpoint-down(sm)
+    font-size: 20px
+    line-height: 26px
+h5, .h5
+  font-size: 24px
+  line-height: 28px
+  margin-bottom: 16px
+  @include media-breakpoint-down(lg)
+    font-size: 22px
+    line-height: 26px
+  @include media-breakpoint-down(md)
+    font-size: 20px
+    line-height: 24px
+  @include media-breakpoint-down(sm)
+    font-size: 18px
+h6, .h6
+  font-size: 18px
+  line-height: 24px
+  margin-bottom: 20px
+  @include media-breakpoint-down(lg)
+    font-size: 17px
+    line-height: 22px
+  @include media-breakpoint-down(md)
+    font-size: 16px
+    line-height: 22px
+
+p
+  margin-bottom: 30px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 20px
+
+.p-mb-40
+  margin-bottom: 40px
+  @include media-breakpoint-down(lg)
+    margin-bottom: 30px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 20px
+small
+  font-size: 14px
+  @include media-breakpoint-down(sm)
+    font-size: 12px
+a,
+span
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
+  color: inherit
+.link-blue, .btn-blue-txt
+  color: #3E9AF6
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
+
+ul
+  padding: 5px 0 0 0 
+  margin: 0
+  li
+    list-style: none
+    margin: 0
+    padding: 0 0 10px 0
+    @include media-breakpoint-down(sm)
+      line-height: 22px
+
+ol
+  padding: 0
+  list-style: none
+  counter-reset: li
+  h1,h2,h3,h4,h5,h6
+    flex: 1
+    +.list-yellow-mark
+      padding-top: 0
+  .list-yellow-mark
+    flex: 100%
+    padding: 20px 0 0 30px
+    li
+      padding: 0
+      flex-wrap: nowrap
+  li
+    display: flex
+    flex-wrap: wrap
+    ol
+      flex: 100%
+    li
+      margin-bottom: 10px
+    a
+      color: #3e9af6
+      &:hover
+        color: #1f8bf8
+    span
+      flex: 1
+      color: rgba(50, 50, 50, 0.8)
+    &:before
+      counter-increment: li
+      content: counters(li, ".") ". "
+      font-weight: 700
+      margin-right: 10px
+.list-yellow-mark
+  li
+    display: flex
+    &::before
+      content: ''
+      display: inline-block
+      background-color: $yellow
+      width: 8px
+      height: 8px
+      min-width: 8px
+      border-radius: 50%
+      margin: 10px 10px 0 0
+      @include media-breakpoint-down(sm)
+        margin: 6px 6px 0 0
+  &.has-links
+    li
+      display: block
+      &::before
+        display: none
+      a
+        display: flex
+        align-items: center
+        &:hover
+          &::before
+            background-color: currentColor
+      a
+        &::before
+          content: ''
+          display: inline-block
+          background-color: $yellow
+          width: 6px
+          height: 6px
+          border-radius: 50%
+          margin: 0
+          margin-right: 10px
+          transition: .3s
+// couter mes..
+[data-count]
+  position: relative
+  // display: inline-flex
+  &::before
+    content: attr(data-count)
+    position: absolute
+    top: 6px
+    // right: 6px
+    left: calc( 100% - 26px )
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-width: 20px
+    min-height: 20px
+    padding: 0 4px
+    word-spacing: 0
+    border-radius: 100px
+    color: #323232
+    background-color: $yellow
+    font-size: 10px
+    line-height: 10px
+    transition: opacity .3s
+    @include media-breakpoint-down(lg)
+      min-width: 15px
+      min-height: 15px
+      font-size: 8px
+      line-height: 8px
+      top: 0
+      left: calc( 100% - 15px )
+      
+[data-count=""],
+[data-count="0"]
+  &::before
+    opacity: 0
+// -- text --
+.dash-block
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  &::before,
+  &::after
+    content: ''
+    flex: auto
+    height: 1px
+    background-color: #DEDEDE
+  .dash-text
+    margin: 0 30px
+
+// tooltip
+[data-title]
+  position: relative !important // (!)
+  &:hover
+    &::before,
+    &::after
+      display: block
+  &.left
+    &::before
+      transform: translateX(calc( 100% - 30px ))
+  &.right
+    &::before
+      right: -10px
+      // transform: translateX(calc( 100% - 30px ))
+      transform: translateX(0)
+  &::before
+    content: attr(data-title)
+    position: absolute
+    display: none
+    right: -15px
+    bottom: calc(100% + 20px)
+    width: 100vw
+    max-width: 280px
+    font-size: 14px
+    line-height: 20px
+    color: $text-c
+    padding: 30px
+    background-color: #F2F2F2
+    border-radius: 5px
+    z-index: 999
+    opacity: 0
+    animation: opacity .5s forwards, opacityDown .5s 5s forwards
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1)
+    @include media-breakpoint-down(sm)
+      padding: 10px 15px
+      font-size: 14px
+      right: 50%
+      transform: translateX(50%)
+  &::after
+    content: ''
+    display: block
+    display: none
+    position: absolute
+    right: 0
+    bottom: calc(100% + 15px)
+    width: 30px
+    height: 30px
+    background-color: #F2F2F2
+    border-radius: 2px
+    transform: rotate(55deg) skewX(20deg)
+    z-index: 998 // -1 (!)
+    opacity: 0
+    animation: opacity .5s .3s forwards, opacityDown .5s 5s forwards
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+    @include media-breakpoint-down(sm)
+      right: -5px
+
+iframe
+  border: none
+img[data-src]
+  opacity: 0
+img, svg
+  max-width: 100%
+  transition: .5s
+img
+  height: auto
+.t-c
+  text-align: center
+.red-t
+  color: #FF0000
+// global animations
+@media (min-width: 992px)
+  .pl-xl-15
+    padding-left: 15px !important
+
+@keyframes opacity
+  0%
+    opacity: .5
+  100%
+    opacity: 1
+
+@keyframes opacityDown
+  0%
+    opacity: 1
+  90%
+    opacity: .5
+  100%
+    opacity: 0
+
+@keyframes scale
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+.animate-pulse
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite
+
+@keyframes pulse
+  0%, 100%
+    opacity: 1
+  50%
+    opacity: .5

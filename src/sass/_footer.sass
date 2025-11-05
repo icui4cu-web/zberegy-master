@@ -1,0 +1,131 @@
+.footer
+  background-repeat: no-repeat
+  background-size: 35% auto
+  background-position: right bottom
+  padding-top: 50px
+  width: 100%
+  @include media-breakpoint-down(sm)
+    padding-top: 0  
+  .logo-link
+    display: block
+    margin-top: -20px
+    margin-bottom: 20px
+    @include media-breakpoint-down(lg)
+      text-align: center
+    @include media-breakpoint-down(sm)
+      margin-top: 0
+  .text-under-logo
+    font-size: 14px
+    @include media-breakpoint-down(lg)
+      text-align: center
+      max-width: 800px
+      margin-left: auto
+      margin-right: auto
+  .nav-collapse
+    padding-top: 0
+    max-width: fit-content
+    margin: 0 auto
+    @include media-breakpoint-down(lg)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      // .menu-item
+        // text-align: center
+      .menu-item-link
+        display: inline-flex
+        padding-right: 20px
+    .btn-drop
+      font-size: 18px
+      line-height: 24px
+      font-weight: 700
+      margin-bottom: 20px
+      @include media-breakpoint-down(sm)
+        line-height: 22px
+        margin-bottom: 10px
+        &[aria-expanded="true"]
+          justify-content: flex-start
+      &.disabled
+        pointer-events: none
+        @include media-breakpoint-down(lg)
+          pointer-events: auto
+        .drop-icon
+          opacity: 0
+          @include media-breakpoint-down(lg)
+            opacity: 1
+  .footer-links
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid #DEDEDE
+    margin-top: 20px
+    padding-top: 50px
+    @include media-breakpoint-down(sm)
+      border-top: none
+      margin-top: 0
+      padding-top: 30px
+    @include media-breakpoint-down(sm)
+      flex-direction: column
+      align-items: center
+    .socl-links-wrap
+      width: fit-content
+      margin-bottom: 30px
+      .title
+        margin-bottom: 30px
+        @include media-breakpoint-down(sm)
+          margin-bottom: 15px
+    .socl-links
+      display: flex
+      flex-wrap: wrap
+      @include media-breakpoint-down(sm)
+        justify-content: center
+      .socl-item
+        margin: 0 20px 20px 0
+        padding: 0
+        @include media-breakpoint-down(sm)
+          margin: 10px
+  .partners-links
+    display: flex
+    flex-wrap: wrap
+    max-width: 320px
+    @include media-breakpoint-down(sm)
+      max-width: none
+      justify-content: center
+      width: 100%
+      border-top: 1px solid #DEDEDE
+      padding-top: 40px
+      @media (max-width: 330px)
+        justify-content: flex-start
+    .partners-item
+      display: inline-flex
+      justify-content: center
+      width: 80px
+      margin-left: 40px
+      margin-bottom: 30px
+      padding: 0
+      transition: .3s
+      &:nth-child(3n+1)
+        margin-left: 0
+      &:hover
+        filter: contrast(120%)
+      img
+        max-height: 80px
+      @include media-breakpoint-down(sm)
+        width: 60px
+        display: flex
+        justify-content: center
+        margin: 0 30px 30px 0
+        &:last-child
+          margin-right: 0
+        img
+          max-height: 60px
+      @media (max-width: 400px)
+        margin: 0 15px 15px 0
+        &:last-child
+          margin-right: 0
+
+  &-copyright-text
+    text-align: center
+    color: rgba(50, 50, 50, 0.6)
+    padding: 30px 0
+    @include media-breakpoint-down(sm)
+      padding: 10px 0 20px
+      font-size: 14px

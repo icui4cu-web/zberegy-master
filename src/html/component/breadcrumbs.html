@@ -1,0 +1,25 @@
+<div class="container-xl">
+  <ul class="menu-breadcrumbs">
+    <li class="menu-item"><a class="menu-item-link" href="index.html">Головна</a></li>
+    @@if (context.false) {
+      <!-- <li class="delimer"></li> -->
+      <!-- <li class="menu-item curent-item">Результати пошуку</li> -->
+      <!-- <li class="menu-item curent-item"><a class="menu-item-link" href="#">Результати пошуку</a></li> -->
+    }
+    @@if (context.item_1) {<li class="delimer"></li> <li class="menu-@@item_1">}
+      <a class="menu-item-link" href="@@if(context.href_1){@@href_1}">@@if (context.text_1) { @@text_1 }</a>
+    @@if (context.item_1) {</li>}
+
+    @@if (context.item_2) {<li class="delimer"></li> <li class="menu-@@item_2">}
+      <a class="menu-item-link" href="@@if(context.href_2){@@href_2}">@@if (context.text_2) { @@text_2 }</a>
+    @@if (context.item_2) {</li>}
+
+    @@if (context.item_3) {<li class="delimer"></li> <li class="menu-@@item_3">}
+      <a class="menu-item-link" href="@@if(context.href_3){@@href_3}">@@if (context.text_3) { @@text_3 }</a>
+    @@if (context.item_3) {</li>}
+
+    @@if (context.item === "curent") { <li class="delimer"></li><li class="menu-item @@item-item">}
+      @@if (context.text) { @@text }
+    @@if (context.item === "curent") {</li>}
+  </ul>
+</div>

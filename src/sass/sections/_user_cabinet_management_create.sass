@@ -1,0 +1,267 @@
+.form-create-memorial
+  .select-img-wrap
+    display: block
+    width: 200px
+    height: 200px
+    @include media-breakpoint-down(sm)
+      margin-left: auto
+      margin-right: auto
+  .btn-load-select-img,
+  .btn-del-select-img
+    right: 15px
+  .btn-load-select-img
+    top: 15px
+  .btn-del-select-img
+    bottom: 15px
+  .icon-for-input
+    right: 20px
+
+  .templates-top-bg
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 20px
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+    label
+      margin: 0
+      @include media-breakpoint-down(sm)
+        width: 100%
+    .custom-checkbox-wrap
+      margin-bottom: 12px
+      min-width: 220px
+      &:hover
+        color: #85858B
+    .img-wrap
+      border-radius: $border-radius
+      overflow: hidden
+      height: 200px
+      flex: auto
+      max-width: 770px
+      width: 100%
+      background-color: #F2F2F2
+      @include media-breakpoint-down(sm)
+        height: 80px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &.epitaph-bg
+      .img-wrap
+        height: 310px
+        @include media-breakpoint-down(sm)
+          height: 120px
+    .btn-downl-templ
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 20px 17px
+      font-size: inherit
+      line-height: inherit
+      border: 1px solid #DEDEDE
+      border-radius: $border-radius
+      margin-bottom: 10px
+      margin-right: 15px
+      transition: .3s
+      @include media-breakpoint-down(sm)
+        padding: 14px 15px
+        width: 100%
+        justify-content: space-between
+      &:hover
+        border-color: #ADADAD
+        color: #776a66
+        .down-arr
+          transform: translateY(2px)
+          transition: .5s
+      .icon-download
+        // margin-left: 100px
+        margin-left: 50px
+        min-width: 15px
+  .btn-wrap
+    padding-top: 40px
+    margin-bottom: 20px
+    @include media-breakpoint-down(sm)
+      padding-top: 20px
+      margin-bottom: 16px
+
+.form-gallery
+  .imgs-previews,
+  .videos-wrap
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 10px
+  .select-img-wrap,
+  .iframe-wrap
+    position: relative
+    width: calc( 20% - (80px / 5) )
+    height: auto
+    margin: 0 20px 20px 0
+    border-radius: $border-radius
+    overflow: hidden
+    &::before
+      position: absolute
+      left: 0
+      top: 0
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.6)
+    &:nth-child(5n + 5)
+      margin-right: 0
+    @include media-breakpoint-down(lg)
+      width: calc( 50% - 3px )
+      margin: 0 6px 6px 0
+      &:nth-child(5n + 5)
+        margin-right: 6px
+      &:nth-child(2n + 2)
+        margin-right: 0
+    .select-img,
+    iframe
+      aspect-ratio: 1/1
+      width: 100%
+      height: 100%
+      object-fit: cover
+    .btn-del-select-img,
+    .btn-load-select-img,
+    .btn-del-select-video,
+    .btn-load-select-video
+      position: absolute
+      right: 50%
+      transform: translate(50%, -50%)
+      z-index: 1
+    .btn-del-select-img,
+    .btn-del-select-video
+      right: calc( 50% - 30px )
+      bottom: 50%
+      transform: translate(50%, 50%)
+      @include media-breakpoint-down(lg)
+        right: calc( 50% - 20px )
+    .btn-load-select-img,
+    .btn-load-select-video
+      right: calc( 50% + 30px )
+      top: 50%
+      @include media-breakpoint-down(lg)
+        right: calc( 50% + 20px )
+  .btn-add-foto
+    margin-bottom: 30px
+
+// Memorable-Events-Form
+.memorable-events-form
+  .form-group
+    max-width: 650px
+  .icon-for-input
+    right: 20px
+  .memorable-event-preview-block
+    position: relative
+    padding: 17px 20px
+    border: 1px solid #DEDEDE
+    border-radius: $border-radius
+    .event-title,
+    .event-date,
+    .event-descr
+      margin-bottom: 10px
+      &[readonly]
+        margin-bottom: 0
+        overflow: hidden
+        ~.textarea-maxlength
+          display: none
+    .event-date
+      margin-top: 25px
+    .event-title,
+    .event-descr
+      margin-bottom: 0
+    .event-title-group
+      position: relative
+      width: calc( 100% - 100px )
+
+    .event-title
+      min-height: auto
+      height: min-content
+      resize: none
+      &[readonly]
+        overflow: hidden
+        border: none
+        color: $title-c
+        padding: 0
+        margin-bottom: 6px
+        height: 30px
+    .event-date
+      // width: auto
+      &[readonly]
+        pointer-events: none
+        border: none
+        padding: 0
+        margin-bottom: 6px
+        font-size: 14px
+        line-height: 20px
+        color: $link
+    .event-descr
+      // width: auto
+      height: min-content
+      min-height: min-content
+      max-height: min-content
+      resize: none
+      overflow: auto
+      // overflow: visible
+      &[readonly]
+        border: none
+        padding: 0
+        margin-bottom: 6px
+        font-size: 14px
+        line-height: 20px
+        color: $text-c
+
+    .memorable-event-img-wrap
+      position: relative
+      .btn-delete
+        position: absolute
+        right: 10px
+        top: 10px
+    .memorable-event-img
+      border-radius: $border-radius
+      max-width: 200px
+    .btns-wrap
+      position: absolute
+      right: 17px
+      top: 20px
+      display: flex
+      .btn-edit-event
+        margin-right: 20px
+  .with-separator
+    position: relative
+    margin-top: 80px
+    &::before
+      content: ''
+      display: block
+      width: 2px
+      height: 40px
+      position: absolute
+      bottom: calc( 100% + 20px )
+      left: 0
+      background-color: #3E9AF6
+  .memorable-event-block
+    textarea
+      height: 100px
+      min-height: 100px
+  // .memorable-event-img
+  .btn-downl-event-img
+    margin-top: 25px
+    border: 1px solid #DEDEDE
+    border-radius: 10px
+    width: 100%
+    padding: 17px 20px
+    display: flex
+    justify-content: space-between
+    transition: .3s
+    &:hover
+      background-color: #eeeeee
+  .memorable-event-img-preview-wrap
+    position: relative
+    max-width: 200px
+    .btn-delete
+      position: absolute
+      right: 10px
+      top: 10px
+  .memorable-event-img-preview
+    border-radius: $border-radius

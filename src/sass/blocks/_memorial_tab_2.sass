@@ -1,0 +1,107 @@
+.gallery-wrap
+  display: flex
+  flex-wrap: wrap
+  a
+    overflow: hidden
+    border-radius: 10px
+    width: calc( 25% - 15px )
+    margin: 0 20px 20px 0
+    &:nth-child(4n)
+      margin-right: 0
+      @include media-breakpoint-down(sm)
+        margin-right: 6px
+    @include media-breakpoint-down(sm)
+      width: calc( 33.333% - 4px )
+      margin: 0 6px 6px 0
+      &:nth-child(3n)
+        margin-right: 0
+
+    img, iframe
+      width: 100%
+      height: 100%
+      max-height: 100%
+    img 
+      object-fit: cover
+    iframe
+      aspect-ratio: 1/1
+
+    &[data-fancybox-type="iframe"]
+      position: relative
+      .btn-play
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(50, 50, 50, 0.6)
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+        svg
+          @include media-breakpoint-down(sm)
+            width: 12px
+            height: 14px
+        &::before
+          content: ''
+          position: absolute
+          display: block
+          width: 60px
+          height: 60px
+          background-color: $yellow
+          border-radius: 50%
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          z-index: -1
+          @include media-breakpoint-down(sm)
+            width: 30px
+            height: 30px
+.memorial-page
+  .fancybox__container.memorial-gallery,
+  .fancybox__container.is-animated.memorial-gallery
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    opacity: 0
+    &.active
+      opacity: 1
+    @include media-breakpoint-down(sm)
+      flex-direction: column
+    .fancybox__leftCol,
+    .fancybox__rightCol
+      width: 50%
+      max-width: 870px
+      height: calc( 100vh - 100px ) // ( ! )
+      max-height: 920px
+      overflow: hidden
+      @include media-breakpoint-down(sm)
+        width: 100%
+        max-width: 320px
+        max-height: 340px
+        height: calc( 50vh - 100px ) // ( ! )
+    .fancybox__rightCol
+      background-color: #fff
+      max-width: 420px
+      overflow-y: auto
+      @include media-breakpoint-down(sm)
+        max-width: 320px
+        
+    .fancybox__slide
+      padding: 0
+      align-content: center
+      &::before,
+      &::after
+        display: none
+      .fancybox__content
+        min-width: 100%
+        min-height: 100%
+        margin: auto
+        img
+          min-width: 100%
+          min-height: 100%
+          width: 100%
+          height: 100%
+          object-fit: cover

@@ -1,0 +1,82 @@
+<div class="user-cabinet-favorites">
+  <h3 class="user-cabinet-title">Обрані меморіали</h3>
+  
+  <div class="memorials-preview-wrap">
+    <a class="link-to-memorial" href="real-memorial.html">
+      <div class="preview-item">
+        <div class="img-wrap">
+          <img width="312" height="312" src="static/img/memorials/person-2/foto-2.jpg" alt="foto">
+        </div>
+        <div class="text-wrap">
+          <h2 class="title">Соловейко Іван Юрійович</h2>
+          <p class="loc">Львів, Україна</p>
+          <p class="date">08.04.1935 — 15.06.2010</p>
+          <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+        </div>
+        <div class="btn-wrap">
+          <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+          <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+          @@include('../component/btns_links.html', {
+            "type": "btn", 
+            "style": "add-to-favorite",
+            "attr": " data-favorite=\"add-to-favorite\" data-title=\"Додати в Обрані Меморіали\" "
+          })
+        </div>
+      </div>
+    </a>
+    <a class="link-to-memorial" href="real-memorial.html">
+      <div class="preview-item">
+        <div class="img-wrap">
+          <img width="312" height="312" src="static/img/memorials/person-1/foto-1.jpg" alt="foto">
+        </div>
+        <div class="text-wrap">
+          <h2 class="title">Соловейко Іван Георгійович</h2>
+          <p class="loc">Львів, Україна</p>
+          <p class="date">08.04.1935 — 15.06.2010</p>
+          <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+        </div>
+        <div class="btn-wrap">
+          @@include('../component/btns_links.html', {
+            "type": "btn",
+            "style": "lock",
+            "attr": " data-title=\"Обмежений доступ\" "
+          })
+          <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+          <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+          @@include('../component/btns_links.html', {
+            "type": "btn",
+            "style": "add-to-favorite",
+            "attr": " data-favorite=\"remove-from-favorite\" data-title=\"Видалити з Обраного\" "
+          })
+        </div>
+      </div>
+    </a>
+    <a class="link-to-memorial" href="real-memorial.html">
+      <div class="preview-item">
+        <div class="img-wrap">
+          <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+        </div>
+        <div class="text-wrap">
+          <h2 class="title">Соловейко Іван Георгійович</h2>
+          <p class="loc">Львів, Україна</p>
+          <p class="date">08.04.1935 — 15.06.2010</p>
+          <p class="text">Наш улюблений дідусь Іван Соловейко помер 27 березня 2015 року. Він боровся з агресивним раком легенів протягом трьох довгих місяців. Він був веселою, доброю і чуйною людиною. В день його народження збиралося...</p>
+        </div>
+        <div class="btn-wrap">
+          @@include('../component/btns_links.html', {
+            "type": "btn",
+            "style": "lock",
+            "attr": " data-title=\"Обмежений доступ\" "
+          })
+          <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+          <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+          @@include('../component/btns_links.html', {
+            "type": "btn",
+            "style": "add-to-favorite",
+            "attr": " data-favorite=\"remove-from-favorite\" data-title=\"Видалити з Обраного\" "
+          })
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

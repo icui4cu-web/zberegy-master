@@ -1,0 +1,129 @@
+.quote
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  min-height: 280px
+  margin: 20px 0 60px
+  background-image: url(../img/memorials/quote-bg.png)
+  padding: 50px
+  border-radius: 20px
+  @include media-breakpoint-down(md)
+    min-height: 300px
+  @include media-breakpoint-down(sm)
+    min-height: 100px
+    margin: 15px 0 40px
+    padding: 20px
+    border-radius: 10px
+  q
+    font-family: $cursive
+    font-size: 26px
+    line-height: 36px
+    font-weight: 400
+    max-width: 550px
+    quotes: none
+    display: block
+    @include media-breakpoint-down(md)
+      font-size: 22px
+      line-height: 30px
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 18px
+  .quotes
+    &-1, &-2
+      position: absolute
+      @include media-breakpoint-down(sm)
+        width: 40px
+        height: 40px
+    &-1
+      left: -30px
+      top: -50px
+      @include media-breakpoint-down(sm)
+        left: -15px
+        top: -20px
+    &-2
+      right: -30px
+      bottom: -50px
+      @include media-breakpoint-down(sm)
+        right: -15px
+        bottom: -20px
+  &.bg-blue
+    background-color: #CEE6FF
+    .quotes
+      &-1, &-2
+        .path
+          fill: #CEE6FF
+  &.bg-yellow
+    background-color: #FADB8B
+    .quotes
+      &-1, &-2
+        .path
+          fill: #FADB8B
+.descr-list
+  margin-bottom: 10px
+  .descr
+    &-item
+      display: flex
+      // flex-wrap: wrap
+    &-key
+      width: 30%
+      max-width: 120px
+      min-width: fit-content
+      color: rgba(50, 50, 50, 0.6)
+      @include media-breakpoint-down(sm)
+        font-size: 12px
+        line-height: 16px
+    &-val
+      flex: auto
+      width: 70%
+      padding-left: 10px
+
+.photos-monument
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 30px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 20px
+  .img-wrap
+    overflow: hidden
+    border-radius: 10px
+    width: calc( 50% - 5px )
+    margin-right: 10px
+    margin-bottom: 10px
+    max-height: 300px
+    &:nth-child(2n)
+      margin-right: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+.loc-monument
+  margin-bottom: 40px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 20px
+  .memorial-map
+    width: 100%
+    max-width: 100%
+    @include media-breakpoint-down(sm)
+      height: 200px
+
+.about-memorial
+  margin-bottom: 40px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 30px
+  &.excerpt-text
+    p
+      overflow: hidden
+      max-height: 3000px
+      margin-bottom: 20px
+      transition: max-height 5s, margin .5s
+    &.close
+      p
+        &:first-child
+          &::after
+            content: '..'
+      p ~ p
+        max-height: 0
+        margin: 0
+        transition: .5s

@@ -1,0 +1,39 @@
+.site-accordion
+  .btn-accordion
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 0
+    .vertical
+      opacity: 0
+      transition: .4s
+    &.collapsed
+      .vertical
+        opacity: 1
+  &-type-br
+    .card
+      border: 1px solid #DEDEDE
+      border-radius: $border-radius
+      margin-bottom: 20px
+    .card-header
+      display: flex
+    .btn-accordion
+      display: flex
+      flex: auto
+      justify-content: space-between
+      align-items: center
+      margin: 0 20px
+      padding: 20px 0
+      border-bottom: 1px solid #DEDEDE
+      &.collapsed
+        border-bottom-width: 0
+        .icon-accordion-brecket
+          fill: #848484
+          transform: rotateX(0)
+      .icon-accordion-brecket
+        fill: #3E9AF6
+        transform: rotateX(180deg)
+    .card-body
+      padding: 20px
+

@@ -1,0 +1,452 @@
+@import "_root"
+@import "_var"
+
+@import "../../node_modules/bootstrap/scss/functions"
+@import "../../node_modules/bootstrap/scss/variables"
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/reboot"
+@import "../../node_modules/bootstrap/scss/transitions"
+
+@import "../../node_modules/bootstrap/scss/nav"
+@import "../../node_modules/bootstrap/scss/modal"
+
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/navbar"
+
+/*_start_main_css_*/
+@import "_typography"
+@import "_mixin"
+
+body
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  position: relative
+  min-width: 320px
+  background-color: $clear
+  color: $text-c
+  overflow-x: hidden
+  *
+    font-family: $text
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+    font-style: normal
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 20px
+    &::selection
+      background: $bg-selection
+      color: $text-selection
+
+#page
+  min-height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  // overflow-x: hidden
+#content
+  flex-grow: 1
+  width: 100%
+  overflow: hidden
+  // overflow-x: hidden
+
+// # Header
+.header
+  position: sticky
+  width: 100%
+  // flex: 100%
+  top: 0
+  left: 0
+  padding: 20px 15px
+  background-color: $clear
+  // box-shadow: 0px 2px 60px #3232321a
+  box-shadow: 0 -50px 70px #323232
+  z-index: 50
+  @include media-breakpoint-down(lg)
+    padding: 15px
+// site logo
+.logo-link
+  color: $blue
+  margin-right: 20px
+  transition: .3s
+  @include media-breakpoint-down(lg)
+    margin: 0px 10px
+    // margin: 0 auto
+  &:hover
+    color: darken($blue, 4%)
+    .yellow
+      fill: darken($yellow, 3%)
+  .yellow
+    fill: $yellow
+    transition: .3s
+  // svg
+  .site-logo
+    max-width: 100%
+    @include media-breakpoint-down(lg)
+      max-width: 100px
+      max-height: 30px
+
+.header-wrap
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  max-width: 1720px
+  margin: 0 auto
+  @include media-breakpoint-down(lg)
+    position: relative
+    flex: auto
+    justify-content: space-between
+  // Search
+  .search-block
+    display: flex
+    align-items: center
+    flex: auto
+    margin-left: 70px
+    // padding-left: 20px
+    max-width: 500px
+    @media (max-width: 1300px)
+      margin-left: 0
+    @include media-breakpoint-down(lg)
+      flex: none
+    .btn-user-mesage
+      @include media-breakpoint-up(xl)
+        display: none
+  .search-wrap
+    display: flex
+    align-items: center
+    width: 100%
+    border: 1px solid #DEDEDE
+    border-radius: 100px
+    padding-left: 20px
+    // max-width: 500px
+    overflow: hidden
+    // flex: auto
+    background-color: $clear
+    // margin-left: 70px
+    transition: .3s
+    @media (max-width: 1400px)
+      margin-left: 15px
+    @include media-breakpoint-down(lg)
+      border-color: transparent
+      padding: 0
+      flex: none
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(50%, -50%)
+      max-width: 0
+    @include media-breakpoint-down(sm)
+      transform: translate(0, -50%)
+    &.active
+      @include media-breakpoint-down(lg)
+        width: 50%
+        right: 50%
+        max-width: 100%
+        padding: 5px 5px 5px 45px
+        border-color: #DEDEDE
+        // &:focus-within
+          // padding-left: 35px
+      @include media-breakpoint-down(sm)
+        right: -5px
+        width: calc( 100% - 30px )
+    &:focus-within
+      .btn-search
+        font-size: 16px
+        border-color: #DEDEDE
+        background-color: #f5f5f5
+        border-radius: 100px
+        padding: 19px
+        transform: scale(100px)
+        color: #535353
+        font-size: 14px
+        font-weight: 400
+        @include media-breakpoint-down(lg)
+          padding: 12px 10px
+          font-size: 12px
+        @include media-breakpoint-down(sm)
+          padding: 7px 5px 8px 12px
+          font-size: 0
+        &:hover
+          color: $text-c
+          background-color: #fafafa
+        .search-icon
+          margin-right: 10px
+          @include media-breakpoint-down(sm)          
+            margin-right: 5px
+      .btn-search-reset
+        border-color: #DEDEDE
+    
+      
+    &.active + .btn-search-toggler
+      opacity: .3
+      z-index: -1
+    .btn-search-toggler
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 5px
+      margin: 0
+    .btn-search
+      display: inline-flex
+      align-items: center
+      padding: 0
+      margin: 0
+      padding-right: 15px
+      font-size: 0
+      border-left: 1px solid transparent
+      border-right: 1px solid transparent
+      @include media-breakpoint-down(lg)
+        padding-right: 5px
+      &::after
+        content: attr(data-btn-name)
+      .search-icon
+        min-width: 14px
+    .search-input
+      min-width: 0
+      flex: auto
+      border: none
+      padding: 16px 10px 16px 20px
+      transition: .3s
+      &:focus-visible                 
+        outline: none
+      @include media-breakpoint-down(lg)
+        font-size: 14px
+        font-weight: 300
+        line-height: 20px
+        padding: 0
+    .btn-search-reset
+      padding: 0
+      margin: 0
+      padding: 15px
+      min-width: 8px
+      height: 100%
+      border-left: 1px solid transparent
+      border-radius: 100px
+      transition: .3s
+      @include media-breakpoint-down(lg)
+        svg
+          width: 12px
+          height: 12px
+      @include media-breakpoint-down(sm)
+        // margin-right: 15px
+        padding: 10px
+      &.hide
+        opacity: 0
+        pointer-events: none
+      svg
+        min-width: 8px
+
+  .btn-search-toggler
+    padding: 0
+    min-width: 20px
+    margin-left: 5px
+    &-close
+      padding: 0
+  // Btn-Menu Toggler
+  .btn-menu-toggler
+    padding: 0
+    .line
+      &-top,
+      &-middle,
+      &-bottom
+        transition: .5s
+    .line-top
+      transform: rotate(-0.13turn) translate(-16px, 1px)
+    .line-middle
+      opacity: 0
+    .line-bottom
+      transform: rotate(0.13turn) translate(6px, -10px)
+    &.collapsed
+      .line
+        &-top,
+        &-middle,
+        &-bottom
+          transform: none
+          opacity: 1
+
+  // Btns ( links )
+  .header-nav
+    flex: auto
+    @include media-breakpoint-down(lg)
+      width: 100%
+  .btn-wrap,
+  .navbar-collapse
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media (max-width: 1300px)
+      padding-left: 10px
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+
+      align-items: flex-start
+      justify-content: flex-start
+      padding-left: 0
+      transition: .3s
+    @include media-breakpoint-down(sm)
+      overflow-x: auto
+  a, button
+    margin-right: 20px
+    &:last-of-type:not(.logo-link)
+      margin-right: 0
+    @media (max-width: 1300px)
+      margin-right: 10px
+  .nav-collapse
+    // padding-top: 15px
+  .btn-user-cabinet,
+  .btn-user-mesage
+    @include media-breakpoint-down(lg)
+      margin-top: 20px
+      width: 30px
+      height: 30px
+      margin-top: 0
+      svg
+        max-width: 100%
+        max-height: 100%
+  .btn-user-mesage
+    display: none
+  .btn-user
+    &-cabinet,
+    &-mesage
+      color: #F2F2F2
+      @include media-breakpoint-down(lg)
+        display: none
+      &:hover
+        color: #eeeeee
+    &-login
+      display: inline-flex
+      align-items: center
+      color: #F2F2F2
+      flex-wrap: nowrap 
+      &:hover
+        color: #e2e0e0
+      @include media-breakpoint-down(lg)
+        margin: 18px 30px 15px 0
+        width: auto
+        align-items: center
+        font-family: $title
+        font-weight: 600
+        background-color: #DBEDFF
+        gap: 10px
+        padding: 5px 10px
+        border-radius: $border-radius
+        svg
+          width: 20px
+          height: 20px
+      svg
+        min-width: 30px
+        min-height: 30px
+      a
+        color: inherit
+      .link,
+      .delimer
+        color: $text-c
+        margin: 0
+        @include media-breakpoint-up(xl)
+          display: none            
+      .link
+        &:hover
+          color: $link
+    &-mesage
+      @include media-breakpoint-down(lg)
+        display: inline-flex
+
+    
+      
+    // If user (not) logged in
+    &-cabinet,
+    &-mesage
+      display: none
+// If user is (logget in)
+.IS_LOG_IN
+  // btns / links
+  .btn-user
+    &-login
+      display: none
+    &-cabinet
+      display: inline-flex
+      align-items: center
+      flex-wrap: nowrap
+      svg
+        min-width: 20px
+      @include media-breakpoint-down(lg)
+        margin-top: 23px
+        margin-bottom: 5px
+        width: auto
+        align-items: center
+        font-family: $title
+        font-weight: 600
+        background-color: #DBEDFF
+        gap: 10px
+        padding: 5px 10px
+        border-radius: $border-radius
+        &:hover
+          &::after
+            color: $link
+        svg
+          width: 20px
+          height: 20px
+        &::after
+          content: 'Особистий кабінет'
+          color: $title-c
+          white-space: nowrap
+          transition: .3s
+    &-mesage
+      display: inline-flex
+      @include media-breakpoint-down(lg)
+        display: none
+    &-mesage
+      @include media-breakpoint-up(xl)
+        display: inline-flex
+  .search-block
+    @include media-breakpoint-down(lg)
+      // flex: none
+    .btn-user-mesage
+      @include media-breakpoint-up(xl)
+        display: none
+        // display: inline-flex
+      @include media-breakpoint-down(lg)
+        display: inline-flex
+      // @include media-breakpoint-up(xl)
+      //   display: none
+      
+/*_component_*/
+@import "component/breadcrumbs"
+@import "component/site_dropdown"
+@import "component/site_form"
+/*_sections_*/
+@import "sections/home_page_first"
+@import "sections/home_about_project"
+@import "sections/search-results"
+@import "sections/memorial_header"
+@import "sections/about_us"
+@import "sections/news"
+@import "sections/capabilities"
+@import "sections/news_single_post"
+/* _user_cabinet_ */
+@import "sections/_user_cabinet_menu"
+@import "sections/_user_cabinet_data"
+@import "sections/_user_cabinet_favorites"
+@import "sections/_user_cabinet_management"
+@import "sections/_user_cabinet_management_create"
+@import "sections/_user_cabinet_my_comments"
+@import "sections/_user_cabinet_private_mess"
+@import "sections/_user_cabinet_gifts"
+@import "sections/_user_cabinet_mailing_reminder"
+
+// ? to style.sass ?
+@import "sections/memorial_body"
+@import "blocks/memorial_tab_1"
+@import "blocks/memorial_tab_2"
+@import "blocks/memorial_tab_3"
+/*_pages_*/
+@import "pages/login_signup"
+@import "pages/contact_us"
+@import "pages/user_cabinet"
+@import "pages/terms_of_use"
+@import "pages/privacy_policy"
+@import "pages/faq"
+@import "pages/donate"

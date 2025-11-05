@@ -1,0 +1,32 @@
+<form enctype="multipart/form-data" id="formGallery" class="form-gallery">
+  <h6>Завантажте фото</h6>
+  <p>
+    Додайте фотографії на сторінку Онлайн Меморіалу. Розмір фото не повинен перевищувати ХХХ Кб (.jpg .jpeg, .png, .gif) а
+    його вміст має відповідати <a href="#" class="link-blue">правилам</a> нашого сервісу.
+  </p>
+  <div id="gallery_img_imgs_previews" class="imgs-previews"></div>
+  <input hidden id="gallery_img" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" name="uploadfile[]" multiple>
+  <label for="gallery_img" class="btn-add-foto">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6" />
+      <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6" />
+    </svg>
+    Додати фото
+  </label>
+  <h6>Завантажте відео</h6>
+  <p>Ви можете додати відео на сторінку Онлайн Меморіалу. Нагадуємо, що контент, який Ви розміщуєте, повинен відповідати нашим правилам і бути завантажений з сервісу YouTube. Для того, щоб коректно додати відеоролик (посилання на нього), Ви можете скористатися розділом Допомога, в якому буде надано докладне пояснення цього процесу.</p>
+  <div class="videos-wrap"></div>
+  <button type="button" id="btn_add_gallery_video" class="btn-add-foto">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" width="2" height="14" rx="1" fill="#3E9AF6" />
+      <rect x="14" y="6" width="2" height="14" rx="1" transform="rotate(90 14 6)" fill="#3E9AF6" />
+    </svg>
+    Додати відео
+  </button>
+  <div class="btn-wrap">
+    <button type="submit" class="btn-yellow" id="btn_save_gallery">Зберегти</button>
+    <button class="btn-reset" id="btn_reset_gallery" type="button"> Скасувати </button>
+  </div>
+
+
+</form>

@@ -1,0 +1,258 @@
+.comments-wrap
+  margin-bottom: 100px
+  @include media-breakpoint-down(md)
+    margin-bottom: 0
+
+  .comments-form-wrap
+    background-color: #F2F2F2
+    border-radius: $border-radius
+    padding: 30px
+    margin-bottom: 20px
+    @include media-breakpoint-down(md)
+      padding: 20px 15px
+    .prev-text
+      font-family: $title
+      font-size: 18px
+      line-height: 24px
+      font-weight: 700
+      margin-bottom: 20px
+      @include media-breakpoint-down(md)
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 16px
+  .comments-form
+    display: flex
+    flex-wrap: wrap
+    .form-text-wrap
+      width: 70%
+      @include media-breakpoint-down(md)
+        width: 100%
+      textarea
+        min-height: 160px
+        @include media-breakpoint-down(sm)
+          min-height: 100px
+    .form-img-wrap
+      width: 30%
+      padding-left: 20px
+      @include media-breakpoint-down(md)
+        width: 100%
+        padding-left: 0
+      .label-add-foto
+        display: block
+        position: relative
+        border-radius: $border-radius
+        overflow: hidden
+        background-color: $blue
+        border-radius: 10px
+        padding: 50px 15px
+        text-align: center
+        @include media-breakpoint-down(md)
+          max-width: 150px
+          padding: 45px 15px
+          margin-bottom: 20px
+
+        &:hover
+          background-color: darken($blue, 5%)
+        &:active
+          background-color: darken($blue, 10%)
+        &.active
+          cursor: default
+          .btns-wrap
+            transform: translateX(100%)
+            @include media-breakpoint-down(md)
+              transform: translateX(0)
+          &:hover
+            .btns-wrap
+              transform: translateX(0)
+          .icon-foto
+            opacity: 0
+      .btns-wrap
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        display: flex
+        padding: 10px
+        background-color: rgba(50, 50, 50, 0.6)
+        transform: translateX(100%)
+        transition: .3s
+        .btn-add-img,
+        .btn-remove-img
+          margin: auto
+          cursor: pointer
+          &:hover
+            .icon
+              fill: $blue
+          .icon
+            fill: #323232
+            transition: .3s
+            &-bg
+              fill: #f2f2f2
+        .btn-remove-img
+          &:hover
+            .icon
+              fill: #f2f2f2
+              &-bg
+                fill: $error
+    // btn submit
+    .form-btn-wrap
+      width: 100%
+  .comments-user-wrap 
+    .comment-block
+      margin-bottom: 40px
+      background-color: #F2F2F2
+      border-radius: $border-radius
+      padding: 30px
+      @include media-breakpoint-down(md)
+        padding: 20px 15px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+      .comment-header
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 16px
+        @include media-breakpoint-down(md)
+          margin-bottom: 5px
+        .img-wrap
+          overflow: hidden
+          border-radius: 50%
+          margin-right: 10px
+        .name
+          margin: 0
+          margin-right: 15px
+          @include media-breakpoint-down(sm)
+            flex: 1
+            margin-right: 10px
+        .date-time
+          margin-right: 20px
+          font-size: 14px
+          line-height: 20px
+          color: rgba(50, 50, 50, 0.6)
+          margin-left: auto
+          @include media-breakpoint-down(md)
+            width: 100%
+            margin: 0
+            order: 1 // auto last position...
+            padding: 6px 0
+            font-size: 12px
+            line-height: 16px
+        .btn-complain
+          @include media-breakpoint-down(md)
+            margin-left: auto
+      .comment-body
+        .comment-wrap
+          overflow: hidden
+          position: relative
+          // max-height: 10000px
+          // transition: 10s
+          transition: .5s
+          .overlay
+            position: absolute
+            bottom: 0
+            left: 0
+            background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(255,255,255,0) 100%)
+            height: 0
+            width: 100%
+            transition: 1s
+        .comment-text
+          color: rgba(50, 50, 50, 0.8)
+          p
+            margin-bottom: 16px
+        .comment-img
+          max-width: 160px
+          overflow: hidden
+          border-radius: $border-radius
+          @include media-breakpoint-down(sm)
+            max-width: 150px
+          img
+            aspect-ratio: 1/1
+            width: 100%
+            height: 100%
+            object-fit: cover
+        // close
+      .comment-body.close
+        .comment-wrap
+          // max-height: 130px
+          // transition: 4s
+          .overlay
+            height: 50%
+            transition: .4s
+      // Form-To-Comments
+      .form-to-comments
+        label
+          color: $title-c
+          font-size: 18px
+          line-height: 24px
+          margin-bottom: 20px
+          font-weight: 700
+          padding-top: 15px
+        .form-group
+          display: flex
+          align-items: center
+          background-color: $clear
+          border-radius: $border-radius
+          padding-right: 15px
+          margin: 0
+          input,
+          [contenteditable]
+            border: none
+            margin: 0 10px 0 0
+
+      // Child-Comments ===================================
+      .child-comments
+        padding-top: 20px
+        @include media-breakpoint-down(sm)
+          padding-top: 15px
+        .child-comments-block
+          padding: 20px 0 0 50px
+          border-top: 1px solid #D9D9D9
+          @include media-breakpoint-down(md)
+            padding: 20px 0 0 30px
+          @include media-breakpoint-down(sm)
+            padding: 20px 0 0 15px
+          .comment-text
+            position: relative
+            overflow: hidden
+            transition: .5s
+            .overlay
+              position: absolute
+              bottom: 0
+              left: 0
+              background: linear-gradient(0deg, rgba(242,242,242,0) 0%, rgba(255,255,255,0) 100%)
+              height: 0
+              width: 100%
+              transition: 1s
+          // close
+          &.close
+            .comment-text
+              // max-height: 130px
+              // transition: 4s
+              .overlay
+                background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(255,255,255,0) 100%)
+                height: 50%
+
+  .btn-excerpt
+    display: flex
+    justify-content: center
+    width: 100%
+    padding: 15px 5px 5px 5px
+    margin-bottom: 10px
+    .icon-doble-brecket
+      transform: rotateX(0)
+      transition: .8s
+    &.active
+      padding-: 15px
+      .icon-doble-brecket
+        transform: rotateX(180deg)
+  [data-title]
+    &::before
+      background-color: $clear
+      right: -15px
+      transform: translateX(0)
+    &::after
+      background-color: $clear
+  

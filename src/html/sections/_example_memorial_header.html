@@ -1,0 +1,60 @@
+<section class="memorial-header">
+  <div class="memorial-header-bg">
+    <picture class="img-header-bg-wrap">
+      <source media="(min-width: 650px)" srcset="static/img/memorials/backgrounds/image-desctop-bg-1.jpg">
+      <source media="(max-width: 650px)" srcset="static/img/memorials/backgrounds/image-mobile-bg-1.jpg">
+      <img class="img-header-bg" src="static/img/memorials/backgrounds/image-desctop-bg-1.jpg" alt="">
+    </picture>
+  </div>
+  <div class="container-xl">
+    <div class="row memorial-header-data">
+      <div class="col-md-3">
+        <div class="img-gift-wrap">
+          <div class="img-wrap" title="Фотографія людини">
+            <!-- example img -->
+          </div>
+          <div class="gift-wrap">
+            <img class="gift-img" width="100" height="100" src="static/img/memorials/gifts/gift-6.png" alt="Подарунок">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-wrap">
+        <div class="name-wrap">
+          <h4>Прізвище Ім'я По-батькові</h4>
+          <!-- ortodox, catolic, islam, judaism, taosizm (all -> src/html/component/icons.html) -->
+          @@include('../component/icons.html', {"icon": "ortodox"})
+        </div>
+        <span class="loc">Місто, Країна</span>
+        <span class="date">Дата народження — Дата смерті</span>
+      </div>
+      <div class="col-md-3 btns-wrap">
+        <!-- data-favorite="remove-from-favorite / add-to-favorite" -->
+        <!-- <button class="btn-add-to-favorite" data-favorite="add-to-favorite" data-title="Додати в Обрані Меморіали"> -->
+        @@include('../component/btns_links.html', {
+          "type": "btn",
+          "style": "add-to-favorite",
+          "class": "btn-round",
+          "attr": " data-favorite=\"add-to-favorite\" data-title=\"Додати в Обрані Меморіали\" "
+        })
+        @@include('../component/btns_links.html', {
+          "type": "btn", 
+          "style": "share-it",
+          "class": "btn-round",
+          "attr": " data-title=\"Поділитись сторінкою\" "
+        })
+        @@include('../component/btns_links.html', {
+          "type": "btn", 
+          "style": "complain",
+          "class": "btn-round",
+          "attr": " data-title=\"Повідомити про порушення\" "
+        })
+        @@include('../component/btns_links.html', {
+          "type": "btn",
+          "style": "goto-add-gift",
+          "class": "d-md-none"
+        })
+      </div>
+
+    </div>
+  </div>
+</section>

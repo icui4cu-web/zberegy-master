@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('_head.html')
+<body>
+  <!-- <main id="page" class="IS_LOG_IN"> -->
+  <main id="page">
+    @@include('_header.html')
+    <div id="content">
+      <div class="container-xl user-cabinet">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-4">
+            @@include('sections/_user_cabinet_menu.html')
+          </div>
+          <div class="col-xl-9 col-lg-8 col-md-8">
+            <div class="user-cabinet-content">
+              <button class="btn-back-to-menu d-md-none">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.875 10.9999C6.875 11.1758 6.9422 11.3518 7.07644 11.486L13.9514 18.361C14.2201 18.6297 14.6551 18.6297 14.9236 18.361C15.192 18.0924 15.1922 17.6574 14.9236 17.3889L8.53463 10.9999L14.9236 4.611C15.1922 4.34236 15.1922 3.90735 14.9236 3.63888C14.6549 3.37041 14.2199 3.37024 13.9514 3.63888L7.07644 10.5139C6.9422 10.6481 6.875 10.8241 6.875 10.9999Z" fill="#323232" fill-opacity="0.8"/>
+                </svg>
+              </button>
+              @@include('sections/_user_cabinet_gifts.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('_footer.html')
+  </main>
+  <!-- scripst & styles -->
+  @@include('_footer_connections.html')
+</body>
+</html>

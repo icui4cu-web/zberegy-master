@@ -1,0 +1,106 @@
+.user-cabinet-private-mess
+  .message-block
+    position: relative
+    display: flex
+    align-items: flex-start
+    @include media-breakpoint-down(lg)
+      // flex-wrap: wrap
+      flex-direction: column
+    .message-header
+      display: flex
+      align-items: center
+      width: 30%
+      margin-right: 15px
+      margin-top: auto
+      margin-bottom: auto
+      @include media-breakpoint-down(lg)
+        width: 100%
+        padding-right: 90px
+        align-items: flex-start
+      @include media-breakpoint-down(md)
+        margin-bottom: 5px
+      .img-wrap
+        overflow: hidden
+        border-radius: 50%
+        margin-right: 10px
+      .name
+        margin: 0
+        @include media-breakpoint-down(lg)
+          margin-top: -3px
+          padding-bottom: 20px
+        @include media-breakpoint-down(sm)
+          flex: 1
+          margin-right: 10px
+    .message-body
+      display: flex
+      flex-wrap: wrap
+      width: 50%
+      max-width: 625px
+      @include media-breakpoint-down(lg)
+        width: 100%
+        max-width: none
+        order: 1
+      .message-header
+        flex: 100%
+        margin-bottom: 15px
+        align-items: center
+        @include media-breakpoint-down(lg)
+          padding-top: 20px
+          border-top: 1px solid #DEDEDE
+        .name
+          padding: 0
+      .title
+        display: block
+        font-weight: 600
+        margin-bottom: 4px
+    .date-time
+      white-space: nowrap
+      flex: auto
+      padding-right: 100px
+      padding-left: 15px
+      font-size: 14px
+      color: rgba(50, 50, 50, 0.6)
+      @include media-breakpoint-down(lg)
+        margin-bottom: 12px
+        padding-left: 50px
+        margin-top: -25px
+        font-size: 12px
+    .btns-wrap
+      display: flex
+      position: absolute
+      right: 0
+      top: 0
+      a, button
+        width: 30px
+        height: 30px
+        padding: 0
+        text-align: center
+        margin-right: 20px
+        cursor: pointer
+        &:last-child
+          margin-right: 0
+      .btn-answer-mess
+        color: #3ED05E
+        &:hover
+          color: #3BC559
+        &.answer
+          color: #7F7F7F
+          &:hover
+            color: #5a5a5a
+      .btn-delete-mess
+        &:hover
+          .bg
+            fill: $error
+          .icon
+            fill: #ffffff
+        .bg
+          fill: #F2F2F2
+          transition: .3s
+        .icon
+          fill: #323232
+          transition: .3s
+
+  .timeline-delimer
+    height: 1px
+    background-color: #DEDEDE
+    margin-bottom: 25px

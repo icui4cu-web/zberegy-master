@@ -1,0 +1,26 @@
+<!-- <section class="home-donate" style="background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,250,255,1) 50%, rgba(255,255,255,1) 100%);"> -->
+<section class="home-donate">
+  <img class="bg" data-src="static/img/home/home-donate-bg.png" alt="">
+  <div class="container-xl content-wrap">
+    <div class="row">
+      <div class="col-lg-6 col-md-7 text-wrap">
+        <h2>Підтримай Збережи</h2>
+        <p>Ми будемо дуже вдячні Вам за будь-яку підтримку нашого проекту.</p>
+        @@include('../component/btns_links.html', {
+          "type": "link",
+          "style": "blue",
+          "text": "Підтримати проект",
+          "attr": "href=\"donate.html\" ",
+          "class": "btn-donate"
+        })
+      </div>
+      <div class="col-lg-6 col-md-5 img-wrap">
+        <picture>
+          <source media="(min-width: 650px)" srcset="static/img/home/donate-desctop.png">
+          <source media="(max-width: 650px)" srcset="static/img/home/donate-mobile.png">
+          <img data-src="static/img/home/donate-desctop.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

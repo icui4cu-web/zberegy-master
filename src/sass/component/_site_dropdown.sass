@@ -1,0 +1,123 @@
+// Dropdown Menu
+.site-dropdown
+  // wrap
+  position: relative
+  display: inline-block
+  white-space: nowrap
+  cursor: pointer
+  background-color: $clear
+  .icon-bracket
+    transition: .5s
+  &.active
+    .site-dropdown
+      // &-header
+      &-select
+        border-width: 1px
+        max-height: 130px
+        overflow-y: auto
+    // .select-sort
+    .icon-bracket
+      transform: rotateX(0.5turn)
+  &-header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    border-radius: 10px
+    border: 1px solid #DEDEDE
+    padding: 7px 14px 7px 10px
+    min-width: 230px
+    .select-sort
+      font-size: 16px
+      line-height: 26px
+      color: rgba(50, 50, 50, 0.6)
+      @include media-breakpoint-down(sm)
+        font-size: 12px
+        line-height: 16px
+  &-select
+    position: absolute
+    // width: 100%
+    top: 100%
+    left: 0
+    max-height: 0
+    overflow: hidden
+    min-width: 100%
+    background-color: $clear
+    border-radius: 10px
+    border: 0 solid #DEDEDE
+    padding: 0
+    z-index: 1
+    transition: .5s
+  &-options
+    font-size: 16px
+    padding: 7px 14px 7px 10px
+    @include media-breakpoint-down(sm)
+      font-size: 12px
+
+    &:hover
+      background-color: rgba(62, 154, 246, 0.1)
+    &:first-child
+      padding-top: 14px
+    &:last-child
+      padding-bottom: 14px
+    &::before
+      content: ''
+      display: inline-block
+      background-color: $yellow
+      width: 0
+      height: 6px
+      margin-right: 0
+      border-radius: 50%
+      transition: .2s
+    &.curent
+      display: flex
+      align-items: center
+      &::before
+        width: 6px
+        margin-right: 10px
+      li
+        cursor: pointer
+        padding: 10px 0
+        &:hover
+          // background-color: #bdbdbd
+          
+    &.active
+      .select
+        .icon-bracket
+          transform: rotateX(0.5turn)
+      .site-dropdown-select
+        max-height: 100vh
+  .select-dropdown.error + .site-dropdown-header
+    border-color: $error
+    .select-sort
+      color: $error
+
+// if in .site-form
+.site-form
+  .site-dropdown
+    display: block
+    margin-bottom: 16px
+    &-header
+      padding: 17px 20px
+      @include media-breakpoint-down(sm)
+        padding: 14px 15px
+    &-options
+      padding: 8.5px 20px
+      &:first-child
+        padding: 17px 20px 8.5px
+      &:last-child
+        padding: 8.5px 20px 17px
+      @include media-breakpoint-down(sm)
+        padding: 7px 15px
+        &:first-child
+          padding: 14px 15px 7px
+        &:last-child
+          padding: 7px 15px 14px
+    &.in-active
+      .select-sort
+        color: $text-c
+    
+    &.active
+      .site-dropdown-select
+        max-height: 300px
+        

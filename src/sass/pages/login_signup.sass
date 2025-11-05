@@ -1,0 +1,144 @@
+.login_signup-block
+  max-width: 1920px
+  margin-left: auto
+  margin-right: auto
+  padding: 80px 0
+  @include media-breakpoint-down(sm)
+    padding: 20px 0
+  &.login-block
+    max-width: none
+    min-height: calc( 100vh - 60px )
+    background-color: #E3F0FF
+    background-image: url(../img/login/login-bg-1.png)
+    background-size: 100% auto
+    background-position: bottom center
+    @include media-breakpoint-down(sm)
+      background-size: 250% auto
+
+    .signup_login-form
+      background-color: $clear
+      @include media-breakpoint-down(sm)
+        background-color: transparent
+        padding: 0
+  &.signup-block
+    position: relative
+    .bg
+      position: absolute
+      right: 0
+      bottom: 0
+      transform: translate(30%, 0%)
+      max-width: 130%
+      max-height: 100%
+      z-index: 0
+      @include media-breakpoint-down(lg)
+        max-width: 110%
+      @include media-breakpoint-down(md)
+        display: none
+        position: relative
+        margin-top: 30px
+        max-width: none
+        width: 150%
+        transform: translate(-10%, 0%)
+    .content-wrap
+      position: relative
+      z-index: 1
+    .form-wrap
+      margin: 0
+    .signup_login-form
+      padding: 15px
+      max-width: 600px
+      @include media-breakpoint-down(md)
+        margin: 0 auto
+        padding: 0
+  &.mail_confirmation-block
+    @include media-breakpoint-down(md)
+      padding-bottom: 0
+    .bg
+      transform: translate(30%, 37%)
+      width: 110%
+      height: auto
+      max-height: none
+      @include media-breakpoint-down(md)
+        display: block
+        transform: translate(-20%, 15%)
+        width: 225%
+        margin-top: 0
+  &.forgot-password-block
+    max-width: none
+  .form-wrap
+    margin: 0 auto
+  .signup_login-form
+    // background-color: $clear
+    border-radius: $border-radius
+    padding: 60px
+    @include media-breakpoint-down(sm)
+      padding: 30px 20px 20px 20px
+      background-color: transparent
+    .btn-login-google,
+    .btn-login-fb
+      margin-bottom: 16px
+    .label-pass
+      display: flex
+      justify-content: space-between
+      .forgot-pass-link
+        font-size: 12px
+        line-height: 16px
+        color: #3E9AF6
+        transition: .3s
+        &:hover
+          color: #2879ca
+    .pass-wrap
+      position: relative
+      margin-bottom: 20px
+      // input
+      //   margin: 0
+    .btn-login
+      width: 100%
+      margin-bottom: 16px
+      text-transform: none
+    .memorable-me
+      user-select: none
+      display: flex
+      align-items: center
+      margin-bottom: 16px
+    .ask-sign-up
+      text-align: center
+      font-weight: 400
+      font-size: 18px
+      line-height: 18px
+      a
+        font-weight: 600
+        color: #3E9AF6
+        transition: .3s
+        &:hover
+          color: #2879ca
+  .mail-confirmation
+    padding: 100px 15px
+    @include media-breakpoint-down(md)
+      padding: 0 15px
+      max-width: 500px
+      margin: 0 auto
+    .ask-mail-mess
+      font-size: 16px
+      font-weight: 700
+      margin-bottom: 16px
+    a,
+    .current-signup-email
+      color: #3E9AF6
+      &:hover
+        color: #1c7fe1
+
+.forgot-password
+  &-block
+    display: flex
+    align-items: center
+  &-message
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    font-size: 18px
+    line-height: 24px
+    color: #797F85
+    svg
+      margin-bottom: 15px

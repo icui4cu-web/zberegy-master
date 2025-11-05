@@ -1,0 +1,393 @@
+button
+  display: inline-flex
+  justify-content: center
+  font-size: 18px// (del?)
+  line-height: 20px// (del?)
+  font-weight: 600// (del?)
+  padding: 0
+  border: none
+  background-color: transparent
+  cursor: pointer
+  transition: .3s
+  &:focus-visible
+    outline: none
+  @media (max-width: 1400px)
+    font-size: 16px
+// button,
+.btn-green,
+.btn-blue,
+.btn-yellow,
+.btn-circle,
+.btn-login-google,
+.btn-login-fb,
+.btn-login,
+.btn-g-pay
+  display: inline-flex
+  justify-content: center
+  font-size: 18px
+  line-height: 20px
+  font-weight: 600
+  padding: 20px 30px
+  // text-transform: capitalize
+  border-radius: 50px
+  transition: .3s
+  @media (max-width: 1400px)
+    padding: 20px
+    font-size: 16px
+  @include media-breakpoint-down(sm)
+    padding: 15px
+.nav-collapse
+  padding-top: 30px
+  margin-right: 30px
+  white-space: nowrap
+
+  @include media-breakpoint-down(sm)
+    padding-top: 15px
+    margin-right: 15px
+  &:last-child
+    margin-right: 0
+    .btn-drop
+      padding-right: 0
+  .btn-drop
+    display: flex
+    align-items: center
+    padding: 0
+    margin-bottom: 15px
+    font-weight: 600
+    line-height: 16px
+    color: $title-c
+    font-family: $title
+    @include media-breakpoint-down(sm)
+      margin-bottom: 5px
+      font-size: 14px
+    .drop-icon
+      min-width: 12px
+      transform: rotateX(180deg)
+      margin-left: 8px
+      transition: .3s
+    &.collapsed
+      .drop-icon
+        transform: rotateX(0)
+  .header-nav-menu,
+  .footer-nav-menu
+    .menu-item
+      // smooth block shift (font-size: 0 to font-size: 14px ...)
+      font-size: 0
+      transition: .1s
+      &-link
+        font-size: inherit
+  .collapse.show
+    .header-nav-menu,
+    .footer-nav-menu
+      .menu-item
+        font-size: 14px
+        @include media-breakpoint-down(sm)
+          font-size: 12px
+
+.btn-green
+  background-color: #3ED05E
+  color: $clear
+  padding: 20px 40px
+  @media (max-width: 1400px)
+    padding: 20px
+  @include media-breakpoint-down(sm)
+    padding: 15px
+  &:hover
+    background-color: #3BC559
+    color: $clear
+  &:active
+    background-color: #31B04D
+.btn-blue
+  background-color: $link
+  color: $clear
+  &:hover
+    background-color: #3A8CDE
+    color: $clear
+  &:active
+    background-color: #2C7BCA
+  .btn-icon
+    margin-left: 8px
+    margin-top: -5px
+.btn-yellow
+  background-color: #FAD101
+  color: #323232
+  padding: 20px 40px
+  @include media-breakpoint-down(sm)
+    padding: 15px
+  &:hover
+    color: #323232
+    background-color: #FCDE44
+  &:active
+    background-color: #FFE874
+.btn-circle
+  position: relative
+  display: inline-flex
+  text-align: left
+  color: #323232
+  font-weight: 600
+  transition: .5s
+  @include media-breakpoint-down(sm)
+    padding: 15px 25px
+  .text
+    position: relative
+    font-size: inherit
+    font-weight: inherit
+    z-index: 1
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 60px
+    height: 60px
+    border-radius: 50px
+    background-color: #FAD101
+    z-index: 0
+    transition: inherit
+    @include media-breakpoint-down(sm)
+      width: 50px
+      height: 50px
+  &:hover
+    color: #323232
+    @include media-breakpoint-up(lg)
+      &::before
+        width: 100%
+  &:focus
+    @include media-breakpoint-down(lg)
+      &::before
+        width: 100%
+  &:active
+    &::before
+      background-color: #FFE874
+
+// btn excerpt
+.btn-excerpt
+  color: #1778F2
+  display: flex
+  align-items: center
+  .icon-brecket
+    margin-left: 10px
+    transition: .3s
+  &.open
+    .icon-brecket
+      transform: rotateX(180deg)
+
+// Social Links
+.btn-facebook
+  color: #1778F2
+  &:hover
+    color: #1675ea
+  &:active
+    color: #1571e1
+.btn-youtube
+  color: #FF0000
+  &:hover
+    color: #f30202
+  &:active
+    color: #e80202
+.btn-twitter
+  color: #55ACEE
+  &:hover
+    color: #4fa4e4
+  &:active
+    color: #479cdd
+
+// btn round
+.btn-round
+  display: flex
+  align-items: center
+  width: 40px
+  height: 40px
+  background-color: #F2F2F2
+  border-radius: 50%
+  padding: 3px
+  @include media-breakpoint-down(md)
+    width: 30px
+    height: 30px
+  // svg
+    // max-width: 20px
+
+.btn-add-to-favorite
+  &[data-favorite="add-to-favorite"]
+    .icon-star
+      .icon-star-border
+        fill: #323232
+        transition: .3s
+      .icon-star-bg
+        fill: transparent
+        transition: .3s
+  &[data-favorite="remove-from-favorite"]
+    .icon-star
+      .icon-star-border
+        fill: transparent
+        transition: .3s
+      .icon-star-bg
+        fill: $yellow
+        transition: .3s
+  .icon-star
+    @include media-breakpoint-down(sm)
+      width: 16px
+      height: 16px
+    .icon-star-border
+      fill: #323232
+    .icon-star-bg
+      // fill: #FAD101
+// btn add gift
+.btn-light
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  border: 1px solid #323232
+  border-radius: 100px
+  padding: 20px 10px
+  &.btn-add-gift
+    .btn-icon
+      margin-top: -5px
+  &:hover
+    border-color: $yellow
+    .btn-icon
+      fill: $yellow
+  .btn-icon
+    margin: 0 10px
+    fill: #323232
+    @include media-breakpoint-down(sm)
+      margin-right: 0
+  &.btn-send-message
+    &:hover
+      border-color: $blue
+      .btn-icon
+        fill: $blue
+.btn-login-google,
+.btn-login-fb
+  width: 100%
+  color: $clear
+  align-items: center
+  .icon-google,
+  .icon-fb
+    margin-right: 10px
+.btn-login-google
+  background-color: #323232
+  &:hover
+    background-color: #525151
+  &:focus
+    background-color: #323232
+.btn-login-fb
+  background-color: #1778F2
+  &:hover
+    background-color: #116cdc
+  &:focus
+    background-color: #1778F2
+.btn-login
+  color: $clear
+  background-color: #3E9AF6
+  &:hover
+    background-color: #318ce7
+  &:focus
+    background-color: #3E9AF6
+.btn-g-pay
+  background-color: #323232
+  padding: 15px
+  border-radius: $border-radius
+  &:hover
+    background-color: #222222
+  &:focus
+    background-color: #323232
+  svg
+    height: 30px
+
+// Btn-Reset
+.btn-reset
+  padding: 20px 30px
+  color: $link
+  &:hover
+    color: darken($link, 20%)
+// Btn in moderatoon
+.btn-in-moder,
+.btn-rejected
+  color: $error
+  &:hover
+    color: darken($error, 10%)
+.btn-approved
+  color: #3ED05E
+  &:hover
+    color: darken(#3ED05E, 10%)
+// Btn edit, rejected
+.btn-edit
+  // color: $title-c
+  color: #f2f2f2
+  border-radius: 50%
+  cursor: pointer
+  .pen
+    fill: $title-c
+    transition: .3s
+  &:hover
+    // color: $link
+    // box-shadow: 0 0 3px $clear
+    .pen
+      fill: $link
+// Btn delete
+.btn-delete
+  color: $title-c
+  background-color: #F2F2F2
+  border-radius: 50%
+  transition: .3s
+  svg
+    transition: .3s
+  &:hover
+    background-color: $error
+    color: $clear
+.btn-delete-red
+  color: #F2F2F2
+  background-color: $error
+  border-radius: 50%
+  transition: .3s
+  svg
+    transition: .3s
+  &:hover
+    background-color: #F2F2F2
+    color: $title-c
+
+.btn-add-foto
+  cursor: pointer
+  display: flex
+  align-items: center
+  color: #3E9AF6
+  font-size: 18px
+  line-height: 18px
+  font-weight: 600
+  margin-bottom: 20px
+  transition: .3s
+  &:hover
+    color: #2780d9
+    
+  svg
+    margin-right: 13px
+
+.btn-add-new-memorial
+  &-wrap
+    display: flex
+    justify-content: center
+    border: 1px solid #DEDEDE
+    border-radius: $border-radius
+    padding: 20px
+    margin-bottom: 30px
+  .line
+    stroke: #C2C2C2
+    transition: .3s
+  &:hover
+    .line
+      stroke: $link 
+
+// links
+a
+  text-decoration: none
+  color: $text-c
+  transition: .3s
+  &:hover
+    text-decoration: none
+    color: $link

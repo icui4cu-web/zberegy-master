@@ -1,0 +1,50 @@
+.home-capabilities,
+.accordion-images-wrap
+  margin-bottom: 100px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 60px
+  &.revers-type
+    .images-wrap
+      justify-content: flex-end
+  .accordion-wrap
+    @include media-breakpoint-down(md)
+      max-width: 530px
+      margin: 0 auto
+  .accordion-capabilities
+    max-width: 530px
+    @include media-breakpoint-down(md)
+      max-width: 100%
+  .site-accordion
+    margin-bottom: 40px
+    .card-header
+      border-bottom: 1px solid #DEDEDE
+    .btn-accordion
+      line-height: 26px
+      font-weight: 700
+      padding: 10px 0 12px
+      @include media-breakpoint-down(sm)
+        font-size: 16px
+        line-height: 22px
+    .card-body
+      padding: 10px 0 20px
+  .images-wrap
+    position: relative
+    display: flex
+  .accordion-img
+    position: absolute
+    overflow: hidden
+    border-radius: 10px
+    max-width: 90%
+    // box-shadow: 1px 3px 30px rgba(50, 50, 50, 0.1)
+    transition: top .8s, left .5s, right .5s, filter .1s
+    cursor: pointer
+    @include media-breakpoint-down(md)
+      max-width: 100%
+      pointer-events: none
+    &.active
+      position: relative
+      animation: opacity 1s
+      @include media-breakpoint-down(md)
+        animation: none
+    img
+      width: 100%
