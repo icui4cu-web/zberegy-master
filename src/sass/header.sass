@@ -1,12 +1,12 @@
 @import "_root"
 @import "_var"
-
 @import "../../node_modules/bootstrap/scss/functions"
 @import "../../node_modules/bootstrap/scss/variables"
 @import "../../node_modules/bootstrap/scss/mixins"
 @import "../../node_modules/bootstrap/scss/reboot"
 @import "../../node_modules/bootstrap/scss/transitions"
 
+@import "../../node_modules/bootstrap/scss/tooltip"
 @import "../../node_modules/bootstrap/scss/nav"
 @import "../../node_modules/bootstrap/scss/modal"
 
@@ -19,14 +19,14 @@
 @import "_mixin"
 
 body
+  min-height: 100vh
+  min-height: 100dvh
   display: flex
-  flex-wrap: wrap
-  align-items: flex-start
+  flex-direction: column
   position: relative
   min-width: 320px
   background-color: $clear
   color: $text-c
-  overflow-x: hidden
   *
     font-family: $text
     font-size: 16px
@@ -41,25 +41,20 @@ body
       color: $text-selection
 
 #page
-  min-height: 100vh
-  width: 100%
+  flex-shrink: 0
+  flex-grow: 1
   display: flex
   flex-direction: column
-  align-items: center
-  // overflow-x: hidden
-#content
-  flex-grow: 1
-  width: 100%
   overflow: hidden
-  // overflow-x: hidden
-
+  &>*
+    width: 100%
 // # Header
+.nav-scroll-lock
+  overflow: hidden
 .header
+  flex-shrink: 0
   position: sticky
-  width: 100%
-  // flex: 100%
   top: 0
-  left: 0
   padding: 20px 15px
   background-color: $clear
   // box-shadow: 0px 2px 60px #3232321a
@@ -272,6 +267,9 @@ body
     flex: auto
     @include media-breakpoint-down(lg)
       width: 100%
+      max-height: calc(100vh - var(--header-height))
+      max-height: calc(100dvh - var(--header-height))
+      overflow-y: auto
   .btn-wrap,
   .navbar-collapse
     display: flex
@@ -412,10 +410,11 @@ body
         display: inline-flex
       // @include media-breakpoint-up(xl)
       //   display: none
-      
+
+@import "utils/shortcuts"
+@import "utils/utils"
 /*_component_*/
 @import "component/breadcrumbs"
-@import "component/site_dropdown"
 @import "component/site_form"
 /*_sections_*/
 @import "sections/home_page_first"

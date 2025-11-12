@@ -1,5 +1,5 @@
 <div class="comments-wrap">
-  <h5>Вшанування пам'яті</h5>
+  <h2 class="h5">Вшанування пам'яті</h2>
 
   <div class="comments-form-wrap">
     <div class="prev-text">Поділиться спогадами про людину, додайте фото, або напишіть слова підтримки близьким.</div>
@@ -10,20 +10,21 @@
         <span class="textarea-maxlength">0/1000</span>
       </div>
       <div class="form-img-wrap">
+        <input id="comment_add_foto" name="comment_add_foto" type="file" accept="image/jpeg, image/jpg, image/png, image/webp">
         <label for="comment_add_foto">Додати фото</label>
         <label for="comment_add_foto" class="label-add-foto">
-          <svg class="icon-foto"  width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-foto ico"  width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 20.34C23.7 20.34 18.6 25.44 18.6 31.74C18.6 38.04 23.7 43.14 30 43.14C36.3 43.14 41.4 38.04 41.4 31.74C41.4 25.5 36.3 20.34 30 20.34ZM30 40.74C25.02 40.74 21 36.72 21 31.74C21 26.76 25.02 22.74 30 22.74C34.98 22.74 39 26.76 39 31.74C39 36.72 34.98 40.74 30 40.74ZM49.8 17.94L40.8 18L37.02 12.48C36.78 12.18 36.42 12 36.06 12H23.94C23.58 12 23.22 12.18 22.98 12.48L19.2 18H10.2C7.56002 18 5.40002 20.1 5.40002 22.74V43.2C5.40002 45.84 7.56002 48 10.2 48H49.8C52.44 48 54.6 45.84 54.6 43.2V22.2C54.6 19.56 52.44 17.94 49.8 17.94ZM52.2 43.2C52.2 44.52 51.12 45.6 49.8 45.6H10.2C8.88002 45.6 7.80002 44.52 7.80002 43.2V22.74C7.80002 21.42 8.88002 20.4 10.2 20.4H19.8C20.16 20.4 20.52 20.22 20.76 19.92L24.54 14.4H35.46L39.24 19.92C39.48 20.22 39.84 20.4 40.2 20.4L49.8 20.34C51.12 20.34 52.2 20.88 52.2 22.2V43.2Z" fill="white"/>
           </svg>
           <div class="btns-wrap">
             <label class="btn-add-img" for="comment_add_foto">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ico" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="icon-bg" cx="15" cy="15" r="15" fill="#f2f2f2"/>
                 <path class="icon" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"/>
               </svg>
             </label>
             <span class="btn-remove-img">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ico" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="icon-bg" cx="15" cy="15" r="15"/>
                 <path class="icon" d="M17.5003 7.5C17.7213 7.5 17.9333 7.5878 18.0896 7.74408C18.2459 7.90036 18.3337 8.11232 18.3337 8.33333H20.0003C20.2213 8.33333 20.4333 8.42113 20.5896 8.57741C20.7459 8.73369 20.8337 8.94565 20.8337 9.16667C20.8337 9.38768 20.7459 9.59964 20.5896 9.75592C20.4333 9.9122 20.2213 10 20.0003 10H10.0003C9.77931 10 9.56735 9.9122 9.41107 9.75592C9.25479 9.59964 9.16699 9.38768 9.16699 9.16667C9.16699 8.94565 9.25479 8.73369 9.41107 8.57741C9.56735 8.42113 9.77931 8.33333 10.0003 8.33333H11.667C11.667 8.11232 11.7548 7.90036 11.9111 7.74408C12.0674 7.5878 12.2793 7.5 12.5003 7.5H17.5003Z"/>
                 <path class="icon" fill-rule="evenodd" clip-rule="evenodd" d="M10 10.8335H20V20.8335C20 21.2755 19.8244 21.6994 19.5118 22.012C19.1993 22.3246 18.7754 22.5002 18.3333 22.5002H11.6667C11.2246 22.5002 10.8007 22.3246 10.4882 22.012C10.1756 21.6994 10 21.2755 10 20.8335V10.8335ZM12.9167 12.5002C12.8062 12.5002 12.7002 12.5441 12.622 12.6222C12.5439 12.7003 12.5 12.8063 12.5 12.9168V20.4168C12.5 20.5273 12.5439 20.6333 12.622 20.7115C12.7002 20.7896 12.8062 20.8335 12.9167 20.8335C13.0272 20.8335 13.1332 20.7896 13.2113 20.7115C13.2894 20.6333 13.3333 20.5273 13.3333 20.4168V12.9168C13.3333 12.8063 13.2894 12.7003 13.2113 12.6222C13.1332 12.5441 13.0272 12.5002 12.9167 12.5002ZM17.0833 12.5002C16.9728 12.5002 16.8668 12.5441 16.7887 12.6222C16.7106 12.7003 16.6667 12.8063 16.6667 12.9168V20.4168C16.6667 20.5273 16.7106 20.6333 16.7887 20.7115C16.8668 20.7896 16.9728 20.8335 17.0833 20.8335C17.1938 20.8335 17.2998 20.7896 17.378 20.7115C17.4561 20.6333 17.5 20.5273 17.5 20.4168V12.9168C17.5 12.8063 17.4561 12.7003 17.378 12.6222C17.2998 12.5441 17.1938 12.5002 17.0833 12.5002Z"/>
@@ -31,7 +32,6 @@
             </span>
           </div>
         </label>
-        <input id="comment_add_foto" name="comment_add_foto" type="file" accept="image/jpeg, image/jpg, image/png, image/webp" hidden>
       </div>
       <div class="form-btn-wrap">
         @@include('btns_links.html', {
@@ -49,7 +49,7 @@
     <div class="comment-block">
       <div class="comment-header">
         <div class="img-wrap">
-          <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+          <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
         </div>
         <div class="name h6">Прізвище Ім'я По-батькові</div>
   
@@ -71,7 +71,7 @@
           </div>
           <a data-fancybox="gallery-comments_id-1" data-type='image' href="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg">
             <div class="comment-img">
-              <img data-src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" />
+              <img src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" alt="Прізвище Ім'я По-батькові" loading="lazy" decoding="async">
             </div>
           </a>
         </div>
@@ -82,7 +82,7 @@
           <div class="child-comments-block">
             <div class="comment-header">
               <div class="img-wrap">
-                <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+                <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
               </div>
               <div class="name h6">Прізвище Ім'я По-батькові</div>
               <div class="date-time">дд.мм.рррр 12:00</div>
@@ -110,7 +110,7 @@
     <div class="comment-block">
       <div class="comment-header">
         <div class="img-wrap">
-          <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+          <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
         </div>
         <div class="name h6">Прізвище Ім'я По-батькові</div>
   
@@ -137,7 +137,7 @@
     <div class="comment-block">
       <div class="comment-header">
         <div class="img-wrap">
-          <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+          <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
         </div>
         <div class="name h6">Прізвище Ім'я По-батькові</div>
   
@@ -155,7 +155,7 @@
           <!-- only img -->
           <a data-fancybox="gallery-comments_id-2" data-type='image' href="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg">
             <div class="comment-img">
-              <img data-src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" />
+              <img src="static/img/memorials/person-1/memorable-dates/memorable-foto-1.jpg" alt="Прикріплене фото" loading="lazy" decoding="async">
             </div>
           </a>
         </div>

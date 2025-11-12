@@ -1,17 +1,17 @@
 <aside class="memorial-sidebar">
   <div class="sidebar-block">
-    <h5>Пам’ять вшанували: 
+    <h2 class="h5">Пам’ять вшанували: 
       <button id="gifts-count" class="gifts-count" data-toggle="modal" data-target="#giverModal" data-gifts-count="3"></button>
-    </h5>
+    </h2>
     <div class="gifts-wrap">
       <div class="gift-img" data-giver-id="6">
-        <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3">
+        <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3" loading="lazy" decoding="async">
       </div>
       <div class="gift-img" data-giver-id="4">
-        <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3">
+        <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3" loading="lazy" decoding="async">
       </div>
       <div class="gift-img" data-giver-id="3">
-        <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+        <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3" loading="lazy" decoding="async">
       </div>
     </div>
     @@include('../component/btns_links.html', {
@@ -23,10 +23,10 @@
     })
   </div>
   <div class="sidebar-block">
-    <h5>Меморіал зберігає:</h5>
+    <h2 class="h5">Меморіал зберігає:</h2>
     <div class="owner">
       <div class="owner-img">
-        <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto">
+        <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
       </div>
       <span class="owner-name">Прізвище Ім'я По-батькові</span>
     </div>
@@ -39,7 +39,7 @@
     })
   </div>
   <div class="sidebar-block">
-    <h5>Останні події:</h5>
+    <h2 class="h5">Останні події:</h2>
     <ul class="last-events list-yellow-mark">
       <li>
         <div class="item-data">

@@ -37,7 +37,7 @@ $('#send_message_form_2').on('submit', function (e) {
       <div class="message-block">
         <div class="message-header">
           <div class="img-wrap">
-            <img width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="">
+            <img class="avatar" width="40" height="40" src="static/img/memorials/no-photo.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="name h6">Ваша відповідь</div>
         </div>

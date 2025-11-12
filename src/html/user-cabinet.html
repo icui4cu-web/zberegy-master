@@ -2,25 +2,24 @@
 <html lang="uk">
   @@include('_head.html')
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
-      <div class="container-xl user-cabinet">
-        <div class="row">
-          <div class="col-xl-3">
-            @@include('sections/_user_cabinet_menu.html')
-          </div>
-          <div class="col-xl-9">
-            <div class="user-cabinet-content">
-              @@include('sections/_user_cabinet_data.html')
-            </div>
+    <div class="container-xl user-cabinet">
+      <div class="row">
+        <div class="col-xl-3">
+          @@include('sections/_user_cabinet_menu.html')
+        </div>
+        <div class="col-xl-9">
+          <div class="user-cabinet-content">
+            @@include('sections/_user_cabinet_data.html')
           </div>
         </div>
       </div>
     </div>
-    @@include('_footer.html')
   </main>
+  @@include('_footer.html')
+  @@include('component/_site_modals.html')
   <!-- scripst & styles -->
   @@include('_footer_connections.html')
 </body>

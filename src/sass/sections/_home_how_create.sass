@@ -9,137 +9,19 @@
       margin-bottom: 50px
     @include media-breakpoint-down(sm)
       margin-bottom: 10px
-  .steps-wrap
-    // display: flex
+  .steps
     margin-bottom: 60px
     @include media-breakpoint-down(sm)
       margin-bottom: 30px
-
-    // .draggable
-    // .slick-track
-      min-width: 100%
-  .step
-    // flex-basis: 25%
-    display: flex
-    flex-direction: column
-    align-items: center
-    &:nth-child(2n+2)
-      @include media-breakpoint-down(sm)
-        flex-direction: column-reverse
-        .step-header
-          &::after
-            top: -20.5px
-      
-    .step-header
-      width: 100%
-    .step-text
-      max-width: 325px
-    &-header,
-    &-footer
-      display: flex
-      align-content: center
-      flex-wrap: wrap
-      justify-content: center
-      min-height: 170px
-      @include media-breakpoint-down(sm)
-        min-height: auto
-    &-header
-      position: relative
-      border-bottom: 1px solid #000
-      min-height: 205px
-      margin-bottom: 30px
-      @include media-breakpoint-down(md)
-        border: none
-      @include media-breakpoint-down(sm)
-        min-height: auto
-    &:first-child
-      .step-header
-        &::before
-          content: ''
-          position: absolute
-          bottom: -4.5px
-          left: 0
-          width: 9px
-          height: 9px
-          border-radius: 50%
-          background-color: $clear
-          border: 1px solid #323232
-          @include media-breakpoint-down(md)
-            display: none
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4)
-      .step-header
-        &::after
-          content: '1'
-          display: flex
-          justify-content: center
-          align-items: center
-          position: absolute
-          border-radius: 50%
-          background-color: #323232
-          border: 10px solid $clear
-          width: 41px
-          height: 41px
-          color: $clear
-          bottom: -20.5px
-          left: calc( 50% - 20.5px )
-    &:nth-child(2)
-      .step-header
-        @include media-breakpoint-down(sm)
-          padding-top: 30px
-          margin-bottom: 0
-        &::after
-          content: '2'
-    &:nth-child(3)
-      .step-header
-        &::after
-          content: '3'
-    &:nth-child(4)
-      .step-header
-        @include media-breakpoint-down(sm)
-          padding-top: 30px
-          margin-bottom: 0
-        &::after
-          content: '4'
-    &:last-child
-      .step-header
-        &::before
-          content: ''
-          position: absolute
-          bottom: -4px
-          right: 2px
-          width: 7px
-          height: 7px
-          transform: rotate(45deg)
-          border-right: 1px solid #323232
-          border-top: 1px solid #323232
-          @include media-breakpoint-down(md)
-            display: none
-    &-img,
-    &-text
-      text-align: center
-    &-img
-      img
-        // width: 120px
-        // width: 100%
-        // max-width: 200px
-        max-height: 200px
   .btns-wrap
     display: flex
     justify-content: center
+    gap: 20px 30px
     @include media-breakpoint-down(sm)
       flex-wrap: wrap
       [class^=btn]
         width: 100%
         max-width: 350px
-    a, button
-      margin: 0 30px 20px 0
-      &:last-of-type
-        margin-right: 0
-      @include media-breakpoint-down(sm)
-        margin-right: 0
 .slick-dots
   display: none
   @include media-breakpoint-down(md)
@@ -170,3 +52,101 @@
     padding: 3px
     border-radius: 50%
     background-color: #E9E9E9
+.steps
+  $root: &
+  $row-gap: 110px
+  counter-reset: steps
+  &__item
+    counter-increment: steps
+  &__img
+    display: block
+    margin-inline: auto
+  &__text
+    max-width: 325px
+    margin-inline: auto
+    &::after
+      content: counter(steps)
+      display: block
+      margin-top: -15px
+      margin-inline: auto
+      width: 51px
+      height: 51px
+      border-radius: 50%
+      border: 10px solid #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: #323232
+      color: #fff
+      font-size: 15px
+      font-weight: 500
+  &__description
+    margin-bottom: 0
+    color: #323232
+  @include media-breakpoint-up(md)
+    .slick-track
+      display: grid
+      grid-template-columns: repeat(4, minmax(0, 1fr))
+      &::before,
+      &::after
+        content: none
+    .slick-slide
+      height: auto
+    &__item
+      display: grid !important
+      grid-template-rows: subgrid
+      grid-row: span 2
+      &:nth-child(even)
+        --inverse: -1
+      &:nth-child(odd)
+        --inverse: 1
+    &__img
+      #{$root}__item:nth-child(even) &
+        margin-top: 20px
+      #{$root}__item:nth-child(odd) &
+        margin-bottom: 20px
+        align-self: end
+    &__text
+      position: relative
+      #{$root}__item:nth-child(even) &
+        order: -1
+        padding-bottom: $row-gap * 0.5
+        align-self: end
+        &::after
+          bottom: 0
+      #{$root}__item:nth-child(odd) &
+        padding-top: $row-gap * 0.5
+        &::after
+          top: 0
+      &::after
+        margin-top: 0
+        position: absolute
+        left: 50%
+        transform: translate(-50%, calc(50% * var(--inverse) * -1))
+  @include media-breakpoint-up(lg)
+    &__text
+      #{$root}__item:first-child &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-50%)
+        width: 9px
+        height: 9px
+        border-radius: 50%
+        background-color: #fff
+        border: 1px solid #323232
+      #{$root}__item:last-child &::before
+        content: ''
+        position: absolute
+        right: 0
+        bottom: 0
+        transform: translateY(50%)
+        border-style: solid
+        border-width: 6px 0 6px 8px
+        border-color: transparent transparent transparent #323232
+      #{$root}__item:nth-child(even) &
+        border-bottom: 1px solid #000
+      #{$root}__item:nth-child(odd) &
+        border-top: 1px solid #000
+        margin-top: -1px

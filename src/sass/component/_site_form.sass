@@ -1,6 +1,6 @@
 // SITE-FORM
 .site-form
-  label:not(.btn-edit)
+  label:not(.btn-edit,.agreement-terms,.h6)
     font-size: 14px
     line-height: 20px
     color: rgba(50, 50, 50, 0.6)
@@ -12,17 +12,18 @@
   .form-group
     position: relative
     margin-bottom: 20px
-  input,
-  textarea,
-  [contenteditable]
+  .form-control
+    width: 100%
+  input:not(.checkbox, .radio, .no-style, [type="file"]),
+  textarea
     display: block
     width: 100%
     padding: 17px 20px
-    // margin-bottom: 20px
     font-size: 16px
     line-height: 26px
     border-radius: 10px
     border: 1px solid #dedede
+    background-color: #fff
     color: rgba(50, 50, 50, 0.6)
     transition: .3s
     @include media-breakpoint-down(sm)
@@ -38,14 +39,16 @@
     &:focus-visible
       color: $text-c
       outline: none
+      border-color: #555
       &::placeholder
         font-size: 0
         color: transparent
+    &:user-invalid
+      border-color: $error
     &.error
       border-color: $error
       &:not(.user-cabinet-data .input-group-email input, textarea)
         margin-bottom: 30px
-
     &.error ~ .error-mess
       padding-top: 4px
       max-height: 100px
@@ -87,26 +90,22 @@
       z-index: 1
       // opacity: 0
       // transition: .3s
-  [contenteditable]
-    &::before
-      content: attr(data-placeholder)
-      width: 100%
-      white-space: nowrap
-      overflow: hidden
-      display: inline-flex
-      transition: .2s
     &.active,
-    &:focus
+    &:focus,
+    &:not(:empty):not(:has(br:only-child))
       &::before
-        width: 0
+        content: none
   .agreement-terms
     margin-bottom: 20px
     font-size: 12px
     line-height: 16px
+    text-wrap: balance
     a
       color: $blue
       font-size: inherit
       line-height: inherit
+      &:hover
+        text-decoration: underline
   .captcha
     margin-bottom: 20px
   .wenn-registriert
@@ -142,7 +141,14 @@ form[disabled=true]:not(#user_data_form)
 .custom-checkbox-wrap
   display: flex
   align-items: center
-.custom-checkbox
+  column-gap: 10px
+.checkbox,
+.radio
+  appearance: none
+  flex-shrink: 0
+  &:not(:disabled)
+    cursor: pointer
+.checkbox
   display: inline-flex
   align-items: center
   justify-content: center
@@ -152,23 +158,51 @@ form[disabled=true]:not(#user_data_form)
   background-color: $clear
   border: 1px solid #DEDEDE
   border-radius: 4px
-  margin-right: 10px
   font-size: 0
   font-weight: 900
   transition: .2s
   &::before
     content: "\2713"
-  &-box
-    width: 19px
-    height: 19px
-    box-shadow: 0 0 0 1px #DEDEDE
-    border: 4px solid #ffffff
-    border-radius: 4px
-    background-color: #ffffff
-    margin-right: 10px
-
-input:checked + .custom-checkbox
-  font-size: 14px
-input:checked + .custom-checkbox-box
-  box-shadow: 0 0 0 1px #3E9AF6
-  background-color: #3E9AF6
+  &:checked
+    font-size: 14px
+.radio
+  width: 19px
+  height: 19px
+  box-shadow: 0 0 0 1px #DEDEDE
+  border: 4px solid #ffffff
+  border-radius: 50%
+  background-color: #ffffff
+  &:checked
+    box-shadow: 0 0 0 1px #3E9AF6
+    background-color: #3E9AF6
+.select
+  appearance: none
+  padding: 17px 30px 17px 20px
+  font-size: 16px
+  line-height: 26px
+  border-radius: 10px
+  border: 1px solid #dedede
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23323232' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") right 14px center / 16px no-repeat #fff
+  color: rgba(50, 50, 50, 0.6)
+  transition: .3s
+  @include media-breakpoint-down(sm)
+    font-size: 14px
+    line-height: 22px
+    padding: 14px 15px
+  &_size_sm
+    padding: 7px 30px 7px 10px
+  &:focus,
+  &:focus-visible
+    color: $text-c
+    outline: none
+  &:user-invalid
+    border-color: $error
+  &.error
+    border-color: $error
+    &:not(.user-cabinet-data .input-group-email input, textarea)
+      margin-bottom: 30px
+  &.error ~ .error-mess
+    padding-top: 4px
+    max-height: 100px
+    @include media-breakpoint-down(sm)
+      padding-top: 4px

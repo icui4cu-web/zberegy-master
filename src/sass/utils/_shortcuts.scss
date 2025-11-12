@@ -1,0 +1,6 @@
+.clouds {
+	background: #E3F0FF url('../img/login/login-bg-1.png') bottom center / 100% auto no-repeat;
+	@include media-breakpoint-down(sm) {
+		background-size: 250% auto
+	}
+}

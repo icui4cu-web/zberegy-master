@@ -131,13 +131,13 @@ $('#user_data_form input').on('keyup', function (e) {
 
 // submit - save / edit
 $('#btn_edit_user_data').on('click', function (e) {
-  // e.preventDefault()
-
-  const thisEvent = e;
-        e.target.textContent = "Зберегти"
+	const thisEvent = e;
+	const formInputs = $('#user_data_form input:not([type="file"])');
   
   if (e.target.form.getAttribute('disabled') === 'true') {
     e.target.form.setAttribute('disabled', 'false')
+	e.target.textContent = "Зберегти"
+	formInputs.prop('disabled', false);
   } else {
 
     // validation inputs
@@ -183,6 +183,7 @@ $('#btn_edit_user_data').on('click', function (e) {
       userDataForm[0].setAttribute('disabled', 'true');
       userDataForm[0].dataset.change = false;
       thisEvent.target.textContent = "Редагувати";
+	  formInputs.prop('disabled', true);
       oldUserDataFilds();
       // old values for fields
       $('#user_data_form input').each(function () {
@@ -204,6 +205,7 @@ $('#btn_reset_user_data_form').on('click', function (e) {
   e.target.form.dataset.change = false
   e.target.form.setAttribute('disabled', 'true')
   $('#btn_edit_user_data')[0].textContent = "Редагувати"
+  $('#user_data_form input:not([type="file"])').prop('disabled', true);
 })
 
 userDataForm.on('submit', function (e) {

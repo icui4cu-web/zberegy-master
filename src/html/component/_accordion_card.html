@@ -4,7 +4,8 @@
       "type": "btn",
       "style": "accordion",
       "text": "@@title",
-      "attr": " class=\"btn-accordion collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_@@num\" aria-expanded=\"@@if(context.show !== 'true'){false}@@if(context.show === 'true'){true}\" aria-controls=\"collapse_@@num\" "
+      "class": "collapsed",
+      "attr": " type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse_@@num\" aria-expanded=\"@@if(context.show !== 'true'){false}@@if(context.show === 'true'){true}\" aria-controls=\"collapse_@@num\" "
     })
   </div>
   <div id="collapse_@@num" class="collapse @@if(context.show === 'true'){show}" aria-labelledby="heading_@@num" data-parent="#accordion@@parent">

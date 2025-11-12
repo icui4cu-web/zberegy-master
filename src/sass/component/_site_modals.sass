@@ -27,6 +27,8 @@
       width: 26px
       height: 26px
       margin-left: auto
+      &:focus-visible
+        box-shadow: 0 0 0 .25rem rgba(13,110,253,.25)
       @include media-breakpoint-down(sm)
         width: 20px
         height: 20px
@@ -47,6 +49,8 @@
         margin-bottom: 10px
         justify-content: center
         text-align: center
+    .modal-title
+      margin-bottom: 0
     .modal-body
       @include media-breakpoint-down(sm)
         padding: 0 0 20px
@@ -62,6 +66,7 @@
           justify-content: center
           padding: 20px 0px
         .giver-img
+          flex-shrink: 0
           width: 40px
           height: 40px
           border-radius: 50%
@@ -175,36 +180,38 @@
       padding: 16px
     .share-links
       padding: 0
-      .more-item-tog
-        cursor: pointer
-        display: flex
-        justify-content: space-between
-        align-items: center
-        .vertical
-          opacity: 0
-      .more-item-tog.more-item
-        .vertical
-          opacity: 1
-        &~.extra-points
-          overflow: hidden
-          max-height: 0
-          padding: 0
-          margin: 0
-          border-color: transparent
-          opacity: 0
-      .extra-points
-        transition: .5s
+      .socl-accordion[open] .socl-toggler::before
+        transform: none
+      .socl-toggler
+        position: relative
+        &::before,
+        &::after
+          content: ''
+          position: absolute
+          width: 17px
+          height: 2px
+          right: 10px
+          top: calc( 50% - 1px )
+          background-color: #FAD101
+          transition: transform .2s
+        &::before
+          transform: rotate(90deg)
       li
-        display: flex
-        padding: 0
         margin-bottom: 10px
+        padding: 0
+      a, button, .socl-toggler
         border: 1px solid #DEDEDE
         border-radius: $border-radius
-        padding: 10px
-      a, button
         display: flex
         align-items: center
+        justify-content: flex-start
         gap: 10px
+        padding: 10px
+        width: 100%
+        text-align: inherit
+        font-weight: inherit
+        .socl-item-arrow
+          margin-left: auto
         span
           font-size: 16px
           font-weight: 500

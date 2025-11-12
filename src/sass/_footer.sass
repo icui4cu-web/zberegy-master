@@ -1,9 +1,10 @@
+@use "./fn";
+  
 .footer
-  background-repeat: no-repeat
-  background-size: 35% auto
-  background-position: right bottom
+  flex-shrink: 0
+  margin-top: auto
+  background: url('/static/img/footer/footer-bg.svg') left calc(50% + fn.rs(170px, 800px)) bottom / fn.rs(516px, 1098px) no-repeat
   padding-top: 50px
-  width: 100%
   @include media-breakpoint-down(sm)
     padding-top: 0  
   .logo-link
@@ -106,8 +107,11 @@
         margin-left: 0
       &:hover
         filter: contrast(120%)
+      .partners-link
+        display: flex
       img
         max-height: 80px
+        margin: auto
       @include media-breakpoint-down(sm)
         width: 60px
         display: flex

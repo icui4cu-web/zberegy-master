@@ -1,7 +1,8 @@
 /* Search Results & Favorites Memlrials */
 .search-results,
 .memorials-preview-wrap
-  margin-bottom: 160px
+  margin-block: auto
+  padding-bottom: 160px
   @include media-breakpoint-down(lg)
     margin-bottom: 100px
   @include media-breakpoint-down(md)
@@ -62,7 +63,10 @@
     @include media-breakpoint-down(sm)
       align-items: center
       justify-content: center
-
+    .label-search-sort
+      margin-bottom: 0
+    .select
+      min-width: 230px
   .preview-item
     position: relative
     display: flex
@@ -143,7 +147,6 @@
       @include media-breakpoint-down(sm)
         top: 10px
         right: 10px
-      // .btn-lock,
       // .btn-add-to-favorite
       button, a
         padding: 0
@@ -159,3 +162,5 @@
           @include media-breakpoint-down(sm)
             width: 16px
             height: 16px
+.memorials-preview-wrap
+  margin-block: 0

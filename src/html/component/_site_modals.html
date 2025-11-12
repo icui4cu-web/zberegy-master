@@ -4,40 +4,30 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="complainModalLabel">Повідомити про порушення</h4>
+        <h2 class="modal-title h4" id="complainModalLabel">Повідомити про порушення</h2>
       </div>
       <div class="modal-body">
-        <form id="complain_form" class="site-form" >
-          <label data-dropdown-for="message_subject">Причина порушення</label>
-          <!-- <input type="text" id="message_subject" name="message_subject" placeholder="Не вказано"> -->
-          <div class="site-dropdown" data-dropdown-id="message_subject">
-            <!-- hiden elem (select)(!) -->
-            <select class="select-dropdown d-none">
-              <option value="none">none</option>
-            </select>
-            
-            <div class="site-dropdown-header">
-              <span class="select-sort">Виберіть зі списку</span>
-              <svg class="icon-bracket" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.00005 7.75001C6.8402 7.75001 6.6802 7.68891 6.55817 7.56688L0.308164 1.31688C0.0639453 1.07266 0.0639453 0.677196 0.308164 0.433134C0.552383 0.189071 0.947852 0.188915 1.19191 0.433134L7.00005 6.24126L12.8082 0.433134C13.0524 0.188915 13.4479 0.188915 13.6919 0.433134C13.936 0.677352 13.9361 1.07282 13.6919 1.31688L7.44192 7.56688C7.31989 7.68891 7.15989 7.75001 7.00005 7.75001Z" fill="#323232"/>
-              </svg>
-            </div>
-            <ul class="site-dropdown-select">
-              <li class="site-dropdown-options">Причина порушення 1</li>
-              <li class="site-dropdown-options">Причина порушення 2</li>
-              <li class="site-dropdown-options">Причина порушення 3</li>
-            </ul>
-          </div>
+        <form id="complain_form" class="site-form">
           <div class="form-group">
-            <label for="message_text">Додатковий коментар</label>
-            <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+            <label for="complain-subject">Причина порушення</label>
+            <select class="select form-control" id="complain-subject" name="subject">
+              <option value="" selected disabled>Виберіть зі списку</option>
+              <option>Причина порушення 1</option>
+              <option>Причина порушення 2</option>
+              <option>Причина порушення 3</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="complain-comment">Додатковий коментар</label>
+            <textarea id="complain-comment" name="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
             <span class="textarea-maxlength">0/1000</span>
           </div>
           @@include('../component/btns_links.html', {
@@ -57,20 +47,20 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <svg class="icon-sucses" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icon-sucses ico" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="40" fill="#3ED05E"/>
           <path d="M37.7127 55.6524C37.2949 55.6536 36.8809 55.572 36.4947 55.4124C36.1086 55.2528 35.7578 55.0183 35.4627 54.7224L21.9377 41.2074C21.3977 40.5998 21.1103 39.8088 21.1342 38.9962C21.1581 38.1836 21.4916 37.4109 22.0664 36.8361C22.6412 36.2613 23.414 35.9278 24.2265 35.9039C25.0391 35.88 25.8301 36.1674 26.4377 36.7074L37.7102 47.9574L57.9877 27.6799C58.5954 27.1399 59.3864 26.8525 60.1989 26.8764C61.0115 26.9003 61.7842 27.2338 62.359 27.8086C62.9339 28.3834 63.2673 29.1561 63.2913 29.9687C63.3152 30.7813 63.0277 31.5723 62.4877 32.1799L39.9552 54.7149C39.3577 55.3102 38.5487 55.6446 37.7052 55.6449L37.7127 55.6524Z" fill="white"/>
         </svg>
       </div>
       <div class="modal-body">
-        <h6 class="modal-title" id="sucsesModalLabel">Дякуємо, Ваше повідомлення надіслано</h6>
+        <p class="modal-title h6" id="sucsesModalLabel">Дякуємо, Ваше повідомлення надіслано</p>
       </div>
     </div>
   </div>
@@ -81,50 +71,50 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="giverModalLabel">Пам'ять вшанували</h5>
+        <h2 class="modal-title h4" id="giverModalLabel">Пам'ять вшанували</h2>
       </div>
       <div class="modal-body">
         <div class="giver-block">
           <div class="giver-img">
-            <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            <img class="avatar" width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
           </div>
           <div class="giver-text-wrap">
             <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
             <span class="giver-date">дд.мм.рррр</span>
           </div>
           <div class="which-gift">
-            <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3">
+            <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-3" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="giver-block">
           <div class="giver-img">
-            <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            <img class="avatar" width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
           </div>
           <div class="giver-text-wrap">
             <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
             <span class="giver-date">дд.мм.рррр</span>
           </div>
           <div class="which-gift">
-            <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3">
+            <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-3" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="giver-block">
           <div class="giver-img">
-            <img width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto">
+            <img class="avatar" width="312" height="312" src="static/img/memorials/no-photo.jpg" alt="foto" loading="lazy" decoding="async">
           </div>
           <div class="giver-text-wrap">
             <span class="h6 giver-name">Прізвище Ім'я По-батькові</span>
             <span class="giver-date">дд.мм.рррр</span>
           </div>
           <div class="which-gift">
-            <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -137,46 +127,46 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="giftsModalLabel">Оберить меморіальний поминок</h5>
+        <h2 class="modal-title h4" id="giftsModalLabel">Оберить меморіальний поминок</h2>
       </div>
       <div class="modal-body">
         <div class="gifts-block">
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-1">
+            <img src="static/img/memorials/gifts/gift-1.png" alt="Подарунок-1" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-2">
+            <img src="static/img/memorials/gifts/gift-2.png" alt="Подарунок-2" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3">
+            <img src="static/img/memorials/gifts/gift-3.png" alt="Подарунок-3" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-4">
+            <img src="static/img/memorials/gifts/gift-4.png" alt="Подарунок-4" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-5.png" alt="Подарунок-5">
+            <img src="static/img/memorials/gifts/gift-5.png" alt="Подарунок-5" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-6">
+            <img src="static/img/memorials/gifts/gift-6.png" alt="Подарунок-6" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-7.png" alt="Подарунок-7">
+            <img src="static/img/memorials/gifts/gift-7.png" alt="Подарунок-7" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-8.png" alt="Подарунок-8">
+            <img src="static/img/memorials/gifts/gift-8.png" alt="Подарунок-8" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-9.png" alt="Подарунок-9">
+            <img src="static/img/memorials/gifts/gift-9.png" alt="Подарунок-9" loading="lazy" decoding="async">
           </div>
           <div class="gift-img">
-            <img src="static/img/memorials/gifts/gift-10.png" alt="Подарунок-10">
+            <img src="static/img/memorials/gifts/gift-10.png" alt="Подарунок-10" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -189,14 +179,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title t-c" id="sendMessageModalLabel">Написати повідомлення <br> <small>(для Зберігача Меморіалу)</small></h5>
+        <h2 class="modal-title t-c h4" id="sendMessageModalLabel">Написати повідомлення <br> <small>(для Зберігача Меморіалу)</small></h2>
       </div>
       <div class="modal-body">
         <form id="send_message_form" class="site-form" >
@@ -205,8 +195,8 @@
             <input type="text" id="message_subject" name="message_subject" placeholder="Не вказано">
           </div>
           <div class="form-group">
-            <label for="message_text">Текст повідомлення</label>
-            <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+            <label for="send-message">Текст повідомлення</label>
+            <textarea name="message_text" id="send-message" placeholder="Напишіть текст" maxlength="1000"></textarea>
             <span class="textarea-maxlength">0/1000</span>
           </div>
           @@include('../component/btns_links.html', {
@@ -226,20 +216,20 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8"/>
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8"/>
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="sendMessageModalLabel_2">Написати відповідь</h5>
+        <h2 class="modal-title h4" id="sendMessageModalLabel_2">Написати відповідь</h2>
       </div>
       <div class="modal-body">
         <form id="send_message_form_2" class="site-form" >
           <div class="form-group">
-            <label for="message_text">Текст відповіді</label>
-            <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+            <label for="send-answer">Текст відповіді</label>
+            <textarea name="message_text" id="send-answer" placeholder="Напишіть текст" maxlength="1000"></textarea>
             <span class="textarea-maxlength">0/1000</span>
             <span class="error-mess">Додайте інформацію</span>
           </div>
@@ -260,27 +250,26 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="delAccModalLabel">Видалення акаунту</h5>
+        <h2 class="modal-title h4" id="delAccModalLabel">Видалення акаунту</h2>
       </div>
       <div class="modal-body">
         <form id="del_account_form" class="del-account-form site-form"  disabled="true">
           <label for="confirm_remove" class="custom-checkbox-wrap">
-            <input hidden type="checkbox" name="confirm_remove" id="confirm_remove">
-            <span class="custom-checkbox"></span>
+            <input class="checkbox" type="checkbox" name="confirm_remove" id="confirm_remove">
             <span>Я усвідомленно видаляю свій акаунт</span>
           </label>
           <p>Відмовляюсь від можливості отримувати будь яку інформацію з сервісу Збережи та відповіді на мої коментарі.</p>
           
           <div class="form-group">
-            <label for="message_text">Будь ласка, введіть причину</label>
-            <textarea name="message_text" id="message_text" placeholder="Напишіть текст" maxlength="1000"></textarea>
+            <label for="del-reason">Будь ласка, введіть причину</label>
+            <textarea name="message_text" id="del-reason" placeholder="Напишіть текст" maxlength="1000"></textarea>
             <span class="textarea-maxlength">0/1000</span>
             <span class="error-mess">Будь ласка, введіть причину</span>
           </div>
@@ -302,14 +291,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="delAccAlertLabel">Видалення акаунту</h4>
+        <h2 class="modal-title h4" id="delAccAlertLabel">Видалення акаунту</h2>
       </div>
       <div class="modal-body">
         <p>Ви є Хранителем одного або кількох Онлайн Меморіалів. Щоб видалити свій обліковий запис Вам необхідно спочатку видалити Меморіали. Після цього Ви отримаєте можливість видалити свій запис.</p>
@@ -324,14 +313,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="delMemorialModalLabel">Ви впевнені що бажаєте видалити обраний Онлайн Меморіал?</h4>
+        <h2 class="modal-title h4" id="delMemorialModalLabel">Ви впевнені що бажаєте видалити обраний Онлайн Меморіал?</h2>
       </div>
       <div class="modal-body">
         @@include("../component/btns_links.html", {
@@ -356,14 +345,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="galleryDescrLabel">Створення галереї</h4>
+        <h2 class="modal-title h4" id="galleryDescrLabel">Створення галереї</h2>
       </div>
       <div class="modal-body">
         <!-- <form id="complain_form" class="site-form" > -->
@@ -377,13 +366,13 @@
             <div class="select-img-wrap square-type">
               <input hidden type="file" id="сhange_image" accept="image/jpeg, image/jpg, image/png, image/webp">
               <label for="сhange_image" class="btn-load-select-img btn-edit">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="ico" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="currentColor"></circle>
                   <path class="pen" d="M21.4873 10.987L20.1844 12.2899L17.6714 9.85386L19.0128 8.51249C19.3409 8.18435 19.7859 8 20.25 8C20.7141 8 21.1591 8.18435 21.4873 8.51249C21.8154 8.84062 21.9997 9.28568 21.9997 9.74974C21.9997 10.2138 21.8154 10.6588 21.4873 10.987ZM19.4214 13.052L11.4108 21.0626L8 22.0129L8.93538 18.589L16.9163 10.6081L19.4214 13.052Z"></path>
                 </svg>
               </label>
               <div class="select-img">
-                <img src="static/img/load.gif" alt="">
+                <img src="static/img/load.gif" alt="" loading="lazy" decoding="async">
               </div>
             </div>
           </div>
@@ -404,20 +393,20 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="galleryVideoLabel">Створення галереї</h4>
+        <h2 class="modal-title h4" id="galleryVideoLabel">Створення галереї</h2>
       </div>
       <div class="modal-body">
         <form id="gallery_video_form" class="site-form gallery-video-form" >
           <label for="input_gallery_video">Відео</label>
           <div class="form-group">
-            <svg class="icon-for-input" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="icon-for-input ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.4238 8.59709L15.2778 11.7431C15.0698 11.9511 14.7578 11.9511 14.5498 11.7431C14.3418 11.5351 14.3418 11.2231 14.5498 11.0151L17.6958 7.86909C19.2298 6.33509 19.2298 3.83909 17.6958 2.30509C16.9418 1.55109 15.9798 1.16109 14.9138 1.16109C13.8738 1.16109 12.8858 1.57709 12.1318 2.30509L8.98581 5.45109C7.45181 6.98509 7.45181 9.48109 8.98581 11.0151C9.34981 11.3791 9.79181 11.6911 10.2858 11.8731C10.5458 11.9771 10.6758 12.2891 10.5718 12.5491C10.3378 13.0951 9.73981 12.7831 9.89581 12.8351C9.27181 12.5751 8.72581 12.2111 8.25781 11.7431C6.30781 9.81909 6.30781 6.64709 8.25781 4.72309L11.4038 1.57709C12.3398 0.641094 13.5878 0.121094 14.9138 0.121094C16.2398 0.121094 17.4878 0.641094 18.4238 1.57709C20.3738 3.50109 20.3738 6.67309 18.4238 8.59709ZM10.1038 7.16709C9.84381 7.06309 9.53181 7.19309 9.42781 7.45309C9.32381 7.71309 9.45381 8.02509 9.71381 8.12909C10.2078 8.33709 10.6498 8.62309 11.0138 8.98709C12.5478 10.5211 12.5478 13.0171 11.0138 14.5511L7.86781 17.6971C7.11381 18.4511 6.15181 18.8411 5.08581 18.8411C4.04581 18.8411 3.05781 18.4251 2.30381 17.6971C0.769812 16.1631 0.769812 13.6671 2.30381 12.1331L5.44981 8.98709C5.65781 8.77909 5.65781 8.46709 5.44981 8.25909C5.24181 8.05109 4.92981 8.05109 4.72181 8.25909L1.57581 11.4051C-0.348187 13.3291 -0.348187 16.5011 1.57581 18.4251C2.51181 19.3611 3.75981 19.8811 5.08581 19.8811C6.41181 19.8811 7.65981 19.3611 8.59581 18.4251L11.7418 15.2791C13.6918 13.3551 13.6918 10.1831 11.7418 8.25909C11.2738 7.79109 10.7278 7.42709 10.1038 7.16709Z" fill="#323232" fill-opacity="0.8" />
             </svg>
             <input type="text" id="input_gallery_video" placeholder="Додати посилання на YouTube">
@@ -440,14 +429,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="galleryEditVideoLabel">Створення галереї</h4>
+        <h2 class="modal-title h4" id="galleryEditVideoLabel">Створення галереї</h2>
       </div>
       <div class="modal-body">
         <form id="gallery_edit_video_form" class="site-form" >
@@ -472,10 +461,10 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="shareLinksLabel">Поділитись сторінкою</h4>
+        <h2 class="modal-title h4" id="shareLinksLabel">Поділитись сторінкою</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
-            <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
               <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
             </svg>
@@ -488,7 +477,7 @@
           <li class="socl-item">
             <!-- https://www.addtoany.com/add_to/facebook?linkurl=YOUR_LINK_SHARE -->
             <a href="https://www.addtoany.com/add_to/facebook?linkurl=https://zberegy.uadev.fun" class="btn-facebook">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ico" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20Z" fill="currentColor"></path>
                 <path d="M21.5948 31.2888V20.5831H25.1884L25.7273 16.4109H21.5948V13.747C21.5948 12.5392 21.9304 11.7159 23.6626 11.7159H25.8719V7.98537C24.8025 7.87224 23.7278 7.81744 22.6524 7.82123C19.467 7.82123 17.2862 9.76548 17.2862 13.3363V16.4109H13.6835V20.5831H17.2862V31.2888H21.5948Z" fill="#FDFDFD"></path>
               </svg>
@@ -499,7 +488,7 @@
           <li class="socl-item">
             <!-- https://twitter.com/intent/tweet?text=&amp;url=YOUR_LINK_SHARE -->
             <a href="https://twitter.com/intent/tweet?text=&amp;url=https://zberegy.uadev.fun" class="btn-twitter">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ico" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.0002 39.9996C31.0458 39.9996 40 31.0454 40 19.9998C40 8.95423 31.0458 0 20.0002 0C8.95459 0 0.000366211 8.95423 0.000366211 19.9998C0.000366211 31.0454 8.95459 39.9996 20.0002 39.9996Z" fill="currentColor"></path>
                 <path d="M32.2508 14.3734C31.3783 14.76 30.4526 15.0134 29.5049 15.1253C30.5034 14.5282 31.2506 13.5883 31.6073 12.481C30.6689 13.0378 29.6422 13.43 28.5715 13.6407C28.1241 13.1636 27.5834 12.7834 26.9831 12.5238C26.3827 12.2642 25.7353 12.1307 25.0812 12.1316C22.4416 12.1316 20.3007 14.2725 20.3007 16.9121C20.3007 17.2868 20.3431 17.6515 20.4251 18.0016C16.4521 17.8023 12.9294 15.8993 10.5714 13.0061C10.1462 13.7357 9.92275 14.5653 9.92397 15.4098C9.92397 17.0679 10.7686 18.5318 12.0506 19.3888C11.2914 19.3654 10.5489 19.1601 9.88547 18.7902L9.88511 18.8508C9.88511 21.1671 11.5336 23.0991 13.7202 23.538C13.3098 23.6499 12.8863 23.7064 12.4609 23.7059C12.1522 23.7059 11.8531 23.6763 11.5615 23.6207C12.1697 25.5195 13.9348 26.9017 16.0272 26.9405C14.3337 28.2697 12.2422 28.9905 10.0894 28.9869C9.70436 28.9869 9.32289 28.9645 8.94962 28.9199C11.135 30.325 13.679 31.0707 16.2771 31.0679C25.0702 31.0679 29.8789 23.7836 29.8789 17.4658C29.8789 17.2587 29.8742 17.0522 29.865 16.8476C30.8013 16.1715 31.6092 15.3336 32.2508 14.3734Z" fill="#F1F2F2"></path>
               </svg>
@@ -508,49 +497,48 @@
           </li>
 
           
-          <li class="socl-item more-item-tog more-item">
-            ... Показати бiльше
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect class="vertical" x="7.5" width="2" height="17" fill="#FAD101"></rect>
-              <rect x="17" y="7.5" width="2" height="17" transform="rotate(90 17 7.5)" fill="#FAD101"></rect>
-            </svg>
-          </li>
-          
-          <li class="socl-item extra-points">
-            <!-- https://t.me/share/url?url=YOUR_LINK_SHARE -->
-            <a href="https://t.me/share/url?url=https://zberegy.uadev.fun" class="btn-twitter">
-              <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Livello_1" data-name="Livello 1" viewBox="0 0 240 240"><defs><linearGradient id="linear-gradient" x1="120" y1="240" x2="120" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1d93d2"/><stop offset="1" stop-color="#38b0e3"/></linearGradient></defs><circle cx="120" cy="120" r="120" fill="url(#linear-gradient)"/><path d="M81.229,128.772l14.237,39.406s1.78,3.687,3.686,3.687,30.255-29.492,30.255-29.492l31.525-60.89L81.737,118.6Z" fill="#c8daea"/><path d="M100.106,138.878l-2.733,29.046s-1.144,8.9,7.754,0,17.415-15.763,17.415-15.763" fill="#a9c6d8"/><path d="M81.486,130.178,52.2,120.636s-3.5-1.42-2.373-4.64c.232-.664.7-1.229,2.1-2.2,6.489-4.523,120.106-45.36,120.106-45.36s3.208-1.081,5.1-.362a2.766,2.766,0,0,1,1.885,2.055,9.357,9.357,0,0,1,.254,2.585c-.009.752-.1,1.449-.169,2.542-.692,11.165-21.4,94.493-21.4,94.493s-1.239,4.876-5.678,5.043A8.13,8.13,0,0,1,146.1,172.5c-8.711-7.493-38.819-27.727-45.472-32.177a1.27,1.27,0,0,1-.546-.9c-.093-.469.417-1.05.417-1.05s52.426-46.6,53.821-51.492c.108-.379-.3-.566-.848-.4-3.482,1.281-63.844,39.4-70.506,43.607A3.21,3.21,0,0,1,81.486,130.178Z" fill="#fff"/></svg>
-              <span>Telegram</span>
-            </a>
-          </li>
-          <li class="socl-item extra-points">
-            <!-- https://www.linkedin.com/shareArticle?mini=true&url=YOUR_LINK_SHARE -->
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://zberegy.uadev.fun" class="btn-twitter">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_27_76)">
-                <path d="M6.0402 0.00219727H33.9598C37.2957 0.00219727 40 2.70649 40 6.0424V33.958C40 37.2939 37.2957 39.9982 33.9598 39.9982H6.0402C2.70429 39.9982 0 37.2939 0 33.958V6.0424C0 2.70649 2.70429 0.00219727 6.0402 0.00219727Z" fill="#006699"/>
-                <path opacity="0.781116" d="M29.432 1.71228H10.568C5.57461 1.71228 1.55481 5.76488 1.55481 10.7989V29.2029C1.71644 33.1323 2.33815 30.6482 3.52155 26.2967C4.89691 21.2393 9.37615 16.8191 14.8309 13.5063C18.9943 10.9779 23.6547 9.36328 32.1375 9.20968C36.9483 9.12257 36.5236 2.96608 29.432 1.71228Z" fill="url(#paint0_linear_27_76)"/>
-                <path d="M12.7984 33.57V15.3932H6.75679V33.57H12.7984ZM9.77839 12.91C11.8852 12.91 13.1966 11.5142 13.1966 9.76999C13.1573 7.98641 11.8853 6.62939 9.81839 6.62939C7.75179 6.62939 6.40039 7.98643 6.40039 9.76999C6.40039 11.5143 7.71145 12.91 9.73899 12.91H9.77839Z" fill="white"/>
-                <path d="M16.1424 33.5701H22.184V23.4193C22.184 22.876 22.2233 22.3333 22.3828 21.945C22.8196 20.8595 23.8136 19.7354 25.4826 19.7354C27.6688 19.7354 28.5434 21.4022 28.5434 23.8458V33.57H34.5846V23.1476C34.5846 17.5644 31.604 14.9666 27.629 14.9666C24.3698 14.9666 22.9388 16.7883 22.1438 18.0292H22.1841V15.393H16.1425C16.2218 17.0986 16.1425 33.5698 16.1425 33.5698L16.1424 33.5701Z" fill="white"/>
-                </g>
-                <defs>
-                <linearGradient id="paint0_linear_27_76" x1="5.00987" y1="-4.10519" x2="10.2145" y2="11.0648" gradientUnits="userSpaceOnUse">
-                <stop stop-color="white"/>
-                <stop offset="1" stop-color="white" stop-opacity="0"/>
-                </linearGradient>
-                <clipPath id="clip0_27_76">
-                <rect width="40" height="40" fill="white"/>
-                </clipPath>
-                </defs>
-              </svg>
-              <span>Linkedin</span>
-            </a>
+          <li class="socl-item">
+			<details class="socl-accordion">
+				<summary class="socl-toggler">... Показати бiльше</summary>
+				<ul>
+					<li class="socl-item">
+						<!-- https://t.me/share/url?url=YOUR_LINK_SHARE -->
+						<a href="https://t.me/share/url?url=https://zberegy.uadev.fun" class="btn-twitter">
+						<svg class="ico" width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Livello_1" data-name="Livello 1" viewBox="0 0 240 240"><defs><linearGradient id="linear-gradient" x1="120" y1="240" x2="120" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1d93d2"/><stop offset="1" stop-color="#38b0e3"/></linearGradient></defs><circle cx="120" cy="120" r="120" fill="url(#linear-gradient)"/><path d="M81.229,128.772l14.237,39.406s1.78,3.687,3.686,3.687,30.255-29.492,30.255-29.492l31.525-60.89L81.737,118.6Z" fill="#c8daea"/><path d="M100.106,138.878l-2.733,29.046s-1.144,8.9,7.754,0,17.415-15.763,17.415-15.763" fill="#a9c6d8"/><path d="M81.486,130.178,52.2,120.636s-3.5-1.42-2.373-4.64c.232-.664.7-1.229,2.1-2.2,6.489-4.523,120.106-45.36,120.106-45.36s3.208-1.081,5.1-.362a2.766,2.766,0,0,1,1.885,2.055,9.357,9.357,0,0,1,.254,2.585c-.009.752-.1,1.449-.169,2.542-.692,11.165-21.4,94.493-21.4,94.493s-1.239,4.876-5.678,5.043A8.13,8.13,0,0,1,146.1,172.5c-8.711-7.493-38.819-27.727-45.472-32.177a1.27,1.27,0,0,1-.546-.9c-.093-.469.417-1.05.417-1.05s52.426-46.6,53.821-51.492c.108-.379-.3-.566-.848-.4-3.482,1.281-63.844,39.4-70.506,43.607A3.21,3.21,0,0,1,81.486,130.178Z" fill="#fff"/></svg>
+						<span>Telegram</span>
+						</a>
+					</li>
+					<li class="socl-item">
+						<!-- https://www.linkedin.com/shareArticle?mini=true&url=YOUR_LINK_SHARE -->
+						<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://zberegy.uadev.fun" class="btn-twitter">
+						<svg class="ico" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_27_76)">
+							<path d="M6.0402 0.00219727H33.9598C37.2957 0.00219727 40 2.70649 40 6.0424V33.958C40 37.2939 37.2957 39.9982 33.9598 39.9982H6.0402C2.70429 39.9982 0 37.2939 0 33.958V6.0424C0 2.70649 2.70429 0.00219727 6.0402 0.00219727Z" fill="#006699"/>
+							<path opacity="0.781116" d="M29.432 1.71228H10.568C5.57461 1.71228 1.55481 5.76488 1.55481 10.7989V29.2029C1.71644 33.1323 2.33815 30.6482 3.52155 26.2967C4.89691 21.2393 9.37615 16.8191 14.8309 13.5063C18.9943 10.9779 23.6547 9.36328 32.1375 9.20968C36.9483 9.12257 36.5236 2.96608 29.432 1.71228Z" fill="url(#paint0_linear_27_76)"/>
+							<path d="M12.7984 33.57V15.3932H6.75679V33.57H12.7984ZM9.77839 12.91C11.8852 12.91 13.1966 11.5142 13.1966 9.76999C13.1573 7.98641 11.8853 6.62939 9.81839 6.62939C7.75179 6.62939 6.40039 7.98643 6.40039 9.76999C6.40039 11.5143 7.71145 12.91 9.73899 12.91H9.77839Z" fill="white"/>
+							<path d="M16.1424 33.5701H22.184V23.4193C22.184 22.876 22.2233 22.3333 22.3828 21.945C22.8196 20.8595 23.8136 19.7354 25.4826 19.7354C27.6688 19.7354 28.5434 21.4022 28.5434 23.8458V33.57H34.5846V23.1476C34.5846 17.5644 31.604 14.9666 27.629 14.9666C24.3698 14.9666 22.9388 16.7883 22.1438 18.0292H22.1841V15.393H16.1425C16.2218 17.0986 16.1425 33.5698 16.1425 33.5698L16.1424 33.5701Z" fill="white"/>
+							</g>
+							<defs>
+							<linearGradient id="paint0_linear_27_76" x1="5.00987" y1="-4.10519" x2="10.2145" y2="11.0648" gradientUnits="userSpaceOnUse">
+							<stop offset="0" stop-color="white"/>
+							<stop offset="1" stop-color="white" stop-opacity="0"/>
+							</linearGradient>
+							<clipPath id="clip0_27_76">
+							<rect width="40" height="40" fill="white"/>
+							</clipPath>
+							</defs>
+						</svg>
+						<span>Linkedin</span>
+						</a>
+					</li>
+				</ul>
+			</details>
           </li>
 
           <li class="socl-item">
             <!-- the link will be copied from the address bar -->
-            <button data-title="Копіювати" data-news-copy="http://localhost:3000/news-1.html" class="btn-share-post">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- <mask id="mask0_77_10" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26"> -->
+            <button class="btn-share-post" data-title="Копіювати" data-location-copy>
+              <svg class="ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- <mask id="mask0_77_10" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26"> -->
                 <path d="M26 0H0V26H26V0Z" fill="white"></path>
                 <path d="M12.9999 25.9998C20.1795 25.9998 25.9998 20.1795 25.9998 12.9999C25.9998 5.82025 20.1795 0 12.9999 0C5.82025 0 0 5.82025 0 12.9999C0 20.1795 5.82025 25.9998 12.9999 25.9998Z" fill="#F7AF23"></path>
                 <path d="M15.6667 9H8.33333C7.59695 9 7 9.65665 7 10.4667V18.5333C7 19.3434 7.59695 20 8.33333 20H15.6667C16.403 20 17 19.3434 17 18.5333V10.4667C17 9.65665 16.403 9 15.6667 9Z" fill="white"></path>
@@ -571,7 +559,7 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
@@ -579,18 +567,18 @@
       </button>
       <div class="modal-body">
         <section class="donate-block"> 
-          <img class="bg" src="static/img/donate-pop-up/donate-bg.svg" alt="">
+          <img class="bg" src="static/img/donate-pop-up/donate-bg.svg" alt="" loading="lazy" decoding="async">
 
           <div class="container-xl content-wrap">
 
             <div class="row">
 
               <div class="col-lg-6 col-md-7 text-wrap">
-                <h2>Підтримай Збережи</h2>
+                <h2 id="donateLabel">Підтримай Збережи</h2>
                 <p>Ми будемо дуже вдячні Вам за будь-яку підтримку нашого проекту.</p>
                 <a href="donate.html" class="btn-blue btn-donate">
                   Підтримати проект 
-                  <svg class="btn-icon" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="btn-icon ico" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.81265 12.5C0.632382 12.5 0.5 12.6348 0.5 12.8261V19.6739C0.5 19.8654 0.632382 20 0.81265 20H2.76671C2.94698 20 3.07936 19.8654 3.07936 19.6739V12.8261C3.07936 12.6348 2.94698 12.5 2.76671 12.5H0.81265ZM24.3656 12.801C24.261 12.7906 24.1603 12.809 24.053 12.8259C23.9125 12.8476 23.7724 12.8933 23.6361 12.9764L17.7479 16.3124C17.0366 17.2038 16.8072 17.3428 15.5593 17.4663C14.0051 17.4927 12.406 17.492 10.8435 17.4911V16.6885H15.4812C16.1087 16.6885 16.4052 16.5435 16.6275 16.3875C16.728 16.3128 16.8031 16.1961 16.8881 16.0865C16.9895 15.9087 17.0965 15.7321 17.0965 15.4343C17.0965 14.9292 16.943 14.6589 16.6797 14.456C16.4163 14.2531 15.9977 14.1299 15.4812 14.1299H13.2144C12.6175 14.1299 11.9863 13.9223 11.3646 13.7286C10.7429 13.5348 10.1139 13.3489 9.74924 13.3273H7.50858C6.83491 13.3273 6.23928 13.5221 5.68478 13.7286C5.12982 13.9353 4.61979 14.1801 4.06942 14.1801H3.9131V19.1718H17.9824C18.1812 19.1637 18.3331 19.1364 18.4253 19.0963H18.4513C18.5971 19.0441 18.6552 19.0209 18.6598 19.0209L24.9649 15.158C25.494 14.8366 25.6604 14.1315 25.3296 13.6028L25.1733 13.3269C24.9841 13.0255 24.6797 12.8411 24.3656 12.8001V12.801Z" fill="currentColor"></path>
                     <path d="M14.3061 0C11.2883 0 8.83333 2.45495 8.83333 5.47279C8.83333 8.49063 11.2883 10.9456 14.3061 10.9456C17.324 10.9456 19.7789 8.49063 19.7789 5.47279C19.7789 2.45495 17.324 0 14.3061 0ZM16.0254 7.14456C15.8602 7.38547 15.6436 7.56622 15.3597 7.70115C15.1503 7.79396 14.9323 7.85096 14.7072 7.87216V8.60779C14.7072 8.72008 14.6164 8.8106 14.5044 8.8106H13.8973C13.7851 8.8106 13.6945 8.71979 13.6945 8.60779V7.80857C13.5802 7.78049 13.4677 7.74125 13.3548 7.68969C13.0514 7.56594 12.8068 7.36427 12.6352 7.09299C12.463 6.8412 12.3705 6.547 12.3562 6.19953C12.3516 6.08953 12.4355 5.99615 12.5453 5.9887L13.0904 5.95146C13.2001 5.94516 13.2929 6.02279 13.3058 6.12992C13.3276 6.3124 13.3789 6.46336 13.4545 6.56648C13.5396 6.69425 13.6487 6.77818 13.8137 6.84578C14.1632 6.99961 14.6078 6.9999 14.9154 6.88159C15.0518 6.82315 15.1483 6.75612 15.2122 6.67362C15.2669 6.59513 15.2938 6.51263 15.2938 6.41409C15.2938 6.32156 15.2701 6.25339 15.2125 6.17948C15.1824 6.13937 15.1048 6.06432 14.9005 5.98268C14.8008 5.94974 14.5419 5.87612 14.1477 5.78073C13.6874 5.66586 13.421 5.57878 13.2557 5.48911C13.0096 5.35906 12.8248 5.19693 12.7088 5.00815C12.5899 4.81594 12.5298 4.59651 12.5298 4.35646C12.5298 4.09521 12.6028 3.84628 12.7466 3.61654C12.8956 3.39253 13.1153 3.21664 13.3852 3.1032C13.4754 3.06224 13.5779 3.02786 13.6948 3.00036V2.32404C13.6948 2.21174 13.7856 2.12122 13.8976 2.12122H14.5046C14.6169 2.12122 14.7074 2.21203 14.7074 2.32404V2.96456C14.8899 2.99492 15.0589 3.04104 15.2122 3.10206C15.5087 3.23526 15.7238 3.41372 15.8773 3.6512C16.0312 3.87521 16.118 4.14419 16.1332 4.44583C16.1386 4.55641 16.0544 4.65094 15.9438 4.65839L15.3858 4.69591C15.2781 4.70336 15.1855 4.62659 15.1709 4.52089C15.1397 4.29201 15.0632 4.13216 14.9369 4.03276C14.7934 3.91044 14.5851 3.85344 14.2941 3.85344C14.0091 3.85344 13.7802 3.90872 13.6493 4.00956C13.543 4.09148 13.4932 4.19003 13.4932 4.31951C13.4932 4.41919 13.5244 4.4974 13.586 4.5524C13.6186 4.57818 13.7968 4.69419 14.3729 4.81536C14.8487 4.92766 15.1984 5.02992 15.3901 5.11242C15.6954 5.24992 15.9137 5.42724 16.0418 5.64036C16.1847 5.85435 16.2566 6.09383 16.2566 6.36424C16.2566 6.64555 16.179 6.90794 16.0254 7.14456Z" fill="currentColor"></path>
                   </svg>
@@ -598,7 +586,7 @@
               </div>
 
               <div class="col-lg-6 col-md-5 img-wrap">
-                <img alt="" src="static/img/donate-pop-up/donate-hands.svg">
+                <img alt="" src="static/img/donate-pop-up/donate-hands.svg" loading="lazy" decoding="async">
               </div>
 
             </div>
@@ -616,14 +604,14 @@
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-close ico" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 0C5.832 0 0 5.8315 0 13C0 20.1685 5.832 26 13 26C20.168 26 26 20.1685 26 13C26 5.8315 20.168 0 13 0ZM13 25C6.3835 25 1 19.6165 1 13C1 6.3835 6.3835 1 13 1C19.6165 1 25 6.3835 25 13C25 19.6165 19.6165 25 13 25Z" fill="#323232" fill-opacity="0.8" />
             <path d="M17.8541 8.14638C17.6586 7.95088 17.3426 7.95088 17.1471 8.14638L13.0006 12.2929L8.85411 8.14638C8.65861 7.95088 8.34261 7.95088 8.14711 8.14638C7.95161 8.34188 7.95161 8.65788 8.14711 8.85338L12.2936 12.9999L8.14711 17.1464C7.95161 17.3419 7.95161 17.6579 8.14711 17.8534C8.24461 17.9509 8.37261 17.9999 8.50061 17.9999C8.62861 17.9999 8.75661 17.9509 8.85411 17.8534L13.0006 13.7069L17.1471 17.8534C17.2446 17.9509 17.3726 17.9999 17.5006 17.9999C17.6286 17.9999 17.7566 17.9509 17.8541 17.8534C18.0496 17.6579 18.0496 17.3419 17.8541 17.1464L13.7076 12.9999L17.8541 8.85338C18.0496 8.65788 18.0496 8.34188 17.8541 8.14638Z" fill="#323232" fill-opacity="0.8" />
           </svg>
         </span>
       </button>
       <div class="modal-header">
-        <h4 class="modal-title" id="infoModalLabel">Онлайн Меморіал видалено.</h4>
+        <p class="modal-title h4" id="infoModalLabel">Онлайн Меморіал видалено.</p>
       </div>
       <div class="modal-body"></div>
     </div>

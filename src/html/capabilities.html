@@ -3,21 +3,19 @@
 @@include('_head.html')
 
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
-  <main id="page">
-    @@include('_header.html')
-    <div id="content" class="capabilities-page">
-      @@include('component/breadcrumbs.html',{
-        "item": "curent",
-        "text": "Можливості сервісу",
-      })
-      @@include('sections/_capabilities.html')
-      @@include('sections/_capabilities_descr_1.html')
-      @@include('sections/_capabilities_descr_2.html')
-      @@include('sections/_capabilities_info.html')
-    </div>
-    @@include('_footer.html')
+  <main id="page" class="capabilities-page">
+    @@include('component/breadcrumbs.html',{
+      "item": "curent",
+      "text": "Можливості сервісу",
+    })
+    @@include('sections/_capabilities.html')
+    @@include('sections/_capabilities_descr_1.html')
+    @@include('sections/_capabilities_descr_2.html')
+    @@include('sections/_capabilities_info.html')
   </main>
+  @@include('_footer.html')
   <!-- scripst & styles -->
   @@include('_footer_connections.html')
 </body>

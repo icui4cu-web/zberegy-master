@@ -3,6 +3,7 @@
 window.onload = function () {
 	
 	//= partials/global-var.js
+	//= partials/tooltip.js
   
 	//= partials/functions.js
 
@@ -16,17 +17,14 @@ window.onload = function () {
 
 	// search
 	//= partials/search.js
-	//= partials/search-sort.js
 
 	//= partials/accordion-img.js
 	//= partials/home-how-create-slider.js
-	//= partials/site-dropdown.js
 	//= partials/memorial-gallery.js
 	//= partials/gifts.js
 	//= partials/post-slider.js
 	//= partials/post-gallery .js
 	//= partials/comments-excerpt.js
-	//= partials/for-tests.js
 
 	//= user-cabinet/user-cabinet.js
 	//= user-cabinet/user-data-form.js

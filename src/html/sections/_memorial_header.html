@@ -3,7 +3,7 @@
     <picture class="img-header-bg-wrap">
       <source media="(min-width: 650px)" srcset="static/img/memorials/backgrounds/image-desctop-bg-1.jpg">
       <source media="(max-width: 650px)" srcset="static/img/memorials/backgrounds/image-mobile-bg-1.jpg">
-      <img class="img-header-bg" src="static/img/memorials/backgrounds/image-desctop-bg-1.jpg" alt="">
+      <img class="img-header-bg" src="static/img/memorials/backgrounds/image-desctop-bg-1.jpg" alt="" loading="lazy" decoding="async">
     </picture>
   </div>
   <div class="container-xl">
@@ -12,16 +12,16 @@
         <div class="img-gift-wrap">
           <div class="img-wrap" title="Фотографія людини">
             <!-- example img -->
-            <img src="../../../static/img/memorials/foto-3.jpg" alt="">
+            <img src="static/img/memorials/foto-3.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="gift-wrap">
-            <img class="gift-img" width="100" height="100" src="static/img/memorials/gifts/gift-6.png" alt="Подарунок">
+            <img class="gift-img" width="100" height="100" src="static/img/memorials/gifts/gift-6.png" alt="Подарунок" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
       <div class="col-md-6 text-wrap">
         <div class="name-wrap">
-          <h4>Прізвище Ім'я По-батькові</h4>
+          <h1 class="h4">Прізвище Ім'я По-батькові</h1>
           <!-- ortodox, catolic, islam, judaism, taosizm (all -> src/html/component/icons.html) -->
           @@include('../component/icons.html', {"icon": "ortodox"})
         </div>

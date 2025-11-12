@@ -1,3 +1,4 @@
+const isProd = process.argv.includes('b');
 const localUrl = 'zberegy'
 const silenceDeprecations = ['color-functions', 'global-builtin', 'import', 'abs-percent', 'legacy-js-api']
 
@@ -16,6 +17,7 @@ const sourcemaps   = require('gulp-sourcemaps');
 const fileinclude  = require('gulp-file-include');
 const formatHtml = require('gulp-format-html')
 var removeEmptyLines = require('gulp-remove-empty-lines');
+const gulpif = require('gulp-if');
 // const del          = require('del');
 
 
@@ -33,24 +35,24 @@ function browsersync() {
 
 function styles() {
   return src('src/sass/style.sass')
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({ silenceDeprecations }))
     .pipe(concat('style.min.css'))
-    .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
-    .pipe(cleancss(({level: {1: {specialComments: 0}}})))
-    .pipe(sourcemaps.write('.'))
+    .pipe(gulpif(isProd, autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true})))
+    .pipe(gulpif(isProd, cleancss({level: {1: {specialComments: 0}}})))
+    .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(dest('dist/static/css/'))
     .pipe(browserSync.stream());
 }
 
 function stylesHeader() {
   return src('src/sass/header.sass')
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({ silenceDeprecations }))
     .pipe(concat('header.min.css'))
-    .pipe(autoprefixer({overrideBrowserslist:  ['last 10 versions'], grid: true}))
-    .pipe(cleancss(({level: {1: {specialComments: 0}}})))
-    .pipe(sourcemaps.write('.'))
+    .pipe(gulpif(isProd, autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true})))
+    .pipe(gulpif(isProd, cleancss({level: {1: {specialComments: 0}}})))
+    .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(dest('dist/static/css/'))
     .pipe(browserSync.stream());
 }

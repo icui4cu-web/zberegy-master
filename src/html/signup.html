@@ -2,95 +2,89 @@
 <html lang="uk">
   @@include('_head.html')
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
+    <div class="login_signup-block signup-block">
+      
+      <div class="container-xl content-wrap">
+        <div class="row">
+          <div class="col-lg-7 form-wrap">
+            <form id="signup_form" class="site-form signup_login-form">
+              <button class="btn-login-google">
+                <svg class="icon-google ico" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
+                  <path d="M16.9925 11.1176C16.9925 10.6025 16.9507 10.2267 16.8603 9.83691H10.979V12.1616H14.4312C14.3616 12.7393 13.9857 13.6093 13.1505 14.1939L13.1388 14.2717L14.9984 15.7123L15.1272 15.7252C16.3104 14.6324 16.9925 13.0246 16.9925 11.1176Z" fill="#4285F4"/>
+                  <path d="M10.979 17.2425C12.6703 17.2425 14.0902 16.6857 15.1273 15.7252L13.1506 14.1939C12.6216 14.5628 11.9117 14.8203 10.979 14.8203C9.32252 14.8203 7.91658 13.7276 7.41541 12.2173L7.34194 12.2235L5.40834 13.72L5.38306 13.7902C6.41315 15.8365 8.52903 17.2425 10.979 17.2425Z" fill="#34A853"/>
+                  <path d="M7.41535 12.2173C7.28311 11.8275 7.20658 11.4099 7.20658 10.9784C7.20658 10.5468 7.28311 10.1292 7.40839 9.73947L7.40489 9.65646L5.44706 8.13599L5.383 8.16646C4.95845 9.0156 4.71484 9.96916 4.71484 10.9784C4.71484 11.9876 4.95845 12.9411 5.383 13.7902L7.41535 12.2173Z" fill="#FBBC05"/>
+                  <path d="M10.979 7.13647C12.1553 7.13647 12.9487 7.64455 13.4011 8.06915L15.169 6.34303C14.0833 5.33381 12.6703 4.71436 10.979 4.71436C8.52903 4.71436 6.41315 6.12029 5.38306 8.16656L7.40845 9.73956C7.91658 8.22921 9.32252 7.13647 10.979 7.13647Z" fill="#EB4335"/>
+                </svg>
+                Увійти за допомогою Google
+              </button>
+              <button class="btn-login-fb">
+                <svg class="icon-fb ico" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
+                  <path d="M11.8771 17.209V11.3209H13.8535L14.1499 9.02616H11.8771V7.56105C11.8771 6.89672 12.0616 6.44395 13.0143 6.44395H14.2295V4.39214C13.6413 4.32991 13.0502 4.29978 12.4587 4.30186C10.7067 4.30186 9.50736 5.3712 9.50736 7.33512V9.02616H7.52588V11.3209H9.50736V17.209H11.8771Z" fill="#1778F2"/>
+                </svg>
+                Увійти за допомогою Facebook
+              </button>
+              
+              <div class="dash-block"><span class="dash-text">або E-mail</span></div>
 
-      <div class="login_signup-block signup-block">
-        
-        <div class="container-xl content-wrap">
-          <div class="row">
-            <div class="col-lg-7 form-wrap">
-              <form id="signup_form" class="site-form signup_login-form">
-                <button class="btn-login-google">
-                  <svg class="icon-google" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
-                    <path d="M16.9925 11.1176C16.9925 10.6025 16.9507 10.2267 16.8603 9.83691H10.979V12.1616H14.4312C14.3616 12.7393 13.9857 13.6093 13.1505 14.1939L13.1388 14.2717L14.9984 15.7123L15.1272 15.7252C16.3104 14.6324 16.9925 13.0246 16.9925 11.1176Z" fill="#4285F4"/>
-                    <path d="M10.979 17.2425C12.6703 17.2425 14.0902 16.6857 15.1273 15.7252L13.1506 14.1939C12.6216 14.5628 11.9117 14.8203 10.979 14.8203C9.32252 14.8203 7.91658 13.7276 7.41541 12.2173L7.34194 12.2235L5.40834 13.72L5.38306 13.7902C6.41315 15.8365 8.52903 17.2425 10.979 17.2425Z" fill="#34A853"/>
-                    <path d="M7.41535 12.2173C7.28311 11.8275 7.20658 11.4099 7.20658 10.9784C7.20658 10.5468 7.28311 10.1292 7.40839 9.73947L7.40489 9.65646L5.44706 8.13599L5.383 8.16646C4.95845 9.0156 4.71484 9.96916 4.71484 10.9784C4.71484 11.9876 4.95845 12.9411 5.383 13.7902L7.41535 12.2173Z" fill="#FBBC05"/>
-                    <path d="M10.979 7.13647C12.1553 7.13647 12.9487 7.64455 13.4011 8.06915L15.169 6.34303C14.0833 5.33381 12.6703 4.71436 10.979 4.71436C8.52903 4.71436 6.41315 6.12029 5.38306 8.16656L7.40845 9.73956C7.91658 8.22921 9.32252 7.13647 10.979 7.13647Z" fill="#EB4335"/>
-                  </svg>
-                  Увійти за допомогою Google
-                </button>
-                <button class="btn-login-fb">
-                  <svg class="icon-fb" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22C17.0751 22 22 17.0751 22 11Z" fill="white"/>
-                    <path d="M11.8771 17.209V11.3209H13.8535L14.1499 9.02616H11.8771V7.56105C11.8771 6.89672 12.0616 6.44395 13.0143 6.44395H14.2295V4.39214C13.6413 4.32991 13.0502 4.29978 12.4587 4.30186C10.7067 4.30186 9.50736 5.3712 9.50736 7.33512V9.02616H7.52588V11.3209H9.50736V17.209H11.8771Z" fill="#1778F2"/>
-                  </svg>
-                  Увійти за допомогою Facebook
-                </button>
-                
-                <div class="dash-block"><span class="dash-text">або E-mail</span></div>
-
-                <div class="row">
-                  <div class="col-lg-6">
-                    <label for="name">Ім’я*</label>
-                    <div class="form-group">
-                      <input type="text" id="name" placeholder="Ваше Ім’я" >
-                      <span class="error-mess">Додайте інформацію</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 pl-lg-0">
-                    <label for="surname">Прізвище*</label>
-                    <div class="form-group">
-                      <input type="text" id="surname" placeholder="Ваше Прізвище" >
-                      <span class="error-mess">Додайте інформацію</span>
-                    </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <label for="name">Ім’я*</label>
+                  <div class="form-group">
+                    <input type="text" id="name" placeholder="Ваше Ім’я" >
+                    <span class="error-mess">Додайте інформацію</span>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="email">Ваш E-mail</label>
-                  <input type="email" id="email" placeholder="Ваш E-mail" required>
-                  <span class="error-mess">Перевірте E-mail</span>
+                <div class="col-lg-6 pl-lg-0">
+                  <label for="surname">Прізвище*</label>
+                  <div class="form-group">
+                    <input type="text" id="surname" placeholder="Ваше Прізвище" >
+                    <span class="error-mess">Додайте інформацію</span>
+                  </div>
                 </div>
-                <label for="pass" class="label-pass">Ваш пароль</label>
-                <div class="form-group pass-wrap">
-                  <svg class="pass-show icon-for-input" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.9996 7.48C9.06361 7.48 7.47961 9.064 7.47961 11C7.47961 12.936 9.06361 14.52 10.9996 14.52C12.9356 14.52 14.5196 12.936 14.5196 11C14.5196 9.064 12.9356 7.48 10.9996 7.48ZM10.9996 13.64C9.54761 13.64 8.35961 12.452 8.35961 11C8.35961 9.548 9.54761 8.36 10.9996 8.36C12.4516 8.36 13.6396 9.548 13.6396 11C13.6396 12.452 12.4516 13.64 10.9996 13.64ZM20.7676 10.692L18.8756 8.778C16.7856 6.666 13.9916 5.5 10.9996 5.5C8.00761 5.5 5.21361 6.666 3.12361 8.778L1.23161 10.692C1.05561 10.868 1.05561 11.132 1.23161 11.308L3.12361 13.222C5.21361 15.334 8.00761 16.5 10.9996 16.5C13.9916 16.5 16.7856 15.334 18.8756 13.222L20.7676 11.308C20.9436 11.132 20.9436 10.868 20.7676 10.692ZM18.2596 12.606C16.3236 14.542 13.7496 15.62 10.9996 15.62C8.24961 15.62 5.67561 14.542 3.73961 12.606L2.15561 11L3.73961 9.394C5.67561 7.458 8.24961 6.38 10.9996 6.38C13.7496 6.38 16.3236 7.458 18.2596 9.394L19.8436 11L18.2596 12.606Z" fill="#323232" fill-opacity="0.6"/>
-                    <path class="eye-slash" d="M18.8777 4.12187C18.7152 3.95938 18.451 3.95938 18.2885 4.12187L4.12187 18.2885C3.95938 18.451 3.95938 18.7152 4.12187 18.8777C4.20355 18.9585 4.31019 18.9994 4.41687 18.9994C4.52355 18.9994 4.63019 18.9586 4.71105 18.8777L18.8777 4.71105C19.0402 4.54855 19.0402 4.28437 18.8777 4.12187Z" fill="#323232" fill-opacity="0.6"/>
-                  </svg>
-                  <input type="password" id="pass" placeholder="Ваш пароль">
-                  <span class="error-mess">Перевірте пароль</span>
-                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Ваш E-mail</label>
+                <input type="email" id="email" placeholder="Ваш E-mail" required>
+                <span class="error-mess">Перевірте E-mail</span>
+              </div>
+              <label for="pass" class="label-pass">Ваш пароль</label>
+              <div class="form-group pass-wrap">
+                <svg class="pass-show icon-for-input ico" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9996 7.48C9.06361 7.48 7.47961 9.064 7.47961 11C7.47961 12.936 9.06361 14.52 10.9996 14.52C12.9356 14.52 14.5196 12.936 14.5196 11C14.5196 9.064 12.9356 7.48 10.9996 7.48ZM10.9996 13.64C9.54761 13.64 8.35961 12.452 8.35961 11C8.35961 9.548 9.54761 8.36 10.9996 8.36C12.4516 8.36 13.6396 9.548 13.6396 11C13.6396 12.452 12.4516 13.64 10.9996 13.64ZM20.7676 10.692L18.8756 8.778C16.7856 6.666 13.9916 5.5 10.9996 5.5C8.00761 5.5 5.21361 6.666 3.12361 8.778L1.23161 10.692C1.05561 10.868 1.05561 11.132 1.23161 11.308L3.12361 13.222C5.21361 15.334 8.00761 16.5 10.9996 16.5C13.9916 16.5 16.7856 15.334 18.8756 13.222L20.7676 11.308C20.9436 11.132 20.9436 10.868 20.7676 10.692ZM18.2596 12.606C16.3236 14.542 13.7496 15.62 10.9996 15.62C8.24961 15.62 5.67561 14.542 3.73961 12.606L2.15561 11L3.73961 9.394C5.67561 7.458 8.24961 6.38 10.9996 6.38C13.7496 6.38 16.3236 7.458 18.2596 9.394L19.8436 11L18.2596 12.606Z" fill="#323232" fill-opacity="0.6"/>
+                  <path class="eye-slash" d="M18.8777 4.12187C18.7152 3.95938 18.451 3.95938 18.2885 4.12187L4.12187 18.2885C3.95938 18.451 3.95938 18.7152 4.12187 18.8777C4.20355 18.9585 4.31019 18.9994 4.41687 18.9994C4.52355 18.9994 4.63019 18.9586 4.71105 18.8777L18.8777 4.71105C19.0402 4.54855 19.0402 4.28437 18.8777 4.12187Z" fill="#323232" fill-opacity="0.6"/>
+                </svg>
+                <input type="password" id="pass" placeholder="Ваш пароль">
+                <span class="error-mess">Перевірте пароль</span>
+              </div>
 
-                <div class="agreement-terms">
-                  Реєструючись, ви погоджуєтеся з умовами 
-                  <a href="#">положення про обробку і захист <br> персональних даних</a>
-                   та 
-                   <a href="#">угодою користувача</a>.
-                </div>
-                
-                <div class="captcha">
-                  <!-- temp example -->
-                  <img style="width: 100%;" src="static/img/captcha.jpg" alt="">
-                </div>
+              
+              <label class="agreement-terms custom-checkbox-wrap">
+                <input class="checkbox" type="checkbox" required>
+                <span>Реєструючись, ви погоджуєтеся з умовами <a href="#">положення про обробку і захист персональних даних</a> та <a href="#">угодою користувача</a>.</span>
+              </label>
+              
+              <div class="captcha">
+                <!-- temp example -->
+                <img style="width: 100%;" src="static/img/captcha.jpg" alt="" loading="lazy" decoding="async">
+              </div>
 
-                <button class="btn-login" type="submit">Зареєструватися</button>
-                <div class="wenn-registriert">
-                  <span>Вже зареєстровані?</span>
-                  <a href="login.html">Увійти</a>
-                </div>
+              <button class="btn-login" type="submit">Зареєструватися</button>
+              <div class="wenn-registriert">
+                <span>Вже зареєстровані?</span>
+                <a href="login.html">Увійти</a>
+              </div>
 
-              </form>
-            </div>
+            </form>
           </div>
         </div>
-        <img class="bg" src="static/img/signup/signup-bg-2.png" alt="">
       </div>
-
+      <img class="bg" src="static/img/signup/signup-bg-2.png" alt="" loading="lazy" decoding="async">
     </div>
-    
   </main>
   <!-- scripst & styles -->
   @@include('_footer_connections.html')

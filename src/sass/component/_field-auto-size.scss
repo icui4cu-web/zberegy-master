@@ -1,0 +1,22 @@
+.field-auto-size {
+	display: grid;
+
+	&::after {
+		content: attr(data-replicated-value) " ";
+		white-space: pre-wrap;
+		visibility: hidden;
+	}
+
+	&__control {
+		resize: none;
+		overflow: hidden;
+		margin: 0;
+	}
+
+	&__control,
+	&::after {
+		border-radius: 3px;
+		padding: var(--padding);
+		grid-area: 1 / 1 / 2 / 2;
+	}
+}

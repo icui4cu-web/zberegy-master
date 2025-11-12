@@ -18,6 +18,19 @@
 
 // })
 
+// header nav
+function navScrollLock(isActive) {
+	document.body.classList.toggle('nav-scroll-lock', isActive)
+}
+
+$('#headerMenu').on('show.bs.collapse', () => {
+	const header = document.getElementById('header')
+
+	header.style.setProperty('--header-height', `${header.offsetHeight}px`)
+	navScrollLock(true)
+});
+$('#headerMenu').on('hide.bs.collapse', () => navScrollLock(false));
+
 // footer nav
 window.addEventListener("resize", function(){
   windowResz()

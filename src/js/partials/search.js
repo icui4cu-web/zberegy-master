@@ -8,11 +8,10 @@ function searchInput() {
 		localStorage.search_query = $('.search-input')[0].value
 	} else {
 		location.href = 'search-no-results.html'
-		localStorage.search_query = ''
 	}
 }
 
-if (localStorage.search_query !== '' && $('.search-results').length !== 0) {
+if (localStorage.getItem('search_query') && $('.search-results').length !== 0) {
 	$('#search_input')[0].value = localStorage.search_query
 	$('#search_query')[0].textContent = '"'+localStorage.search_query+'"'
 }

@@ -3,10 +3,8 @@ $('.pass-show').on('click', function () {
   let thisInput = $(this)[0].parentNode.querySelector('input'),
     thisSlashEye = $(this).find('.eye-slash')[0]
 
-  thisInput.type === 'password'
-    ? (thisInput.type = 'text' && thisSlashEye.setAttribute('hidden', ''))
-    : (thisInput.type = 'password') && thisSlashEye.removeAttribute('hidden')
-  // thisSlashEye.classList.toggle('hidden')
+	thisInput.type = thisInput.type === 'password' ? 'text' : 'password'
+	thisSlashEye.classList.toggle('d-none', thisInput.type !== 'password')
 })
 
 // LOGOUT
@@ -130,16 +128,6 @@ textareaLetterCounter()
 // removeClass error if focus
 $('textarea, input').on('focus', function(){
   $(this).removeClass('error')
-})
-
-// input that adjusts in height
-$('[contenteditable]').on('keyup', function () {
-	const thisDataId = $(this)[0].getAttribute('data-input-id')
-	$('#' + thisDataId).val($(this).text())
-  
-  $('#' + thisDataId).val() === ''
-		? $(this).removeClass('active')
-		: $(this).addClass('active')
 })
 
 // pass icon or curency icon...

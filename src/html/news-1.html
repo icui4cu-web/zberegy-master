@@ -3,24 +3,22 @@
 @@include('_head.html')
 
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
-      @@include('component/breadcrumbs.html',{
-      "item_1": "item",
-      "text_1": "Новини",
-      "href_1": "news.html",
+    @@include('component/breadcrumbs.html',{
+    "item_1": "item",
+    "text_1": "Новини",
+    "href_1": "news.html",
 
-      "item": "curent",
-      "text": "Як вшанувати пам'ять рідної людини",
-      })
-      
-      @@include('sections/_news-1.html')
-      <!-- @@include('component/_news_paginations.html') -->
-    </div>
-    @@include('_footer.html')
+    "item": "curent",
+    "text": "Як вшанувати пам'ять рідної людини",
+    })
+    
+    @@include('sections/_news-1.html')
+    <!-- @@include('component/_news_paginations.html') -->
   </main>
+  @@include('_footer.html')
   <!-- scripst & styles -->
   @@include('_footer_connections.html')
 </body>

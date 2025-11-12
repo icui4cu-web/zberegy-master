@@ -16,7 +16,7 @@ for (let i = 0; i < $('.comments-user-wrap .comment-body').length; i++) {
       const btnExcerpt = document.createElement('button')
       btnExcerpt.classList.add('btn-excerpt')
       btnExcerpt.innerHTML +=
-        '<svg class="icon-doble-brecket" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9.44134L13.9051 8.46143L7.5 14.2429L1.09489 8.46143L0 9.44134L7.5 16.1537L15 9.44134Z" fill="#323232" fill-opacity="0.8"/><path d="M15 4.8261L13.9051 3.84619L7.5 9.62768L1.09489 3.84619L0 4.8261L7.5 11.5385L15 4.8261Z" fill="#323232" fill-opacity="0.8"/></svg>'
+        '<svg class="icon-doble-brecket ico" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9.44134L13.9051 8.46143L7.5 14.2429L1.09489 8.46143L0 9.44134L7.5 16.1537L15 9.44134Z" fill="#323232" fill-opacity="0.8"/><path d="M15 4.8261L13.9051 3.84619L7.5 9.62768L1.09489 3.84619L0 4.8261L7.5 11.5385L15 4.8261Z" fill="#323232" fill-opacity="0.8"/></svg>'
 
       $(this)[0].querySelector('.comment-wrap').appendChild(overlay)
       $(this)[0]
@@ -61,7 +61,7 @@ for (let i = 0; i < childCommentsArr; i++) {
 			const btnExcerpt = document.createElement('button')
 			btnExcerpt.classList.add('btn-excerpt')
 			btnExcerpt.innerHTML +=
-				'<svg class="icon-doble-brecket" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9.44134L13.9051 8.46143L7.5 14.2429L1.09489 8.46143L0 9.44134L7.5 16.1537L15 9.44134Z" fill="#323232" fill-opacity="0.8"/><path d="M15 4.8261L13.9051 3.84619L7.5 9.62768L1.09489 3.84619L0 4.8261L7.5 11.5385L15 4.8261Z" fill="#323232" fill-opacity="0.8"/></svg>'
+				'<svg class="icon-doble-brecket ico" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 9.44134L13.9051 8.46143L7.5 14.2429L1.09489 8.46143L0 9.44134L7.5 16.1537L15 9.44134Z" fill="#323232" fill-opacity="0.8"/><path d="M15 4.8261L13.9051 3.84619L7.5 9.62768L1.09489 3.84619L0 4.8261L7.5 11.5385L15 4.8261Z" fill="#323232" fill-opacity="0.8"/></svg>'
 
 			$(this)[0].querySelector('.comment-text').appendChild(overlay)
 			$(this)[0]

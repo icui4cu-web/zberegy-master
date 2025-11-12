@@ -4,6 +4,9 @@
 @import "icons"
 @import "component/btns_links"
 
+summary::-webkit-details-marker
+  display: none
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -219,21 +222,27 @@ ol
       margin-right: 10px
 .list-yellow-mark
   li
-    display: flex
+    position: relative
+    padding-left: 18px
+    margin-bottom: 10px
+    padding-bottom: 0
+    @include media-breakpoint-down(sm)
+      padding-left: 16px
     &::before
       content: ''
-      display: inline-block
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
       background-color: $yellow
       width: 8px
       height: 8px
       min-width: 8px
       border-radius: 50%
-      margin: 10px 10px 0 0
-      @include media-breakpoint-down(sm)
-        margin: 6px 6px 0 0
   &.has-links
     li
       display: block
+      padding-left: 0
       &::before
         display: none
       a
@@ -245,6 +254,7 @@ ol
       a
         &::before
           content: ''
+          flex-shrink: 0
           display: inline-block
           background-color: $yellow
           width: 6px
@@ -302,67 +312,36 @@ ol
   .dash-text
     margin: 0 30px
 
-// tooltip
-[data-title]
-  position: relative !important // (!)
-  &:hover
-    &::before,
-    &::after
-      display: block
-  &.left
-    &::before
-      transform: translateX(calc( 100% - 30px ))
-  &.right
-    &::before
-      right: -10px
-      // transform: translateX(calc( 100% - 30px ))
-      transform: translateX(0)
-  &::before
-    content: attr(data-title)
-    position: absolute
-    display: none
-    right: -15px
-    bottom: calc(100% + 20px)
-    width: 100vw
-    max-width: 280px
-    font-size: 14px
-    line-height: 20px
-    color: $text-c
+$tooltip-arrow-size: 10px
+.tooltip
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2))
+  &.show
+    opacity: 1
+  .tooltip-inner
+    max-width: 300px
     padding: 30px
     background-color: #F2F2F2
+    color: #323232
     border-radius: 5px
-    z-index: 999
-    opacity: 0
-    animation: opacity .5s forwards, opacityDown .5s 5s forwards
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1)
+    font-size: 14px
+    line-height: 1.428571429
     @include media-breakpoint-down(sm)
       padding: 10px 15px
-      font-size: 14px
-      right: 50%
-      transform: translateX(50%)
-  &::after
-    content: ''
-    display: block
-    display: none
-    position: absolute
-    right: 0
-    bottom: calc(100% + 15px)
-    width: 30px
-    height: 30px
-    background-color: #F2F2F2
-    border-radius: 2px
-    transform: rotate(55deg) skewX(20deg)
-    z-index: 998 // -1 (!)
-    opacity: 0
-    animation: opacity .5s .3s forwards, opacityDown .5s 5s forwards
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
-    @include media-breakpoint-down(sm)
-      right: -5px
-
+  .arrow
+    width: $tooltip-arrow-size * 2
+    height: $tooltip-arrow-size
+.bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"]
+  padding: $tooltip-arrow-size 0
+  .arrow::before
+    border-top-color: #F2F2F2
+    border-width: $tooltip-arrow-size $tooltip-arrow-size 0
+.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"]
+  padding: $tooltip-arrow-size 0
+  .arrow::before
+    border-bottom-color: #F2F2F2
+    border-width: 0 $tooltip-arrow-size $tooltip-arrow-size
 iframe
   border: none
-img[data-src]
-  opacity: 0
 img, svg
   max-width: 100%
   transition: .5s

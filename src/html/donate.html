@@ -3,18 +3,16 @@
 @@include('_head.html')
 
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
-      @@include('component/breadcrumbs.html',{
-        "item": "curent",
-        "text": "Підтримати проект",
-      })
-      @@include('sections/_donate.html')
-    </div>
-    @@include('_footer.html')
+    @@include('component/breadcrumbs.html',{
+      "item": "curent",
+      "text": "Підтримати проект",
+    })
+    @@include('sections/_donate.html')
   </main>
+  @@include('_footer.html')
   <!-- scripst & styles -->
   @@include('_footer_connections.html')
 </body>

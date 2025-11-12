@@ -3,25 +3,23 @@
 @@include('_head.html')
 
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
-      @@include('component/breadcrumbs.html',{
-      "item": "curent",
-      "text": "Новини",
-      })
-      @@include('sections/_news.html')
-      <div class="container-xl">
-        <div class="row">
-          <div class="col-12">
-            @@include('component/_site_paginations.html')
-          </div>
+    @@include('component/breadcrumbs.html',{
+    "item": "curent",
+    "text": "Новини",
+    })
+    @@include('sections/_news.html')
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-12">
+          @@include('component/_site_paginations.html')
         </div>
       </div>
     </div>
-    @@include('_footer.html')
   </main>
+  @@include('_footer.html')
   <!-- scripst & styles -->
   @@include('_footer_connections.html')
 </body>

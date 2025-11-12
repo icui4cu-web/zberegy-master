@@ -3,37 +3,32 @@
 @@include('_head.html')
 
 <body>
+  @@include('_header.html')
   <!-- <main id="page" class="IS_LOG_IN"> -->
   <main id="page">
-    @@include('_header.html')
-    <div id="content">
+    <div class="login_signup-block signup-block mail_confirmation-block">
 
-      <div class="login_signup-block signup-block mail_confirmation-block">
+      <div class="container-xl content-wrap">
+        <div class="row">
+          <div class="col-lg-7 mail-confirmation">
+              <h1 class="h5">Підтвердження електронної адреси</h1>
+              <p>
+                Перегляньте лист від Збережи на пошті <span class="current-signup-email">xxxxxxx@ukr.net</span>, 
+                <br> щоб завершити налаштування свого аккаунта.
+              </p>
+              <div class="ask-mail-mess">
+                Не отримали листа?
+              </div>
 
-        <div class="container-xl content-wrap">
-          <div class="row">
-            <div class="col-lg-7 mail-confirmation">
-                <h5>Підтвердження електронної адреси</h5>
-                <p>
-                  Перегляньте лист від Збережи на пошті <span class="current-signup-email">xxxxxxx@ukr.net</span>, 
-                  <br> щоб завершити налаштування свого аккаунта.
-                </p>
-                <div class="ask-mail-mess">
-                  Не отримали листа?
-                </div>
-
-                <p>
-                  Перевірте папку “Спам” або зв'яжіться з нами через <br>
-                  <a href="contact-us.html">контактну форму</a>.
-                </p>
-            </div>
+              <p>
+                Перевірте папку “Спам” або зв'яжіться з нами через <br>
+                <a href="contact-us.html">контактну форму</a>.
+              </p>
           </div>
         </div>
-        <img class="bg" src="static/img/signup/signup-bg-2.png" alt="">
       </div>
-
+      <img class="bg" src="static/img/signup/signup-bg-2.png" alt="" loading="lazy" decoding="async">
     </div>
-
   </main>
   <!-- scripst & styles -->
   @@include('_footer_connections.html')

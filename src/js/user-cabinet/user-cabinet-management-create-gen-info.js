@@ -123,7 +123,7 @@ $('#form_create_memorial').on('submit', function (e) {
     data: jsonData,
     success: function (jsonData) {
       // code
-      $('#headCrMem_2').removeAttr('style')
+      $('#headCrMem_2').removeAttr('style inert')
     },
     error: function (error) {
       // code

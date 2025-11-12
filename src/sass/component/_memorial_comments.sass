@@ -32,11 +32,18 @@
         @include media-breakpoint-down(sm)
           min-height: 100px
     .form-img-wrap
+      position: relative
       width: 30%
       padding-left: 20px
       @include media-breakpoint-down(md)
         width: 100%
         padding-left: 0
+      input
+        position: absolute
+        clip: rect(0,0,0,0)
+        pointer-events: none
+        &:focus-visible~.label-add-foto
+          box-shadow: 0 0 0 0.25rem rgba(49,132,253, .5)
       .label-add-foto
         display: block
         position: relative
@@ -113,17 +120,22 @@
       .comment-header
         display: flex
         align-items: center
-        flex-wrap: wrap
         margin-bottom: 16px
         @include media-breakpoint-down(md)
           margin-bottom: 5px
+          flex-wrap: wrap
         .img-wrap
+          flex-shrink: 0
+          width: 40px
+          height: 40px
           overflow: hidden
           border-radius: 50%
           margin-right: 10px
         .name
           margin: 0
           margin-right: 15px
+          @include media-breakpoint-down(md)
+            max-width: calc(100% - 40px - 10px - 15px - 30px)
           @include media-breakpoint-down(sm)
             flex: 1
             margin-right: 10px
@@ -197,8 +209,7 @@
           border-radius: $border-radius
           padding-right: 15px
           margin: 0
-          input,
-          [contenteditable]
+          input
             border: none
             margin: 0 10px 0 0
 
@@ -248,11 +259,12 @@
       padding-: 15px
       .icon-doble-brecket
         transform: rotateX(180deg)
-  [data-title]
-    &::before
-      background-color: $clear
-      right: -15px
-      transform: translateX(0)
-    &::after
-      background-color: $clear
+        // TODO
+  // [data-title]
+  //   &::before
+  //     background-color: $clear
+  //     right: -15px
+  //     transform: translateX(0)
+  //   &::after
+  //     background-color: $clear
   

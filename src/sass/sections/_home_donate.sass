@@ -1,21 +1,27 @@
+@use "../fn"
+  
 .home-donate
   position: relative
-  background-repeat: no-repeat
-  background-size: auto 100%
-  background-position: left center
-  max-width: 1920px
-  margin-left: auto
-  margin-right: auto
   margin-bottom: 100px
+  &::before, &::after
+    content: ''
+    position: absolute
+    z-index: -1
+    pointer-events: none
+  &::before
+    background: linear-gradient(to bottom, #fff, #F0FBFF 15% 85%, #fff)
+    inset: -100px 0 -50px
+  &::after
+    top: calc(50% - fn.rs(50px, 0px))
+    right: calc(50% + fn.rs(-100px, 200px))
+    transform: translateY(-50%)
+    background: url('/static/img/home/donate-bg.svg') center / contain no-repeat
+    width: fn.rs(551px, 1028px)
+    aspect-ratio: 1028/890
+    @media (min-width: 1296px)
+      right: calc(50% + fn.rs(200px, 400px, 1296px, 1400px))
   @include media-breakpoint-down(sm)
     margin-bottom: 60px
-  .bg
-    position: absolute
-    left: -300px
-    top: 50%
-    transform: translateY(-50%)
-    height: 150%
-    // width: 200%
   .content-wrap
     position: relative
   .text-wrap,

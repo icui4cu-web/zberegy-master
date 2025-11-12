@@ -36,6 +36,7 @@
     max-width: 500px
     margin: 0 auto
     margin-bottom: 20px
+    aspect-ratio: 16/9
     
   .play-video
     position: absolute
@@ -44,7 +45,8 @@
     transform: translate(-50%, -50%)
     z-index: 1
     padding: 0
-    &:hover
+    &:hover,
+    &:focus-visible
       .pulse-1
         animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite
       .pulse-2
