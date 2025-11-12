@@ -64,7 +64,7 @@
   &__text
     max-width: 325px
     margin-inline: auto
-    &::after
+    &::before
       content: counter(steps)
       display: block
       margin-top: -15px
@@ -112,20 +112,20 @@
         order: -1
         padding-bottom: $row-gap * 0.5
         align-self: end
-        &::after
+        &::before
           bottom: 0
       #{$root}__item:nth-child(odd) &
         padding-top: $row-gap * 0.5
-        &::after
+        &::before
           top: 0
-      &::after
+      &::before
         margin-top: 0
         position: absolute
         left: 50%
         transform: translate(-50%, calc(50% * var(--inverse) * -1))
   @include media-breakpoint-up(lg)
     &__text
-      #{$root}__item:first-child &::before
+      #{$root}__item:first-child &::after
         content: ""
         position: absolute
         top: 0
@@ -136,7 +136,7 @@
         border-radius: 50%
         background-color: #fff
         border: 1px solid #323232
-      #{$root}__item:last-child &::before
+      #{$root}__item:last-child &::after
         content: ''
         position: absolute
         right: 0
